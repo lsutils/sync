@@ -17,5 +17,5 @@ jobs:
     - name: 'login'
       run: skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p "${{ secrets.REGISTERY_PASSWORD }}"
     - name: sync
-      run: python sync.py
+      run: python sync.py -v
 
