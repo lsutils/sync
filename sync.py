@@ -27,7 +27,12 @@ base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
 for item in trans:
     base_image = item.split('/')[-1]
-    data = list(get_tags(item) - get_tags(base + '/' + base_image))
+    h = get_tags(item)
+    a = get_tags(base + '/' + base_image)
+    print(len(h))
+    print(len(a))
+    data = list(h - a)
+
     i = 0
     for tag in sorted(data):
         cmd = f'skopeo copy --all --insecure-policy docker://{item}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
