@@ -19,7 +19,7 @@ jobs:
           - 'docker.io/labring/calico'
           - 'docker.io/library/ubuntu'
           - 'docker.io/library/centos'
-          - 'docker.io/library/centos'
+          - 'docker.io/mydlqclub/dnsutils'
           - 'docker.io/bitnami/etcd'
           - 'docker.io/apache/apisix'
     steps:
