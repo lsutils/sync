@@ -25,6 +25,7 @@ jobs:
           - 'docker.io/apache/apisix'
           - 'docker.io/flannel/flannel-cni-plugin'
           - 'docker.io/flannel/flannel'
+          - 'docker.io/flannel/debian'
     steps:
     - name: Checkout
       uses: actions/checkout@v2
