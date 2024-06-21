@@ -27,6 +27,10 @@ jobs:
           - 'docker.io/flannel/flannel'
           - 'docker.io/library/debian' 
           - 'docker.io/library/busybox' 
+          - 'skywalking.docker.scarf.sh/apache/skywalking-oap-server'
+          - 'skywalking.docker.scarf.sh/apache/skywalking-ui'
+          - 'docker.io/library/busybox'
+          - 'docker.elastic.co/elasticsearch/elasticsearch'
           
     steps:
     - name: Checkout
