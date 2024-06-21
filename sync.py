@@ -1,5 +1,6 @@
 import json
 import os
+import random
 import subprocess
 import sys
 
@@ -23,9 +24,10 @@ a = get_tags(base + '/' + base_image)
 print(len(h))
 print(len(a))
 data = list(h - a)
+random.shuffle(data)
 
 i = 0
-for tag in sorted(data):
+for tag in data:
     cmd = f'skopeo copy --all --insecure-policy docker://{item}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     os.system(cmd)
