@@ -25,8 +25,8 @@ jobs:
           - 'docker.io/apache/apisix'
           - 'docker.io/flannel/flannel-cni-plugin'
           - 'docker.io/flannel/flannel'
-          - 'docker.io/library/debian' 
-          - 'docker.io/library/busybox' 
+          - 'docker.io/library/debian'
+          - 'docker.io/library/busybox'
           - 'skywalking.docker.scarf.sh/apache/skywalking-oap-server'
           - 'skywalking.docker.scarf.sh/apache/skywalking-ui'
           - 'docker.io/library/busybox'
@@ -74,7 +74,8 @@ jobs:
           - 'ghcr.io/apache/skywalking-cli/skywalking-cli'
           - 'registry.k8s.io/kube-state-metrics/kube-state-metrics'
           - 'docker.io/bitnami/rabbitmq'
-          
+          - 'docker.io/kindest/node'
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
