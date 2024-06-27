@@ -76,6 +76,7 @@ jobs:
           - 'docker.io/bitnami/rabbitmq'
           - 'docker.io/kindest/node'
           - 'docker.io/frooodle/s-pdf'
+          - 'docker.io/library/python'
 
     steps:
     - name: Checkout
