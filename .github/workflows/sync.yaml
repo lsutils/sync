@@ -25,8 +25,7 @@ jobs:
           - 'docker.io/apache/apisix'
           - 'docker.io/flannel/flannel-cni-plugin'
           - 'docker.io/flannel/flannel'
-          - 'docker.io/library/debian'
-          - 'docker.io/library/busybox'
+          - 'docker.io/library/debian' 
           - 'skywalking.docker.scarf.sh/apache/skywalking-oap-server'
           - 'skywalking.docker.scarf.sh/apache/skywalking-ui'
           - 'docker.io/library/busybox'
@@ -77,6 +76,7 @@ jobs:
           - 'docker.io/kindest/node'
           - 'docker.io/frooodle/s-pdf'
           - 'docker.io/library/python'
+          - 'public.ecr.aws/zinclabs/openobserve'
 
     steps:
     - name: Checkout
