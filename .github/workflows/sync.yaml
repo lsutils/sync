@@ -47,6 +47,7 @@ jobs:
           - 'docker.io/bitnami/mongodb'
           - 'ghcr.io/apache/skywalking-showcase/app'
           - 'docker.io/library/postgres'
+          - 'docker.io/library/golang'
           - 'ghcr.io/apache/skywalking-showcase/songs-service'
           - 'docker.io/pivotalrabbitmq/perf-test'
           - 'ghcr.io/skyapm/r3'
