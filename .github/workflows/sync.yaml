@@ -79,6 +79,8 @@ jobs:
           - 'docker.io/library/python'
           - 'public.ecr.aws/zinclabs/openobserve'
           - 'docker.io/jaegertracing/all-in-one'
+          - 'docker.io/kubezoo/kubezoo'
+          - 'docker.io/kubezoo/clusterresourcequota'
 
     steps:
     - name: Checkout
