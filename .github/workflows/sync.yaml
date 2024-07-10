@@ -13,7 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
-          - 'quay.io/coreos/etcd'
+    
           - 'docker.io/library/alpine'
           - 'docker.io/labring/kubernetes-docker'
           - 'docker.io/labring/kubernetes'
