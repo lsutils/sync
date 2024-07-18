@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/volcanosh/dist-mnist-tf-example'
           - 'docker.io/volcanosh/vc-webhook-manager'
           - 'docker.io/volcanosh/vc-controller-manager'
           - 'docker.io/volcanosh/vc-scheduler'
