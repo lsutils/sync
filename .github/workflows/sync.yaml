@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/yunwei37/ebpm'
           - 'docker.io/redroid/redroid'
           - 'docker.io/volcanosh/dist-mnist-tf-example'
           - 'docker.io/volcanosh/vc-webhook-manager'
