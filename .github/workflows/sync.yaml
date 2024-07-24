@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/budtmo/docker-android'
           - 'docker.io/x11docker/xserver-xorg-focal'
           - 'docker.io/yunwei37/ebpm'
           - 'docker.io/redroid/redroid'
