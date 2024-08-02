@@ -13,6 +13,11 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/karmada/karmada-aggregated-apiserver'
+          - 'docker.io/karmada/karmada-controller-manager'
+          - 'docker.io/karmada/karmada-scheduler'
+          - 'docker.io/karmada/karmada-webhook'
+          - 'quay.io/coreos/etcd'
           - 'docker.io/budtmo/docker-android'
           - 'docker.io/x11docker/xserver-xorg-focal'
           - 'docker.io/yunwei37/ebpm'
@@ -30,7 +35,6 @@ jobs:
           - 'docker.io/library/ubuntu'
           - 'docker.io/library/centos'
           - 'docker.io/mydlqclub/dnsutils'
-          - 'docker.io/bitnami/etcd'
           - 'docker.io/apache/apisix'
           - 'docker.io/flannel/flannel-cni-plugin'
           - 'docker.io/flannel/flannel'
