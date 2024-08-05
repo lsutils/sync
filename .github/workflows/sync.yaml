@@ -13,6 +13,10 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/karmada/karmada-scheduler-estimator'
+          - 'docker.io/karmada/karmada-metrics-adapter'
+          - 'docker.io/karmada/karmada-descheduler'
+          - 'docker.io/karmada/karmada-search'
           - 'gcr.io/heptio-images/ks-guestbook-demo'
           - 'docker.io/karmada/karmada-aggregated-apiserver'
           - 'docker.io/karmada/karmada-controller-manager'
