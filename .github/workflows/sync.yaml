@@ -13,7 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
-          - 'docker.io/library/alpine'
+          - 'gcr.io/heptio-images/ks-guestbook-demo'
           - 'docker.io/karmada/karmada-aggregated-apiserver'
           - 'docker.io/karmada/karmada-controller-manager'
           - 'docker.io/karmada/karmada-scheduler'
