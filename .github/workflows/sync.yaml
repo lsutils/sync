@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/karmada/karmada-agent'
           - 'registry.k8s.io/etcd'
           - 'registry.k8s.io/kube-apiserver'
           - 'registry.k8s.io/kube-controller-manager'
