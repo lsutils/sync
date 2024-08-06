@@ -14,6 +14,8 @@ jobs:
      matrix:
         syncs:
           - 'registry.k8s.io/etcd'
+          - 'registry.k8s.io/kube-apiserver'
+          - 'registry.k8s.io/kube-controller-manager'
           - 'registry.k8s.io/metrics-server/metrics-server'
           - 'docker.io/80imike/find-container-process'
           - 'docker.io/karmada/karmada-scheduler-estimator'
