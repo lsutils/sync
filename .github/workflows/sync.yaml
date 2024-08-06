@@ -13,6 +13,8 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'registry.k8s.io/etcd'
+          - 'registry.k8s.io/metrics-server/metrics-server'
           - 'docker.io/80imike/find-container-process'
           - 'docker.io/karmada/karmada-scheduler-estimator'
           - 'docker.io/karmada/karmada-metrics-adapter'
@@ -23,7 +25,6 @@ jobs:
           - 'docker.io/karmada/karmada-controller-manager'
           - 'docker.io/karmada/karmada-scheduler'
           - 'docker.io/karmada/karmada-webhook'
-          - 'quay.io/coreos/etcd'
           - 'docker.io/budtmo/docker-android'
           - 'docker.io/x11docker/xserver-xorg-focal'
           - 'docker.io/yunwei37/ebpm'
