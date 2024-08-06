@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/80imike/find-container-process'
           - 'docker.io/karmada/karmada-scheduler-estimator'
           - 'docker.io/karmada/karmada-metrics-adapter'
           - 'docker.io/karmada/karmada-descheduler'
