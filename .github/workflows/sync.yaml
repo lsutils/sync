@@ -43,6 +43,7 @@ jobs:
           - 'docker.io/labring/flannel'
           - 'docker.io/labring/calico'
           - 'docker.io/library/ubuntu'
+          - 'docker.io/library/redis'
           - 'docker.io/library/centos'
           - 'docker.io/mydlqclub/dnsutils'
           - 'docker.io/apache/apisix'
