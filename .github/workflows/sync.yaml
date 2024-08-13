@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'vllm/vllm-openai'
           - 'docker.io/karmada/karmada-agent'
           - 'registry.k8s.io/etcd'
           - 'registry.k8s.io/kube-apiserver'
