@@ -16,6 +16,7 @@ jobs:
           - 'ghcr.io/k-cloud-labs/kinitiras-webhook'
           - 'docker.io/goharbor/prepare'
           - 'docker.io/vllm/vllm-openai'
+          - 'docker.io/library/nginx'
           - 'docker.io/karmada/karmada-agent'
           - 'registry.k8s.io/etcd'
           - 'registry.k8s.io/kube-apiserver'
