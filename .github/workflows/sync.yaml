@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/loftsh/vcluster'
           - 'ghcr.io/k-cloud-labs/kinitiras-webhook'
           - 'docker.io/goharbor/prepare'
           - 'docker.io/vllm/vllm-openai'
