@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/wagoodman/dive'
           - 'docker.io/mingrammer/flog'
           - 'docker.io/kubeskoop/agent'
           - 'docker.io/prom/prometheus'
