@@ -13,6 +13,22 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'quay.io/submariner/nettest'
+          - 'quay.io/submariner/submariner-operator'
+          - 'quay.io/submariner/lighthouse-coredns'
+          - 'quay.io/submariner/submariner-gateway'
+          - 'quay.io/submariner/submariner-route-agent'
+          - 'docker/karmada/karmada-metrics-adapter'
+          - 'docker/karmada/karmada-operator'
+          - 'docker/karmada/karmada-search'
+          - 'docker/karmada/karmada-interpreter-webhook-example'
+          - 'docker/karmada/karmada-scheduler-estimator'
+          - 'docker/karmada/karmada-agent'
+          - 'docker/karmada/karmada-webhook'
+          - 'docker/karmada/karmada-descheduler'
+          - 'docker/karmada/karmada-scheduler'
+          - 'docker/karmada/karmada-controller-manager'
+          - 'docker/karmada/karmada-aggregated-apiserver'
           - 'docker.io/wagoodman/dive'
           - 'docker.io/mingrammer/flog'
           - 'docker.io/kubeskoop/agent'
