@@ -13,6 +13,10 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/library/busybox'
+          - 'docker.io/kubeshark/front'
+          - 'docker.io/kubeshark/worker'
+          - 'docker.io/kubeshark/hub'
           - 'quay.io/submariner/lighthouse-agent'
           - 'quay.io/submariner/nettest'
           - 'quay.io/submariner/submariner-operator'
