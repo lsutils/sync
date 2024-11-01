@@ -13,6 +13,10 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/flomesh/fsm-preinstall'
+          - 'docker.io/flomesh/fsm-controller'
+          - 'docker.io/flomesh/fsm-injector'
+          - 'docker.io/flomesh/fsm-ingress'
           - 'docker.io/rancher/k3s'
           - 'docker.io/library/busybox'
           - 'docker.io/kubeshark/front'
