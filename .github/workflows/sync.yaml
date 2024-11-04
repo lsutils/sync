@@ -16,6 +16,7 @@ jobs:
           - 'docker.io/flomesh/pipy'
           - 'docker.io/flomesh/pipy-repo'
           - 'docker.io/flomesh/fsm-preinstall'
+          - 'docker.io/flomesh/fsm-bootstrap'
           - 'docker.io/flomesh/fsm-controller'
           - 'docker.io/flomesh/fsm-injector'
           - 'docker.io/flomesh/fsm-ingress'
