@@ -13,7 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
-          - 'rook/ceph'
+          - 'docker.io/rook/ceph'
           - 'quay.io/cephcsi/cephcsi'
           - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar'
           - 'k8s.gcr.io/sig-storage/csi-resizer'  
