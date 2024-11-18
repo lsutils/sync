@@ -13,6 +13,12 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'quay.io/cephcsi/cephcsi'
+          - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar'
+          - 'k8s.gcr.io/sig-storage/csi-resizer'  
+          - 'k8s.gcr.io/sig-storage/csi-provisioner'
+          - 'k8s.gcr.io/sig-storage/csi-snapshotter'
+          - 'k8s.gcr.io/sig-storage/csi-attacher'
           - 'docker.io/flomesh/pipy'
           - 'docker.io/flomesh/pipy-repo'
           - 'docker.io/flomesh/fsm-sidecar-init'
