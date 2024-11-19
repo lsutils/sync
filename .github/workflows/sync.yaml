@@ -13,6 +13,9 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'quay.io/cilium/hubble-export-stdout'
+          - 'quay.io/cilium/tetragon-operator'
+          - 'quay.io/cilium/tetragon'
           - 'ghcr.io/protosam/auto-nbd'
           - 'docker.io/rook/ceph'
           - 'quay.io/cephcsi/cephcsi'
