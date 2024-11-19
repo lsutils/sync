@@ -13,8 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
-          - 'ghcr.io/eunomia-bpf/ecc-arm64'
-          - 'ghcr.io/eunomia-bpf/ecc-amd64'
+          - 'ghcr.io/eunomia-bpf/ecc-x86_64'
           - 'docker.io/opensearchproject/opensearch'
           - 'docker.io/opensearchproject/opensearch-dashboards'
           - 'quay.io/cilium/hubble-export-stdout'
