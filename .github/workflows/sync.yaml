@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'docker.io/clickhouse/clickhouse-server'
           - 'ghcr.io/eunomia-bpf/ecc-x86_64'
           - 'docker.io/opensearchproject/opensearch'
           - 'docker.io/opensearchproject/opensearch-dashboards'
