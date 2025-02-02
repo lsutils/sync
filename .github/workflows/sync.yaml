@@ -28,8 +28,7 @@ jobs:
           - 'quay.io/cilium/hubble-ui'
           - 'quay.io/cilium/cilium-envoy'
           - 'quay.io/cilium/operator'
-          - 'quay.io/cilium/startup-script'
-          - 'quay.io/cilium/cilium-ci'
+          - 'quay.io/cilium/startup-script' 
           - 'quay.io/cilium/clustermesh-apiserver-ci'
           
           - 'ghcr.io/protosam/auto-nbd'
