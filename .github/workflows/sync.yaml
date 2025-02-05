@@ -17,7 +17,7 @@ jobs:
           - 'ghcr.io/eunomia-bpf/ecc-x86_64'
           - 'docker.io/opensearchproject/opensearch'
           - 'docker.io/opensearchproject/opensearch-dashboards'
-          
+          - 'docker.io/registry/latency-test'
           - 'quay.io/cilium/hubble-export-stdout'
           - 'quay.io/cilium/tetragon-operator'
           - 'quay.io/cilium/tetragon'
