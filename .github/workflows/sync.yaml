@@ -27,6 +27,9 @@ jobs:
           - 'quay.io/cilium/cilium-envoy'
           - 'quay.io/cilium/operator'
           - 'quay.io/cilium/startup-script' 
+          - 'quay.io/cilium/operator-generic'
+          - 'docker.io/cilium/hubble-relay'
+          - 'docker.io/cilium/cilium'
           
           - 'ghcr.io/protosam/auto-nbd'
           - 'docker.io/rook/ceph'
