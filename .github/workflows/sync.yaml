@@ -21,7 +21,7 @@ jobs:
           - 'docker.io/grafana/grafana'
           - 'docker.io/istio/examples-bookinfo-reviews-v2'
           - 'docker.io/mccutchen/go-httpbin'
-          - 'docker.io/istio/proxy2'
+          - 'docker.io/istio/proxyv2'
           - 'docker.io/istio/examples-bookinfo-mongodb'
           - 'docker.io/istio/examples-bookinfo-ratings-v1'
           - 'docker.io/istio/examples-helloworld-v1'
