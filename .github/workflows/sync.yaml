@@ -13,6 +13,7 @@ jobs:
     strategy:
      matrix:
         syncs:
+          - 'ghcr.io/prometheus-operator/prometheus-config-reloader'
           - 'docker.io/istio/examples-bookinfo-details-v1'
           - 'docker.io/istio/examples-bookinfo-reviews-v1'
           - 'docker.io/istio/tcp-echo-server'
