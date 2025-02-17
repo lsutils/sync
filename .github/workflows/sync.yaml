@@ -34,7 +34,7 @@ jobs:
           - 'docker.io/istio/examples-bookinfo-productpage-v1'
           - 'docker.io/istio/examples-bookinfo-ratings-v2'
           - 'docker.io/istio/examples-bookinfo-mysqldb'
-       
+
           - 'docker.io/projecthami/hami'
           - 'docker.io/clickhouse/clickhouse-server'
           - 'ghcr.io/eunomia-bpf/ecc-x86_64'
@@ -49,16 +49,16 @@ jobs:
           - 'quay.io/cilium/hubble-ui'
           - 'quay.io/cilium/cilium-envoy'
           - 'quay.io/cilium/operator'
-          - 'quay.io/cilium/startup-script' 
+          - 'quay.io/cilium/startup-script'
           - 'quay.io/cilium/operator-generic'
           - 'docker.io/cilium/hubble-relay'
           - 'docker.io/cilium/cilium'
-          
+
           - 'ghcr.io/protosam/auto-nbd'
           - 'docker.io/rook/ceph'
           - 'quay.io/cephcsi/cephcsi'
           - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar'
-          - 'k8s.gcr.io/sig-storage/csi-resizer'  
+          - 'k8s.gcr.io/sig-storage/csi-resizer'
           - 'k8s.gcr.io/sig-storage/csi-provisioner'
           - 'k8s.gcr.io/sig-storage/csi-snapshotter'
           - 'k8s.gcr.io/sig-storage/csi-attacher'
@@ -130,7 +130,7 @@ jobs:
           - 'docker.io/apache/apisix'
           - 'docker.io/flannel/flannel-cni-plugin'
           - 'docker.io/flannel/flannel'
-          - 'docker.io/library/debian' 
+          - 'docker.io/library/debian'
           - 'skywalking.docker.scarf.sh/apache/skywalking-oap-server'
           - 'skywalking.docker.scarf.sh/apache/skywalking-ui'
           - 'docker.io/library/busybox'
@@ -182,7 +182,7 @@ jobs:
           - 'docker.io/frooodle/s-pdf'
           - 'docker.io/library/python'
           - 'public.ecr.aws/zinclabs/openobserve'
-          
+
           - 'docker.io/kubezoo/kubezoo'
           - 'docker.io/kubezoo/clusterresourcequota'
 
@@ -193,6 +193,8 @@ jobs:
       run: apt update -y && apt -y install skopeo curl python3
     - name: 'login'
       run: skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p "${{ secrets.REGISTERY_PASSWORD }}"
+    - name: 'login docker'
+      run: skopeo login -u ${{ secrets.DOCKER_REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p "${{ secrets.DOCKER_REGISTERY_PASSWORD }}"
     - name: sync
       run: python3 sync.py ${{ matrix.syncs }} -v
 
