@@ -193,8 +193,6 @@ jobs:
       run: apt update -y && apt -y install skopeo curl python3
     - name: 'login'
       run: skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p "${{ secrets.REGISTERY_PASSWORD }}"
-    - name: 'login docker'
-      run: skopeo login -u ${{ secrets.DOCKER_REGISTERY_USERNAME }} docker.io -p "${{ secrets.DOCKER_REGISTERY_PASSWORD }}"
     - name: sync
       run: python3 sync.py ${{ matrix.syncs }} -v
 

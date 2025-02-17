@@ -4,6 +4,10 @@ import random
 import subprocess
 import sys
 
+data = list(range(1, 10))
+data.append('')
+seq = random.sample(list(data), k=1)[0]
+os.system(f"skopeo login -u pulldownload{seq}@gmail.com docker.io -p pulldownload{seq}")
 
 def get_tags(rep):
     data = set()
@@ -35,4 +39,3 @@ for tag in data:
     print(i, "/", len(data), cmd, flush=True)
     os.system(cmd)
     i += 1
-# os.system(f'skopeo sync --src docker --dest docker {item.f} {item.t} --src-tls-verify=false --dest-tls-verify=false')
