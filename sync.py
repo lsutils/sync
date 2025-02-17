@@ -8,12 +8,13 @@ import sys
 def get_tags(rep):
     data = set()
     try:
-        data = set(json.loads(subprocess.getoutput(f"skopeo list-tags docker://{rep}"))['Tags'])
+        cmd = f"skopeo list-tags docker://{rep}"
+        out = subprocess.getoutput(cmd)
+        print(rep, cmd, out)
+        data = set(json.loads(out)['Tags'])
     except Exception as e :
         print(e)
-    print(rep, data)
     return data
-
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 print(sys.argv)
