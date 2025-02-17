@@ -9,8 +9,8 @@ def get_tags(rep):
     data = set()
     try:
         data = set(json.loads(subprocess.getoutput(f"skopeo list-tags docker://{rep}"))['Tags'])
-    except Exception:
-        pass
+    except Exception as e :
+        print(e)
     print(rep, data)
     return data
 
