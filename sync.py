@@ -23,6 +23,8 @@ base_image = item.split('/')[-1]
 h = get_tags(item)
 a = get_tags(base + '/' + base_image)
 print(len(h))
+if len(h) == 0:
+    raise Exception("null")
 print(len(a))
 data = list(h - a)
 random.shuffle(data)
