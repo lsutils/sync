@@ -18,6 +18,7 @@ jobs:
           - 'docker.io/istio/tcp-echo-server'
           - 'docker.io/istio/health'
           - 'docker.io/grafana/loki'
+          - 'docker.io/kiwigrid/k8s-sidecar'
           - 'docker.io/grafana/grafana'
           - 'docker.io/istio/examples-bookinfo-reviews-v2'
           - 'docker.io/mccutchen/go-httpbin'
