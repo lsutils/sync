@@ -14,10 +14,10 @@ def get_tags(rep):
     try:
         cmd = f"skopeo list-tags docker://{rep}"
         out = subprocess.getoutput(cmd)
-        print(rep, cmd, out)
+        print(rep, cmd)
         data = set(json.loads(out)['Tags'])
     except Exception as e :
-        print(e)
+        print(e, out)
     return data
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
