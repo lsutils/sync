@@ -111,7 +111,6 @@ jobs:
           - 'docker.io/80imike/find-container-process'
           - 'gcr.io/heptio-images/ks-guestbook-demo'
           - 'docker.io/budtmo/docker-android'
-          - 'docker.io/x11docker/xserver-xorg-focal'
           - 'docker.io/yunwei37/ebpm'
           - 'docker.io/redroid/redroid'
           - 'docker.io/volcanosh/dist-mnist-tf-example'
