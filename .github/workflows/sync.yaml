@@ -55,7 +55,7 @@ jobs:
           - 'docker.io/cilium/hubble-relay'
           - 'docker.io/cilium/cilium'
 
-          - 'ghcr.io/protosam/auto-nbd'
+          # - 'ghcr.io/protosam/auto-nbd'
           - 'docker.io/rook/ceph'
           - 'quay.io/cephcsi/cephcsi'
           - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar'
