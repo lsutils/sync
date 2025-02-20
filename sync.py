@@ -30,8 +30,10 @@ print(len(h))
 if len(h) == 0:
     raise Exception("null")
 print(len(a))
-data = list(h - a)
-random.shuffle(data)
+# data = list(h - a)
+# random.shuffle(data)
+
+data = h
 
 i = 0
 for tag in data:
