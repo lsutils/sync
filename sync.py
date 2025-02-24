@@ -18,7 +18,11 @@ def get_tags(rep):
         data = set(json.loads(out)['Tags'])
     except Exception as e :
         print(e, out)
-    return data
+    x = set()
+    for item in data:
+        if len(item)<20:
+            x.add(item)
+    return x
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 print(sys.argv)

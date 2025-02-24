@@ -42,6 +42,7 @@ jobs:
           - 'docker.io/opensearchproject/opensearch'
           - 'docker.io/opensearchproject/opensearch-dashboards'
           - 'docker.io/meltwater/latency-test'
+          
           - 'quay.io/cilium/hubble-export-stdout'
           - 'quay.io/cilium/tetragon-operator'
           - 'quay.io/cilium/tetragon'
@@ -54,8 +55,8 @@ jobs:
           - 'quay.io/cilium/operator-generic'
           - 'docker.io/cilium/hubble-relay'
           - 'docker.io/cilium/cilium'
+          - 'quay.io/cilium/hubble-relay-ci'
 
-          # - 'ghcr.io/protosam/auto-nbd'
           - 'docker.io/rook/ceph'
           - 'quay.io/cephcsi/cephcsi'
           - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar'
@@ -118,8 +119,6 @@ jobs:
           - 'docker.io/volcanosh/vc-controller-manager'
           - 'docker.io/volcanosh/vc-scheduler'
           - 'docker.io/library/alpine'
-          - 'docker.io/labring/kubernetes-docker'
-          - 'docker.io/labring/kubernetes'
           - 'docker.io/labring/helm'
           - 'docker.io/labring/flannel'
           - 'docker.io/labring/calico'
