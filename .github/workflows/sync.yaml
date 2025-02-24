@@ -53,6 +53,7 @@ jobs:
           - 'quay.io/cilium/operator'
           - 'quay.io/cilium/startup-script'
           - 'quay.io/cilium/operator-generic'
+          - 'quay.io/cilium/cilium-ci'
           - 'docker.io/cilium/hubble-relay'
           - 'docker.io/cilium/cilium'
           - 'quay.io/cilium/hubble-relay-ci'
