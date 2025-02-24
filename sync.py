@@ -20,7 +20,7 @@ def get_tags(rep):
         print(e, out)
     x = set()
     for item in data:
-        if len(item)<20:
+        if len(item)<20 or item.startswith("v"):
             x.add(item)
     return x
 
