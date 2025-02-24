@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container: debian:stable
     strategy:
-    #  max-parallel: 10
+     max-parallel: 10
      matrix:
         syncs:
           - 'ghcr.io/prometheus-operator/prometheus-config-reloader'
