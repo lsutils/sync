@@ -4,6 +4,7 @@ import random
 import subprocess
 import sys
 
+
 # data = list(range(2, 10))
 # data.append('')
 # seq = random.sample(list(data), k=1)[0]
@@ -16,13 +17,16 @@ def get_tags(rep):
         out = subprocess.getoutput(cmd)
         print(rep, cmd)
         data = set(json.loads(out)['Tags'])
-    except Exception as e :
+    except Exception as e:
         print(e, out)
     x = set()
     for item in data:
-        if item.startswith("v") or item.startswith("1") or item.startswith("2") :
+        if item.startswith("v") or item.startswith("1") or item.startswith("2"):
             x.add(item)
+    if len(x) == 0:
+        x = data
     return x
+
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 print(sys.argv)
