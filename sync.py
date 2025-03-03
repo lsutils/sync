@@ -5,10 +5,10 @@ import subprocess
 import sys
 
 
-# data = list(range(2, 10))
-# data.append('')
-# seq = random.sample(list(data), k=1)[0]
-# os.system(f"skopeo login -u pulldownload{seq}@gmail.com docker.io -p pulldownload{seq}")
+data = list(range(2, 10))
+data.append('')
+seq = random.sample(list(data), k=1)[0]
+os.system(f"skopeo login -u pulldownload{seq}@gmail.com docker.io -p pulldownload{seq}")
 
 def get_tags(rep):
     data = set()
