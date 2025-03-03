@@ -48,7 +48,7 @@ for tag in data:
     if tag.endswith('.sbom'):
         print(f"skip {tag}")
         continue
-    cmd = f'skopeo --debug copy --all --insecure-policy docker://{item}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
+    cmd = f'skopeo copy --all --insecure-policy docker://{item}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     os.system(cmd)
     i += 1
