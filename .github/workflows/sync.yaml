@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: quay.io/skopeo/stable:latest
+    container: ubuntu:24.04
     continue-on-error: true
     strategy:
     #  max-parallel: 10
