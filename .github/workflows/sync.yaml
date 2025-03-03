@@ -192,6 +192,9 @@ jobs:
       uses: actions/checkout@v2
     - name: 'login'
       run: skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p "${{ secrets.REGISTERY_PASSWORD }}"
+    - name: 'pare'
+      run: |
+        pip3 install redis
     - name: sync
       run: python3 sync.py ${{ matrix.syncs }} -v
 

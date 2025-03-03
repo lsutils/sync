@@ -1,8 +1,21 @@
 import json
 import os
 import random
-import subprocess
 import sys
+import redis
+import subprocess
+
+source_image = sys.argv[1]
+
+client = redis.StrictRedis(
+    host=os.getenv("REDIS_HOST"),
+    port=26379,
+    db=10,
+    password=os.getenv("REDIS_PASSWORD")
+)
+
+rdata = client.hgetall(source_image)
+
 
 # data = list(range(2, 10))
 # data.append('')
@@ -11,44 +24,47 @@ import sys
 
 
 def get_tags(rep):
-    data = set()
+    _data = set()
+    _out = ""
     try:
-        cmd = f"skopeo list-tags docker://{rep}"
-        out = subprocess.getoutput(cmd)
-        print(rep, cmd)
-        data = set(json.loads(out)['Tags'])
+        _cmd = f"skopeo list-tags docker://{rep}"
+        _out = subprocess.getoutput(_cmd)
+        print(rep, _cmd)
+        _data = set(json.loads(_out)['Tags'])
     except Exception as e:
-        print(e, out)
+        print(e, _out)
     x = set()
-    for item in data:
-        if item.startswith("v") or item.startswith("1") or item.startswith("2"):
-            x.add(item)
+    for _item in _data:
+        if _item.startswith("v") or _item.startswith("1") or _item.startswith("2"):
+            x.add(_item)
     if len(x) == 0:
-        x = data
+        x = _data
+
+    for k, _ in rdata.items():
+        x.remove(k)
+
     return x
 
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 print(sys.argv)
-item = sys.argv[1]
-base_image = item.split('/')[-1]
-h = get_tags(item)
-a = get_tags(base + '/' + base_image)
-print(len(h))
-if len(h) == 0:
-    raise Exception("null")
-print(len(a))
-# data = list(h - a)
-# random.shuffle(data)
+base_image = source_image.split('/')[-1]
+data = list(get_tags(source_image))
 
-data = h
+print(len(data))
+if len(data) == 0:
+    raise Exception("null")
+
+random.shuffle(data)
 
 i = 0
 for tag in data:
     if tag.endswith('.sbom'):
         print(f"skip {tag}")
         continue
-    cmd = f'skopeo copy --all --insecure-policy docker://{item}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
+    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
-    os.system(cmd)
-    i += 1
+    res = subprocess.run(cmd, shell=True)
+    if res.returncode == 0:
+        client.hset(source_image, tag, "1")
+        i += 1
