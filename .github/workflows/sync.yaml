@@ -1,7 +1,7 @@
 name: sync
 on:
   schedule:
-  - cron: '*/30 * * * *'
+  - cron: '* */6 * * *'
   push:
     branches: ["main"]
   pull_request:
@@ -12,7 +12,7 @@ jobs:
     container: debian:stable
     continue-on-error: true
     strategy:
-     max-parallel: 10
+    #  max-parallel: 10
      matrix:
         syncs:
           - 'docker.io/library/buildpack-deps'
