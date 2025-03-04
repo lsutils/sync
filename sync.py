@@ -53,8 +53,6 @@ base_image = source_image.split('/')[-1]
 data = list(get_tags(source_image))
 
 print(len(data))
-if len(data) == 0:
-    raise Exception("null")
 
 random.shuffle(data)
 
