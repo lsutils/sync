@@ -41,7 +41,7 @@ def get_tags(rep):
         x = _data
 
     for k, _ in rdata.items():
-        x.remove(k)
+        x.remove(str(k))
 
     return x
 
