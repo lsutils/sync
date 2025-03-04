@@ -11,7 +11,8 @@ client = redis.StrictRedis(
     host=os.getenv("REDIS_HOST"),
     port=26379,
     db=10,
-    password=os.getenv("REDIS_PASSWORD")
+    password=os.getenv("REDIS_PASSWORD"),
+    decode_responses=True
 )
 
 rdata = client.hgetall(source_image)
