@@ -39,13 +39,15 @@ def get_tags(rep):
         if _item.startswith("v") or _item.startswith("1") or _item.startswith("2") or _item == "latest":
             x.add(_item)
     # if len(x) == 0:
-        # x = _data
-    
+    # x = _data
+
     for k, _ in rdata.items():
         if "latest" == k:
             continue
-        x.remove(str(k))
-
+        try:
+            x.remove(str(k))
+        except:
+            pass
     return x
 
 
