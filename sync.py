@@ -36,12 +36,14 @@ def get_tags(rep):
         print(e, _out)
     x = set()
     for _item in _data:
-        if _item.startswith("v") or _item.startswith("1") or _item.startswith("2"):
+        if _item.startswith("v") or _item.startswith("1") or _item.startswith("2") or _item == "latest":
             x.add(_item)
-    if len(x) == 0:
-        x = _data
-
+    # if len(x) == 0:
+        # x = _data
+    
     for k, _ in rdata.items():
+        if "latest" == k:
+            continue
         x.remove(str(k))
 
     return x
