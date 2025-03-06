@@ -34,12 +34,12 @@ def get_tags(rep):
         _data = set(json.loads(_out)['Tags'])
     except Exception as e:
         print(e, _out)
-    x = set()
-    for _item in _data:
-        if _item.startswith("v") or _item.startswith("1") or _item.startswith("2") or _item == "latest":
-            x.add(_item)
+    # x = set()
+    # for _item in _data:
+    #     if _item.startswith("v") or _item.startswith("1") or _item.startswith("2") or _item == "latest":
+    #         x.add(_item)
     # if len(x) == 0:
-    # x = _data
+    x = _data
 
     for k, _ in rdata.items():
         if "latest" == k:
