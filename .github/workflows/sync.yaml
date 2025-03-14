@@ -15,6 +15,7 @@ jobs:
     #  max-parallel: 10
      matrix:
         syncs:
+          - 'docker.io/envoyproxy/envoy'
           - 'docker.io/goharbor/harbor-log'
           - 'docker.io/goharbor/registry-photon'
           - 'docker.io/goharbor/harbor-registryctl'
