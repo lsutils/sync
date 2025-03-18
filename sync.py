@@ -67,7 +67,11 @@ for tag in data:
         continue
     cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
-    res = subprocess.run(cmd, shell=True)
-    if res.returncode == 0:
+    i += 1
+    (code, text) = subprocess.getstatusoutput(cmd)
+    if code == 0:
         client.hset(source_image, tag, "1")
+        i += 1
+    if 'unsupported' in text:
+        client.hset(source_image, tag, "unsupported")
         i += 1
