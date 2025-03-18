@@ -15,7 +15,8 @@ client = redis.StrictRedis(
     decode_responses=True
 )
 
-rdata = client.hgetall(source_image)
+
+# rdata = client.hgetall(source_image)
 
 
 # data = list(range(2, 10))
@@ -41,13 +42,19 @@ def get_tags(rep):
     # if len(x) == 0:
     x = _data
 
-    for k, _ in rdata.items():
-        if "latest" == k:
-            continue
-        try:
-            x.remove(str(k))
-        except:
-            pass
+    for k in x:
+        if client.hexists(source_image, k):
+            try:
+                x.remove(str(k))
+            except:
+                pass
+    # for k, _ in rdata.items():
+    #     if "latest" == k:
+    #         continue
+    #     try:
+    #         x.remove(str(k))
+    #     except:
+    #         pass
     return x
 
 
