@@ -42,7 +42,7 @@ def get_tags(rep):
     # if len(x) == 0:
     x = _data
 
-    for k in x:
+    for k in list(x):
         if client.hexists(source_image, k):
             try:
                 x.remove(str(k))
