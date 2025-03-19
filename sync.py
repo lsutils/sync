@@ -5,7 +5,12 @@ import sys
 import redis
 import subprocess
 
-source_image = sys.argv[1]
+from dup import new_name
+
+_input = sys.argv[1]
+print(sys.argv)
+ss = _input.strip(' "').split(' ')
+source_image = ss[0].strip()
 
 client = redis.StrictRedis(
     host=os.getenv("REDIS_HOST"),
@@ -15,8 +20,7 @@ client = redis.StrictRedis(
     decode_responses=True
 )
 
-
-# rdata = client.hgetall(source_image)
+rdata = client.hgetall(source_image)
 
 
 # data = list(range(2, 10))
@@ -42,29 +46,31 @@ def get_tags(rep):
     # if len(x) == 0:
     x = _data
 
-    for k in list(x):
-        if client.hexists(source_image, k):
-            try:
-                x.remove(str(k))
-            except:
-                pass
-    # for k, _ in rdata.items():
-    #     if "latest" == k:
-    #         continue
-    #     try:
-    #         x.remove(str(k))
-    #     except:
-    #         pass
+    # for k in list(x):
+    #     if client.hexists(source_image, k):
+    #         try:
+    #             x.remove(str(k))
+    #         except:
+    #             pass
+    for k, _ in rdata.items():
+        if "latest" == k:
+            continue
+        try:
+            x.remove(str(k))
+        except:
+            pass
     return x
 
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
-print(sys.argv)
-base_image = source_image.split('/')[-1]
+
+if len(ss) != 1:
+    new_name = ss[-1]
+else:
+    new_name = ss[0].split('/')[-1]
+
 data = list(get_tags(source_image))
-
 print(len(data))
-
 random.shuffle(data)
 
 i = 0
@@ -72,12 +78,12 @@ for tag in data:
     if tag.endswith('.sbom'):
         print(f"skip {tag}")
         continue
-    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{base_image}:{tag}'
+    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{new_name}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     if code == 0:
         client.hset(source_image, tag, "1")
         i += 1
     if 'unsupported' in text:
-        client.hset(source_image, tag, "unsupported")
+        client.hset(source_image, tag, "2")
         i += 1
