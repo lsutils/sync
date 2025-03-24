@@ -5,8 +5,6 @@ import sys
 import redis
 import subprocess
 
-from dup import new_name
-
 _input = sys.argv[1]
 print(sys.argv)
 ss = _input.strip(' "').split(' ')
