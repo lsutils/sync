@@ -139,6 +139,7 @@ jobs:
                 - '"docker.io/volcanosh/vc-webhook-manager                                                                      "'
                 - '"docker.io/wagoodman/dive                                                                                    "'
                 - '"docker.io/yunwei37/ebpm                                                                                     "'
+                - '"docker://ghcr.io/fluxcd/flagger                                                                             "'
                 - '"gcr.io/heptio-images/ks-guestbook-demo                                                                      "'
                 - '"gcr.io/kubebuilder/kube-rbac-proxy                                                                          "'
                 - '"ghcr.io/apache/skywalking-cli/skywalking-cli                                                                "'
