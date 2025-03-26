@@ -159,6 +159,7 @@ jobs:
                 - '"ghcr.io/k-cloud-labs/kinitiras-webhook                                                                      "'
                 - '"ghcr.io/prometheus-operator/prometheus-config-reloader                                                      "'
                 - '"ghcr.io/skyapm/r3                                                                                           "'
+                - '"ghcr.io/stefanprodan/podinfo                                                                                "'
                 - '"k8s.gcr.io/sig-storage/csi-attacher                                                                         "'
                 - '"k8s.gcr.io/sig-storage/csi-node-driver-registrar                                                            "'
                 - '"k8s.gcr.io/sig-storage/csi-provisioner                                                                      "'
