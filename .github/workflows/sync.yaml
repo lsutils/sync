@@ -202,6 +202,17 @@ jobs:
                 - '"registry.k8s.io/metrics-server/metrics-server                                                               "'
                 - '"skywalking.docker.scarf.sh/apache/skywalking-oap-server                                                     "'
                 - '"skywalking.docker.scarf.sh/apache/skywalking-ui                                                             "'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice                                      microservices-demo-adservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice                                    microservices-demo-cartservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice                                microservices-demo-checkoutservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice                                microservices-demo-currencyservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice                                   microservices-demo-emailservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend                                       microservices-demo-frontend"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator                                  microservices-demo-loadgenerator"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice                                 microservices-demo-paymentservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice                          microservices-demo-productcatalogservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice                          microservices-demo-recommendationservice"'
+                - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice                                microservices-demo-shippingservice"'
             max-parallel: 100
 name: sync
 'on':
