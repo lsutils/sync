@@ -22,17 +22,18 @@ for item in raw:
 for k, v in c.items():
     if v != 1:
         message = f"{k} more than 1"
-        raise Exception(message)
+        print(message)
 
-syncs = []
+syncs = set()
 
 for item in raw:
     raw_name = item.split(' ')[0].strip()
 
     new_name = item.split(' ')[-1].strip() if len(item.split(' ')) > 1 else ''
 
-    syncs.append('"%s%s%s"' % (raw_name, ' ' * (max_len - len(raw_name)), new_name))
+    syncs.add('"%s%s%s"' % (raw_name, ' ' * (max_len - len(raw_name)), new_name))
 
+syncs=list(syncs)
 syncs.sort()
 res['jobs']['build']['strategy']['matrix']['syncs'] = syncs
 
