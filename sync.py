@@ -82,7 +82,7 @@ for tag in data:
     if code == 0:
         client.hset(source_image, tag, "1")
         i += 1
-    elif 'unsupported' in text:
+    elif 'unsupported' in text or 'unknown' in text:
         client.hset(source_image, tag, "2")
         i += 1
     else:
