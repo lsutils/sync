@@ -77,7 +77,7 @@ random.shuffle(data)
 
 i = 0
 for tag in data:
-    if tag.endswith('.sbom'):
+    if tag.endswith('.sbom') or tag.endswith('.sig') or tag.endswith('.att'):
         print(f"skip {tag}")
         continue
     cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{base}/{new_name}:{tag}'
