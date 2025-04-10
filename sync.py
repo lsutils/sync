@@ -62,7 +62,7 @@ def get_tags(rep):
 
 
 # base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
-base = 'tcr.tencentcloudapi.com/acejilam'
+base = 'ccr.ccs.tencentyun.com/acejilam'
 
 if len(ss) != 1:
     new_name = ss[-1]
