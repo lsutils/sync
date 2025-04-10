@@ -8,10 +8,12 @@ jobs:
             uses: actions/checkout@v2
         -   name: login
             run: skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p ${{ secrets.REGISTERY_PASSWORD }}
+        -   name: login
+            run: skopeo login -u ${{ secrets.TENCENT_REGISTERY_USERNAME }} ccr.ccs.tencentyun.com -p ${{ secrets.TENCENT_REGISTERY_PASSWORD }}
         -   name: perpare
-            run: "dnf install pip3 -y \npip3 install redis pyyaml\n"
+            run: 'dnf install pip3 -y && pip3 install redis pyyaml tencentcloud-sdk-python-tcr'
         -   name: sync
-            run: REDIS_HOST=${{ secrets.REDIS_HOST }} REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }} python3 sync.py ${{ matrix.syncs }} -v
+            run: REDIS_HOST=${{ secrets.REDIS_HOST }} REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }} SECRET_ID=${{ secrets.SECRET_ID }} SECRET_KEY=${{ secrets.SECRET_KEY }} python3 sync.py ${{ matrix.syncs }} -v
         strategy:
             matrix:
                 syncs:

@@ -4,6 +4,7 @@ import random
 import sys
 import redis
 import subprocess
+from tencent import create_repo
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -60,12 +61,15 @@ def get_tags(rep):
     return x
 
 
-base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
+# base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
+base = 'tcr.tencentcloudapi.com/acejilam'
 
 if len(ss) != 1:
     new_name = ss[-1]
 else:
     new_name = ss[0].split('/')[-1]
+
+create_repo(new_name)
 
 data = list(get_tags(source_image))
 print(len(data))
@@ -76,7 +80,7 @@ for tag in data:
     if tag.endswith('.sbom'):
         print(f"skip {tag}")
         continue
-    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://registry.cn-hangzhou.aliyuncs.com/acejilam/{new_name}:{tag}'
+    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{base}/{new_name}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     if code == 0:

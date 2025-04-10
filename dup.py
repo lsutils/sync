@@ -40,4 +40,4 @@ res['jobs']['build']['strategy']['matrix']['syncs'] = syncs
 # yaml.dump(res, open('.github/workflows/sync.yaml', 'w', encoding='utf8'))
 
 with open('.github/workflows/sync.yaml', 'w', encoding='utf8') as f:
-    f.write(yaml.dump(res, allow_unicode=False, default_flow_style=False, indent=4, width=10 ** 4))
+    f.write(yaml.dump(res, allow_unicode=False, default_flow_style=False, indent=4, width=10 ** 10))
