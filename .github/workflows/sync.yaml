@@ -236,4 +236,4 @@ name: sync
         branches:
         - main
     schedule:
-    -   cron: '* */6 * * *'
+    -   cron: '* * */1 * *'
