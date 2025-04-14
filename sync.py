@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import re
 import sys
 import redis
 import subprocess
@@ -38,12 +39,12 @@ def get_tags(rep):
         _data = set(json.loads(_out)['Tags'])
     except Exception as e:
         print(e, _out)
-    # x = set()
-    # for _item in _data:
-    #     if _item.startswith("v") or _item.startswith("1") or _item.startswith("2") or _item == "latest":
-    #         x.add(_item)
+    x = set()
+    for _item in _data:
+        if _item == "latest" or len(re.findall(r"^[0-9v]+", _item)) > 0:
+            x.add(_item)
     # if len(x) == 0:
-    x = _data
+    _data = x
 
     # for k in list(x):
     #     if client.hexists(source_image, k):
