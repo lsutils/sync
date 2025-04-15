@@ -11,13 +11,13 @@ jobs:
         -   name: login
             run: skopeo login -u ${{ secrets.TENCENT_REGISTERY_USERNAME }} ccr.ccs.tencentyun.com -p ${{ secrets.TENCENT_REGISTERY_PASSWORD }}
         -   name: perpare
-            run: 'dnf install pip3 -y && pip3 install redis pyyaml tencentcloud-sdk-python-tcr'
+            run: dnf install pip3 -y && pip3 install redis pyyaml tencentcloud-sdk-python-tcr
         -   name: sync
             run: REDIS_HOST=${{ secrets.REDIS_HOST }} REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }} SECRET_ID=${{ secrets.SECRET_ID }} SECRET_KEY=${{ secrets.SECRET_KEY }} python3 sync.py ${{ matrix.syncs }} -v
         strategy:
             matrix:
                 syncs:
-                - '"cgr.dev/chainguard/bash                                                                                     "'
+                - '"cgr.dev/chainguard/bash                                                                                     chainguard_bash"'
                 - '"docker.elastic.co/elasticsearch/elasticsearch                                                               "'
                 - '"docker.io/80imike/find-container-process                                                                    "'
                 - '"docker.io/apache/apisix                                                                                     "'
@@ -30,7 +30,6 @@ jobs:
                 - '"docker.io/bitnami/mongodb                                                                                   "'
                 - '"docker.io/bitnami/mongodb-exporter                                                                          "'
                 - '"docker.io/bitnami/rabbitmq                                                                                  "'
-                - '"docker.io/budtmo/docker-android                                                                             "'
                 - '"docker.io/cilium/cilium                                                                                     "'
                 - '"docker.io/cilium/hubble-relay                                                                               "'
                 - '"docker.io/clickhouse/clickhouse-server                                                                      "'
@@ -101,7 +100,7 @@ jobs:
                 - '"docker.io/kubezoo/kubezoo                                                                                   "'
                 - '"docker.io/labring/calico                                                                                    labring_calico"'
                 - '"docker.io/labring/flannel                                                                                   labring_flannel"'
-                - '"docker.io/labring/helmlabring_helm                                                                          "'
+                - '"docker.io/labring/helm                                                                                      labring_helm"'
                 - '"docker.io/library/alpine                                                                                    "'
                 - '"docker.io/library/buildpack-deps                                                                            "'
                 - '"docker.io/library/busybox                                                                                   "'
@@ -119,7 +118,6 @@ jobs:
                 - '"docker.io/meltwater/latency-test                                                                            "'
                 - '"docker.io/mingrammer/flog                                                                                   "'
                 - '"docker.io/mydlqclub/dnsutils                                                                                "'
-                - '"docker.io/openresty/openresty                                                                               "'
                 - '"docker.io/opensearchproject/opensearch                                                                      "'
                 - '"docker.io/opensearchproject/opensearch-dashboards                                                           "'
                 - '"docker.io/otel/opentelemetry-collector                                                                      "'
@@ -131,7 +129,6 @@ jobs:
                 - '"docker.io/rancher/k3s                                                                                       "'
                 - '"docker.io/redroid/redroid                                                                                   "'
                 - '"docker.io/rmohr/activemq                                                                                    "'
-                - '"docker.io/rook/ceph                                                                                         "'
                 - '"docker.io/tinygo/tinygo                                                                                     "'
                 - '"docker.io/traefik/whoami                                                                                    "'
                 - '"docker.io/vllm/vllm-openai                                                                                  "'
@@ -236,4 +233,4 @@ name: sync
         branches:
         - main
     schedule:
-    -   cron: '* * */1 * *'
+    -   cron: '0 20 * * *'
