@@ -20,6 +20,7 @@ for item in raw:
         c[ss[-1]] += 1
 
 for k, v in c.items():
+    k = k.strip()
     if v != 1:
         message = f"{k} more than 1"
         print(message)

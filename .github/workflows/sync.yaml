@@ -151,6 +151,7 @@ jobs:
                 - '"gcr.io/heptio-images/ks-guestbook-demo                                                                      "'
                 - '"gcr.io/knative-releases/knative.dev/net-istio/cmd/controller                                                net-istio-controller"'
                 - '"gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook                                                   net-istio-webhook"'
+                - '"gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier                                                 net-kourier-kourier"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/activator                                                   knative-serving-activator"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler                                                  knative-serving-autoscaler"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/controller                                                  knative-serving-controller"'
