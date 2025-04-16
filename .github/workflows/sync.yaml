@@ -149,6 +149,8 @@ jobs:
                 - '"gcr.io/google-samples/microservices-demo/recommendationservice                                              microservices-demo-recommendationservice"'
                 - '"gcr.io/google-samples/microservices-demo/shippingservice                                                    microservices-demo-shippingservice"'
                 - '"gcr.io/heptio-images/ks-guestbook-demo                                                                      "'
+                - '"gcr.io/knative-releases/knative.dev/net-istio/cmd/controller                                                net-istio-controller"'
+                - '"gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook                                                   net-istio-webhook"'
                 - '"gcr.io/kubebuilder/kube-rbac-proxy                                                                          "'
                 - '"ghcr.io/apache/skywalking-cli/skywalking-cli                                                                "'
                 - '"ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    "'
