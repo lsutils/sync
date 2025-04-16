@@ -156,6 +156,7 @@ jobs:
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/activator                                                   knative-serving-activator"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler                                                  knative-serving-autoscaler"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/controller                                                  knative-serving-controller"'
+                - '"gcr.io/knative-releases/knative.dev/serving/cmd/default-domain                                              knative-serving-default-domain"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/queue                                                       knative-serving-queue"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/webhook                                                     knative-serving-webhook"'
                 - '"gcr.io/kubebuilder/kube-rbac-proxy                                                                          "'
