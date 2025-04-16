@@ -77,5 +77,7 @@ for tag in data:
     elif 'unsupported' in text or 'unknown' in text:
         client.hset(source_image, tag, "2")
         i += 1
+    elif 'toomanyrequests' in text:
+        sys.exit(1)
     else:
         print(text, flush=True)
