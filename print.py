@@ -59,7 +59,7 @@ for i, _ in enumerate(raw):
     _data = set(json.loads(_out)['Tags'])
     x = {"latest"}
     for _item in _data:
-        if len(re.findall(r"^v?[0-9-.]+$", _item)) > 0 :
+        if len(re.findall(r"^v?[0-9-.]+$", _item)) > 0:
             x.add(_item)
     # if len(x) == 0:
     _data = x
