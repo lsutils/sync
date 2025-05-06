@@ -73,6 +73,7 @@ for tag in data:
     cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{base}/{new_name}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
+    print(text, flush=True)
     if code == 0:
         client.hset(source_image, tag, "1")
         i += 1
@@ -81,5 +82,3 @@ for tag in data:
         i += 1
     elif 'toomanyrequests' in text:
         sys.exit(1)
-    else:
-        print(text, flush=True)
