@@ -189,6 +189,7 @@ jobs:
                 - '"k8s.gcr.io/sig-storage/csi-snapshotter                                                                      "'
                 - '"public.ecr.aws/zinclabs/openobserve                                                                         "'
                 - '"quay.io/argoproj/argocd                                                                                     "'
+                - '"quay.io/centos/centos                                                                                       "'
                 - '"quay.io/cephcsi/cephcsi                                                                                     "'
                 - '"quay.io/cilium/certgen                                                                                      "'
                 - '"quay.io/cilium/cilium-envoy                                                                                 "'
