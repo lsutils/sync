@@ -245,4 +245,4 @@ name: sync
         branches:
         - main
     schedule:
-    -   cron: 0 20 * * *
+    -   cron: 0 */2 * * *
