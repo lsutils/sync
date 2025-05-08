@@ -32,6 +32,7 @@ jobs:
                 - '"docker.io/cilium/hubble-relay                                                                               "'
                 - '"docker.io/clickhouse/clickhouse-server                                                                      "'
                 - '"docker.io/curlimages/curl                                                                                   "'
+                - '"docker.io/docker/dockerfile                                                                                 "'
                 - '"docker.io/envoyproxy/envoy                                                                                  envoyproxy-envoy"'
                 - '"docker.io/flannel/flannel                                                                                   "'
                 - '"docker.io/flannel/flannel-cni-plugin                                                                        "'
