@@ -116,6 +116,7 @@ jobs:
                 - '"docker.io/mccutchen/go-httpbin                                                                              "'
                 - '"docker.io/meltwater/latency-test                                                                            "'
                 - '"docker.io/mingrammer/flog                                                                                   "'
+                - '"docker.io/moby/buildkit                                                                                     "'
                 - '"docker.io/mydlqclub/dnsutils                                                                                "'
                 - '"docker.io/opensearchproject/opensearch                                                                      "'
                 - '"docker.io/opensearchproject/opensearch-dashboards                                                           "'
