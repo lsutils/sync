@@ -18,8 +18,15 @@ client = redis.StrictRedis(
     password=os.getenv("REDIS_PASSWORD"),
     decode_responses=True
 )
-
+todo_client = redis.StrictRedis(
+    host=os.getenv("REDIS_HOST"),
+    port=26379,
+    db=11,
+    password=os.getenv("REDIS_PASSWORD"),
+    decode_responses=True
+)
 rdata = client.hgetall(source_image)
+todo_data = todo_client.hgetall(source_image)
 
 
 # data = list(range(2, 10))
@@ -53,6 +60,8 @@ def get_tags(rep):
             x.remove(str(k))
         except:
             pass
+    for k, _ in todo_data.items():
+        x.add(str(k))
     return x
 
 
@@ -65,6 +74,7 @@ else:
     new_name = ss[0].split('/')[-1]
 
 data = list(get_tags(source_image))
+
 print(len(data))
 random.shuffle(data)
 
