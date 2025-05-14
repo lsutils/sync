@@ -7,7 +7,7 @@ jobs:
         -   name: checkout
             uses: actions/checkout@v2
         -   name: login
-            run: for i in {1..5}; do skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p ${{ secrets.REGISTERY_PASSWORD }} || true; done 
+            run: for i in {1..5}; do skopeo login -u ${{ secrets.REGISTERY_USERNAME }} registry.cn-hangzhou.aliyuncs.com -p ${{ secrets.REGISTERY_PASSWORD }} || true; done
         -   name: perpare
             run: dnf install pip3 -y && pip3 install redis pyyaml tencentcloud-sdk-python-tcr
         -   name: sync
@@ -238,6 +238,8 @@ jobs:
                 - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice                          microservices-demo-productcatalogservice"'
                 - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice                          microservices-demo-recommendationservice"'
                 - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice                                microservices-demo-shippingservice"'
+                - '"us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend                                        "'
+                - '"us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend                                       "'
             max-parallel: 100
 name: sync
 'on':
