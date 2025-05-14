@@ -77,6 +77,7 @@ data = list(get_tags(source_image))
 
 print(len(data))
 random.shuffle(data)
+print(data)
 
 i = 0
 for tag in data:
