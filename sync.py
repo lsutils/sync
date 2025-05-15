@@ -50,7 +50,9 @@ def get_tags(rep):
     for _item in _data:
         if _item == "latest":
             x.add(_item)
-        if len(re.findall(r"^v?[0-9-.]+.*", _item)) > 0:
+        if len(_item) > 10 and '.' not in _item[:9]:
+            continue
+        if len(re.findall(r"^v?[0-9-.]+.*", _item)) > 0 and ():
             x.add(_item)
 
     for k, _ in rdata.items():
