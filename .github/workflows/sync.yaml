@@ -193,6 +193,7 @@ jobs:
                 - '"quay.io/centos/centos                                                                                       "'
                 - '"quay.io/cephcsi/cephcsi                                                                                     "'
                 - '"quay.io/cilium/certgen                                                                                      "'
+                - '"quay.io/cilium/cilium-ci                                                                                    "'
                 - '"quay.io/cilium/cilium-envoy                                                                                 "'
                 - '"quay.io/cilium/hubble-export-stdout                                                                         "'
                 - '"quay.io/cilium/hubble-ui                                                                                    "'
