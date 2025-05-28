@@ -111,6 +111,7 @@ jobs:
                 - '"docker.io/library/postgres                                                                                  "'
                 - '"docker.io/library/python                                                                                    "'
                 - '"docker.io/library/redis                                                                                     "'
+                - '"docker.io/library/registry                                                                                  "'
                 - '"docker.io/library/ubuntu                                                                                    "'
                 - '"docker.io/loftsh/vcluster                                                                                   "'
                 - '"docker.io/mccutchen/go-httpbin                                                                              "'
