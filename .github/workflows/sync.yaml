@@ -220,6 +220,8 @@ jobs:
                 - '"quay.io/submariner/submariner-gateway                                                                       "'
                 - '"quay.io/submariner/submariner-operator                                                                      "'
                 - '"quay.io/submariner/submariner-route-agent                                                                   "'
+                - '"registry.cn-shanghai.aliyuncs.com/labring/kubernetes                                                        labring-kubernetes"'
+                - '"registry.cn-shanghai.aliyuncs.com/labring/kubernetes-docker                                                 labring-kubernetes-docker"'
                 - '"registry.k8s.io/e2e-test-images/agnhost                                                                     e2e-test-images-agnhost"'
                 - '"registry.k8s.io/etcd                                                                                        "'
                 - '"registry.k8s.io/kube-apiserver                                                                              "'
