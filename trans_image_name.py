@@ -10,7 +10,8 @@ base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
 def trans_image_name():
     sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".github", 'workflows', 'sync.yaml')
-    sync_path = '/Users/acejilam/k8s/sync/.github/workflows/sync.yaml'
+    if not os.path.exists(sync_path):
+        sync_path = '/Users/acejilam/k8s/sync/.github/workflows/sync.yaml'
     res = yaml.safe_load(open(sync_path, 'r', encoding='utf8'))
     syncs = res['jobs']['build']['strategy']['matrix']['syncs']
 
