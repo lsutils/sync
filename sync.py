@@ -1,3 +1,4 @@
+from trans_image_name import trans_image_name
 import json
 import os
 import random
@@ -5,7 +6,6 @@ import re
 import sys
 import redis
 import subprocess
-from .trans_image_name import trans_image_name
 
 _input = sys.argv[1]
 print(sys.argv)
