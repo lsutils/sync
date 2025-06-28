@@ -234,6 +234,7 @@ jobs:
                 - '"registry.k8s.io/kube-state-metrics/kube-state-metrics                                                       "'
                 - '"registry.k8s.io/lws/lws                                                                                     "'
                 - '"registry.k8s.io/metrics-server/metrics-server                                                               "'
+                - '"registry.k8s.io/prometheus-adapter/prometheus-adapter                                                       "'
                 - '"skywalking.docker.scarf.sh/apache/skywalking-oap-server                                                     "'
                 - '"skywalking.docker.scarf.sh/apache/skywalking-ui                                                             "'
                 - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice                                      docker_microservices-demo-adservice"'
