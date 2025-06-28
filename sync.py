@@ -5,6 +5,7 @@ import re
 import sys
 import redis
 import subprocess
+from .trans_image_name import trans_image_name
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -66,14 +67,7 @@ def get_tags(rep):
         x.add(str(k))
     return x
 
-
-base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
-# base = 'ccr.ccs.tencentyun.com/acejilam'
-
-if len(ss) != 1:
-    new_name = ss[-1]
-else:
-    new_name = ss[0].split('/')[-1]
+image_map = trans_image_name()
 
 data = list(get_tags(source_image))
 
@@ -83,7 +77,7 @@ print(data)
 
 i = 0
 for tag in data:
-    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{base}/{new_name}:{tag}'
+    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{image_map[source_image]}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     print(text, flush=True)
