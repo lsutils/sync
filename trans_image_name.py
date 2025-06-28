@@ -1,11 +1,16 @@
+#!/usr/bin/env python3
 import os.path
+import sys
+
 import yaml
 from collections import defaultdict
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
+
 def trans_image_name():
     sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".github", 'workflows', 'sync.yaml')
+    sync_path = '/Users/acejilam/k8s/sync/.github/workflows/sync.yaml'
     res = yaml.safe_load(open(sync_path, 'r', encoding='utf8'))
     syncs = res['jobs']['build']['strategy']['matrix']['syncs']
 
@@ -30,8 +35,42 @@ def trans_image_name():
 
 
 if __name__ == '__main__':
+    sys.argv = ['/Users/acejilam/script/trans_image_name.py', 'dir', '/tmp/kube-prometheus/manifests']
     ts = trans_image_name()
-    text = input()
+    new_ts = {}
     for k, v in ts.items():
-        text = text.replace(k, v)
-    print(text)
+        if k.startswith('docker.io/'):
+            new_ts[k[10:]] = v
+    if sys.argv[1] == "dir":
+        for _cd , dirs, files in os.walk(sys.argv[2]):
+            for file in files:
+                if file.endswith('.yaml') or file.endswith('.yml'):
+                    file_path = os.path.join(_cd , file)
+                    with open(file_path, 'r', encoding='utf8') as f:
+                        text = f.read()
+                        for k, v in ts.items():
+                            text = text.replace(k, v)
+                        for k, v in new_ts.items():
+                            text = text.replace(k, v)
+                        print(f"Handing {file_path}")
+                    with open(file_path, 'w', encoding='utf8') as f:
+                        f.write(text)
+    elif sys.argv[1] == "file":
+        with open(sys.argv[1], 'r', encoding='utf8') as f:
+            text = f.read()
+            for k, v in ts.items():
+                text = text.replace(k, v)
+
+            for k, v in new_ts.items():
+                text = text.replace(k, v)
+
+            print(text)
+        with open(sys.argv[2], 'w', encoding='utf8') as f:
+            f.write(text)
+    else:
+        text = input()
+        for k, v in ts.items():
+            text = text.replace(k, v)
+        for k, v in new_ts.items():
+            text = text.replace(k, v)
+        print(text)
