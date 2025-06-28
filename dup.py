@@ -1,4 +1,5 @@
 import yaml
+
 from trans_image_name import trans_image_name
 
 res = yaml.safe_load(open('.github/workflows/sync.yaml', 'r', encoding='utf8'))

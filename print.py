@@ -1,8 +1,9 @@
 import json
+import os
 import re
 import subprocess
 
-import yaml, os
+import yaml
 
 res = yaml.safe_load(open('.github/workflows/sync.yaml', 'r', encoding='utf8'))
 

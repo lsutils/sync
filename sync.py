@@ -1,11 +1,13 @@
-from trans_image_name import trans_image_name
 import json
 import os
 import random
 import re
-import sys
-import redis
 import subprocess
+import sys
+
+import redis
+
+from trans_image_name import trans_image_name
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -66,6 +68,7 @@ def get_tags(rep):
     for k, _ in todo_data.items():
         x.add(str(k))
     return x
+
 
 image_map = trans_image_name()
 

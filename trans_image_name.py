@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import os.path
 import sys
+from collections import defaultdict
 
 import yaml
-from collections import defaultdict
 
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
@@ -43,10 +43,10 @@ if __name__ == '__main__':
         if k.startswith('docker.io/'):
             new_ts[k[10:]] = v
     if sys.argv[1] == "dir":
-        for _cd , dirs, files in os.walk(sys.argv[2]):
+        for _cd, dirs, files in os.walk(sys.argv[2]):
             for file in files:
                 if file.endswith('.yaml') or file.endswith('.yml'):
-                    file_path = os.path.join(_cd , file)
+                    file_path = os.path.join(_cd, file)
                     with open(file_path, 'r', encoding='utf8') as f:
                         text = f.read()
                         for k, v in ts.items():
