@@ -1,5 +1,6 @@
 import json
 import os
+import platform
 import random
 import re
 import subprocess
@@ -31,6 +32,10 @@ todo_client = redis.StrictRedis(
 rdata = client.hgetall(source_image)
 todo_data = todo_client.hgetall(source_image)
 
+skopeo_bin = 'skopeo'
+if platform.system() == 'Darwin':
+    skopeo_bin = '/opt/homebrew/bin/skopeo'
+
 
 # data = list(range(2, 10))
 # data.append('')
@@ -42,7 +47,7 @@ def get_tags(rep):
     _data = set()
     _out = ""
     try:
-        _cmd = f"skopeo list-tags docker://{rep}"
+        _cmd = f"{skopeo_bin} list-tags docker://{rep}"
         _out = subprocess.getoutput(_cmd)
         print(rep, _cmd)
         _data = set(json.loads(_out)['Tags'])
@@ -80,7 +85,7 @@ print(data)
 
 i = 0
 for tag in data:
-    cmd = f'skopeo copy --all --insecure-policy docker://{source_image}:{tag} docker://{image_map[source_image]}:{tag}'
+    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{image_map[source_image]}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     print(text, flush=True)
