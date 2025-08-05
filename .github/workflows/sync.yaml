@@ -88,6 +88,7 @@ jobs:
                 - '"docker.io/istio/tcp-echo-server                                                                             "'
                 - '"docker.io/istio/ztunnel                                                                                     "'
                 - '"docker.io/jaegertracing/all-in-one                                                                          "'
+                - '"docker.io/joxit/docker-registry-ui                                                                          "'
                 - '"docker.io/karmada/karmada-agent                                                                             "'
                 - '"docker.io/karmada/karmada-aggregated-apiserver                                                              "'
                 - '"docker.io/karmada/karmada-controller-manager                                                                "'
