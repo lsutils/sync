@@ -154,6 +154,7 @@ jobs:
                 - '"docker.io/volcanosh/vc-scheduler                                                                            "'
                 - '"docker.io/volcanosh/vc-webhook-manager                                                                      "'
                 - '"docker.io/wagoodman/dive                                                                                    "'
+                - '"docker.io/yanbaru/vyos-1.4                                                                                  "'
                 - '"docker.io/yunwei37/ebpm                                                                                     "'
                 - '"gcr.io/google-samples/microservices-demo/adservice                                                          gcr_microservices-demo-adservice"'
                 - '"gcr.io/google-samples/microservices-demo/cartservice                                                        gcr_microservices-demo-cartservice"'
