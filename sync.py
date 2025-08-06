@@ -1,6 +1,5 @@
 import json
 import os
-import platform
 import random
 import re
 import subprocess
@@ -33,7 +32,8 @@ rdata = client.hgetall(source_image)
 todo_data = todo_client.hgetall(source_image)
 
 skopeo_bin = 'skopeo'
-if platform.system() == 'Darwin':
+
+if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
 
 
