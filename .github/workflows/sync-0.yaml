@@ -102,7 +102,7 @@ jobs:
                 - 'docker.io/karmada/karmada-webhook                                                                           '
                 - 'docker.io/kindest/node                                                                                      '
                 - 'docker.io/kiwigrid/k8s-sidecar                                                                              '
-            max-parallel: 100
+            max-parallel: 10
 name: sync-0
 'on':
     pull_request:
@@ -112,4 +112,4 @@ name: sync-0
         branches:
         - main
     schedule:
-    -   cron: 0 */2 * * *
+    -   cron: 0 */6 * * *

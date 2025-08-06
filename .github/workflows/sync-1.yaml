@@ -102,7 +102,7 @@ jobs:
                 - 'ghcr.io/apache/skywalking-showcase/gateway-service                                                          '
                 - 'ghcr.io/apache/skywalking-showcase/load-gen                                                                 '
                 - 'ghcr.io/apache/skywalking-showcase/rating-service                                                           '
-            max-parallel: 100
+            max-parallel: 10
 name: sync-1
 'on':
     pull_request:
@@ -112,4 +112,4 @@ name: sync-1
         branches:
         - main
     schedule:
-    -   cron: 0 */2 * * *
+    -   cron: 0 */6 * * *
