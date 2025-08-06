@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - 'ghcr.io/apache/skywalking-showcase/recommendation-service                                                   '
                 - 'ghcr.io/apache/skywalking-showcase/songs-service                                                            '
                 - 'ghcr.io/apache/skywalking/oap                                                                               '
                 - 'ghcr.io/apache/skywalking/ui                                                                                '
@@ -87,6 +86,7 @@ jobs:
                 - 'registry.k8s.io/lws/lws                                                                                     '
                 - 'registry.k8s.io/metrics-server/metrics-server                                                               '
                 - 'registry.k8s.io/prometheus-adapter/prometheus-adapter                                                       '
+                - 'registry.k8s.io/sig-storage/csi-node-driver-registrar                                                       '
                 - 'skywalking.docker.scarf.sh/apache/skywalking-oap-server                                                     '
                 - 'skywalking.docker.scarf.sh/apache/skywalking-ui                                                             '
                 - us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice                                      docker_microservices-demo-adservice

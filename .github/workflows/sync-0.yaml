@@ -24,6 +24,7 @@ jobs:
                 - 'docker.io/apache/rocketmq-exporter                                                                          '
                 - 'docker.io/apache/skywalking-swck                                                                            '
                 - 'docker.io/apachepulsar/pulsar-all                                                                           '
+                - 'docker.io/aweimeow/sctp-server                                                                              '
                 - 'docker.io/bitnami/jmx-exporter                                                                              '
                 - 'docker.io/bitnami/kubectl                                                                                   '
                 - 'docker.io/bitnami/mongodb                                                                                   '

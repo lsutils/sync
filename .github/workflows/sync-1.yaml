@@ -102,6 +102,7 @@ jobs:
                 - 'ghcr.io/apache/skywalking-showcase/gateway-service                                                          '
                 - 'ghcr.io/apache/skywalking-showcase/load-gen                                                                 '
                 - 'ghcr.io/apache/skywalking-showcase/rating-service                                                           '
+                - 'ghcr.io/apache/skywalking-showcase/recommendation-service                                                   '
             max-parallel: 10
 name: sync-1
 'on':
