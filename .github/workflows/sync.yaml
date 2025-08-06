@@ -229,6 +229,7 @@ jobs:
                 - '"quay.io/cilium/tetragon-operator                                                                            "'
                 - '"quay.io/coreos/etcd                                                                                         quay_coreos_etcd"'
                 - '"quay.io/frrouting/frr                                                                                       "'
+                - '"quay.io/jetstack/cert-manager-cainjector                                                                    "'
                 - '"quay.io/jetstack/cert-manager-controller                                                                    "'
                 - '"quay.io/jetstack/cert-manager-ctl                                                                           "'
                 - '"quay.io/jetstack/cert-manager-webhook                                                                       "'
