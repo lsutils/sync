@@ -1,6 +1,6 @@
 jobs:
     build:
-        container: quay.io/skopeo/stable:latest
+        container: quay.io/skopeo/stable:@sha256:29b4490f94975e7ad079dfcd60e2840b406bb58f059d2aada842894ee4983b74
         continue-on-error: true
         runs-on: ubuntu-latest
         steps:
@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-           
             max-parallel: 10
 name: sync
 'on':
