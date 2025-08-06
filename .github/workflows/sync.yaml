@@ -179,6 +179,7 @@ jobs:
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/queue                                                       knative-serving-queue"'
                 - '"gcr.io/knative-releases/knative.dev/serving/cmd/webhook                                                     knative-serving-webhook"'
                 - '"gcr.io/kubebuilder/kube-rbac-proxy                                                                          "'
+                - '"gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver"'
                 - '"ghcr.io/apache/skywalking-cli/skywalking-cli                                                                "'
                 - '"ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    "'
                 - '"ghcr.io/apache/skywalking-rover/skywalking-rover                                                            "'
