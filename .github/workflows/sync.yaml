@@ -202,6 +202,7 @@ jobs:
                 - '"ghcr.io/k8snetworkplumbingwg/multi-networkpolicy-iptables                                                   k8snetworkplumbingwg_multi-networkpolicy-iptables"'
                 - '"ghcr.io/k8snetworkplumbingwg/multus-cni                                                                     k8snetworkplumbingwg_multus-cni"'
                 - '"ghcr.io/k8snetworkplumbingwg/whereabouts                                                                    k8snetworkplumbingwg_whereabouts"'
+                - '"ghcr.io/mellanox/k8s-rdma-shared-dev-plugin                                                                 "'
                 - '"ghcr.io/prometheus-operator/prometheus-config-reloader                                                      "'
                 - '"ghcr.io/skyapm/r3                                                                                           "'
                 - '"ghcr.io/stefanprodan/podinfo                                                                                "'
@@ -250,6 +251,7 @@ jobs:
                 - '"quay.io/submariner/submariner-gateway                                                                       "'
                 - '"quay.io/submariner/submariner-operator                                                                      "'
                 - '"quay.io/submariner/submariner-route-agent                                                                   "'
+                - '"registry.k8s.io/dns/k8s-dns-node-cache                                                                      "'
                 - '"registry.k8s.io/e2e-test-images/agnhost                                                                     e2e-test-images-agnhost"'
                 - '"registry.k8s.io/etcd                                                                                        "'
                 - '"registry.k8s.io/kube-apiserver                                                                              "'
@@ -273,6 +275,7 @@ jobs:
                 - '"us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice                                docker_microservices-demo-shippingservice"'
                 - '"us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend                                        "'
                 - '"us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend                                       "'
+                - ghcr.io/squat/generic-device-plugin
             max-parallel: 100
 name: sync
 'on':
