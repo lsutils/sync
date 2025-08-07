@@ -33,7 +33,7 @@ jobs:
                 - 'ghcr.io/squat/generic-device-plugin                                                                         '
                 - 'ghcr.io/stefanprodan/podinfo                                                                                '
                 - 'k8s.gcr.io/sig-storage/csi-attacher                                                                         '
-                - 'k8s.gcr.io/sig-storage/csi-node-driver-registrar                                                            '
+                - k8s.gcr.io/sig-storage/csi-node-driver-registrar                                                            gcr_csi-node-driver-registrar
                 - 'k8s.gcr.io/sig-storage/csi-provisioner                                                                      '
                 - 'k8s.gcr.io/sig-storage/csi-resizer                                                                          '
                 - 'k8s.gcr.io/sig-storage/csi-snapshotter                                                                      '
