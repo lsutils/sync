@@ -102,7 +102,7 @@ jobs:
                 - us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice                                docker_microservices-demo-shippingservice
                 - 'us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend                                        '
                 - 'us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend                                       '
-            max-parallel: 10
+            max-parallel: 100
 name: sync-2
 'on':
     pull_request:
@@ -112,4 +112,4 @@ name: sync-2
         branches:
         - main
     schedule:
-    -   cron: 0 */6 * * *
+    -   cron: 0 */2 * * *

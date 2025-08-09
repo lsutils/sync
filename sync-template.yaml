@@ -15,7 +15,7 @@ jobs:
         strategy:
             matrix:
                 syncs:
-            max-parallel: 10
+            max-parallel: 100
 name: sync
 'on':
     pull_request:
@@ -25,4 +25,4 @@ name: sync
         branches:
         - main
     schedule:
-    -   cron: 0 */6 * * *
+    -   cron: 0 */2 * * *
