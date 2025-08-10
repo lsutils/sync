@@ -218,6 +218,7 @@
     "quay.io/frrouting/frr                                                                                       ",
     "quay.io/jetstack/cert-manager-cainjector                                                                    ",
     "quay.io/jetstack/cert-manager-controller                                                                    ",
+    "quay.io/jetstack/cert-manager-csi-driver                                                                    ",
     "quay.io/jetstack/cert-manager-ctl                                                                           ",
     "quay.io/jetstack/cert-manager-webhook                                                                       ",
     "quay.io/kuberay/operator                                                                                    kuberay_operator",
