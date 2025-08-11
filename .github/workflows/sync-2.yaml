@@ -15,8 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - 'ghcr.io/apache/skywalking-showcase/songs-service                                                            '
-                - 'ghcr.io/apache/skywalking/oap                                                                               '
                 - 'ghcr.io/apache/skywalking/ui                                                                                '
                 - 'ghcr.io/dexidp/dex                                                                                          '
                 - 'ghcr.io/eunomia-bpf/ecc-x86_64                                                                              '
@@ -29,6 +27,8 @@ jobs:
                 - ghcr.io/k8snetworkplumbingwg/whereabouts                                                                    k8snetworkplumbingwg_whereabouts
                 - 'ghcr.io/mellanox/k8s-rdma-shared-dev-plugin                                                                 '
                 - 'ghcr.io/prometheus-operator/prometheus-config-reloader                                                      '
+                - 'ghcr.io/siemens/ghostwire                                                                                   '
+                - 'ghcr.io/siemens/packetflix                                                                                  '
                 - 'ghcr.io/skyapm/r3                                                                                           '
                 - 'ghcr.io/squat/generic-device-plugin                                                                         '
                 - 'ghcr.io/stefanprodan/podinfo                                                                                '

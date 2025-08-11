@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - 'docker.io/kubeshark/front                                                                                   '
                 - 'docker.io/kubeshark/hub                                                                                     '
                 - 'docker.io/kubeshark/worker                                                                                  '
                 - 'docker.io/kubeskoop/agent                                                                                   '
@@ -103,6 +102,8 @@ jobs:
                 - 'ghcr.io/apache/skywalking-showcase/load-gen                                                                 '
                 - 'ghcr.io/apache/skywalking-showcase/rating-service                                                           '
                 - 'ghcr.io/apache/skywalking-showcase/recommendation-service                                                   '
+                - 'ghcr.io/apache/skywalking-showcase/songs-service                                                            '
+                - 'ghcr.io/apache/skywalking/oap                                                                               '
             max-parallel: 100
 name: sync-1
 'on':

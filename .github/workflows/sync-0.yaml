@@ -103,6 +103,7 @@ jobs:
                 - 'docker.io/karmada/karmada-webhook                                                                           '
                 - 'docker.io/kindest/node                                                                                      '
                 - 'docker.io/kiwigrid/k8s-sidecar                                                                              '
+                - 'docker.io/kubeshark/front                                                                                   '
             max-parallel: 100
 name: sync-0
 'on':
