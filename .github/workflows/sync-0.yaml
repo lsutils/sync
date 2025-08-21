@@ -36,9 +36,6 @@ jobs:
                 - docker.io/calico/cni                                                                                        calico_cni
                 - docker.io/calico/kube-controllers                                                                           calico_kube-controllers
                 - docker.io/calico/node                                                                                       calico_node
-                - 'docker.io/cilium/cilium                                                                                     '
-                - 'docker.io/cilium/hubble-relay                                                                               '
-                - docker.io/cilium/netperf                                                                                    cilium_netperf
                 - 'docker.io/clickhouse/clickhouse-server                                                                      '
                 - docker.io/cloudnativelabs/kube-router                                                                       cloudnativelabs_kube-router
                 - 'docker.io/curlimages/curl                                                                                   '
@@ -104,6 +101,9 @@ jobs:
                 - 'docker.io/kindest/node                                                                                      '
                 - 'docker.io/kiwigrid/k8s-sidecar                                                                              '
                 - 'docker.io/kubeshark/front                                                                                   '
+                - 'docker.io/kubeshark/hub                                                                                     '
+                - 'docker.io/kubeshark/worker                                                                                  '
+                - 'docker.io/kubeskoop/agent                                                                                   '
             max-parallel: 100
 name: sync-0
 'on':
