@@ -52,6 +52,7 @@ jobs:
                 - 'quay.io/cilium/operator                                                                                     '
                 - 'quay.io/cilium/operator-generic                                                                             '
                 - 'quay.io/cilium/startup-script                                                                               '
+                - 'quay.io/cilium/starwars                                                                                     '
                 - 'quay.io/cilium/tetragon                                                                                     '
                 - 'quay.io/cilium/tetragon-operator                                                                            '
                 - quay.io/coreos/etcd                                                                                         quay_coreos_etcd
