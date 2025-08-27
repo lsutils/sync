@@ -15,6 +15,21 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - 'docker.io/karmada/karmada-controller-manager                                                                '
+                - 'docker.io/karmada/karmada-descheduler                                                                       '
+                - 'docker.io/karmada/karmada-interpreter-webhook-example                                                       '
+                - 'docker.io/karmada/karmada-metrics-adapter                                                                   '
+                - 'docker.io/karmada/karmada-operator                                                                          '
+                - 'docker.io/karmada/karmada-scheduler                                                                         '
+                - 'docker.io/karmada/karmada-scheduler-estimator                                                               '
+                - 'docker.io/karmada/karmada-search                                                                            '
+                - 'docker.io/karmada/karmada-webhook                                                                           '
+                - 'docker.io/kindest/node                                                                                      '
+                - 'docker.io/kiwigrid/k8s-sidecar                                                                              '
+                - 'docker.io/kubeshark/front                                                                                   '
+                - 'docker.io/kubeshark/hub                                                                                     '
+                - 'docker.io/kubeshark/worker                                                                                  '
+                - 'docker.io/kubeskoop/agent                                                                                   '
                 - docker.io/kubeskoop/controller                                                                              kubeskoop_controller
                 - 'docker.io/kubezoo/clusterresourcequota                                                                      '
                 - 'docker.io/kubezoo/kubezoo                                                                                   '
@@ -89,21 +104,6 @@ jobs:
                 - gcr.io/knative-releases/knative.dev/serving/cmd/webhook                                                     knative-serving-webhook
                 - 'gcr.io/kubebuilder/kube-rbac-proxy                                                                          '
                 - gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver
-                - 'ghcr.io/apache/skywalking-cli/skywalking-cli                                                                '
-                - 'ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    '
-                - 'ghcr.io/apache/skywalking-rover/skywalking-rover                                                            '
-                - 'ghcr.io/apache/skywalking-satellite/skywalking-satellite                                                    '
-                - 'ghcr.io/apache/skywalking-showcase/app                                                                      '
-                - 'ghcr.io/apache/skywalking-showcase/frontend                                                                 '
-                - 'ghcr.io/apache/skywalking-showcase/gateway-service                                                          '
-                - 'ghcr.io/apache/skywalking-showcase/load-gen                                                                 '
-                - 'ghcr.io/apache/skywalking-showcase/rating-service                                                           '
-                - 'ghcr.io/apache/skywalking-showcase/recommendation-service                                                   '
-                - 'ghcr.io/apache/skywalking-showcase/songs-service                                                            '
-                - 'ghcr.io/apache/skywalking/oap                                                                               '
-                - 'ghcr.io/apache/skywalking/ui                                                                                '
-                - 'ghcr.io/dexidp/dex                                                                                          '
-                - 'ghcr.io/eunomia-bpf/ecc-x86_64                                                                              '
             max-parallel: 100
 name: sync-1
 'on':

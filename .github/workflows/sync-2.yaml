@@ -15,6 +15,21 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - 'ghcr.io/apache/skywalking-cli/skywalking-cli                                                                '
+                - 'ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    '
+                - 'ghcr.io/apache/skywalking-rover/skywalking-rover                                                            '
+                - 'ghcr.io/apache/skywalking-satellite/skywalking-satellite                                                    '
+                - 'ghcr.io/apache/skywalking-showcase/app                                                                      '
+                - 'ghcr.io/apache/skywalking-showcase/frontend                                                                 '
+                - 'ghcr.io/apache/skywalking-showcase/gateway-service                                                          '
+                - 'ghcr.io/apache/skywalking-showcase/load-gen                                                                 '
+                - 'ghcr.io/apache/skywalking-showcase/rating-service                                                           '
+                - 'ghcr.io/apache/skywalking-showcase/recommendation-service                                                   '
+                - 'ghcr.io/apache/skywalking-showcase/songs-service                                                            '
+                - 'ghcr.io/apache/skywalking/oap                                                                               '
+                - 'ghcr.io/apache/skywalking/ui                                                                                '
+                - 'ghcr.io/dexidp/dex                                                                                          '
+                - 'ghcr.io/eunomia-bpf/ecc-x86_64                                                                              '
                 - 'ghcr.io/fluxcd/flagger                                                                                      '
                 - 'ghcr.io/fluxcd/flagger-loadtester                                                                           '
                 - 'ghcr.io/jimmidyson/configmap-reload                                                                         '
@@ -39,6 +54,7 @@ jobs:
                 - quay.io/brancz/kube-rbac-proxy                                                                              brancz_kube-rbac-proxy
                 - 'quay.io/centos/centos                                                                                       '
                 - 'quay.io/cephcsi/cephcsi                                                                                     '
+<<<<<<< HEAD
                 - 'quay.io/cilium/certgen                                                                                      '
                 - 'quay.io/cilium/cilium                                                                                       '
                 - 'quay.io/cilium/cilium-ci                                                                                    '
@@ -55,6 +71,8 @@ jobs:
                 - 'quay.io/cilium/starwars                                                                                     '
                 - 'quay.io/cilium/tetragon                                                                                     '
                 - 'quay.io/cilium/tetragon-operator                                                                            '
+=======
+>>>>>>> f676c7b (-)
                 - quay.io/coreos/etcd                                                                                         quay_coreos_etcd
                 - 'quay.io/frrouting/frr                                                                                       '
                 - 'quay.io/jetstack/cert-manager-cainjector                                                                    '
