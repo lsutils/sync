@@ -55,6 +55,10 @@ jobs:
                 - docker.io/cloudnativelabs/kube-router                                                                       cloudnativelabs_kube-router
                 - 'docker.io/curlimages/curl                                                                                   '
                 - 'docker.io/docker/dockerfile                                                                                 '
+                - 'docker.io/dragonflyoss/client                                                                               '
+                - 'docker.io/dragonflyoss/dfinit                                                                               '
+                - 'docker.io/dragonflyoss/manager                                                                              '
+                - 'docker.io/dragonflyoss/scheduler                                                                            '
                 - docker.io/envoyproxy/envoy                                                                                  envoyproxy_envoy
                 - 'docker.io/flannel/flannel                                                                                   '
                 - 'docker.io/flannel/flannel-cni-plugin                                                                        '
@@ -101,9 +105,6 @@ jobs:
                 - 'docker.io/istio/tcp-echo-server                                                                             '
                 - 'docker.io/istio/ztunnel                                                                                     '
                 - 'docker.io/jaegertracing/all-in-one                                                                          '
-                - 'docker.io/joxit/docker-registry-ui                                                                          '
-                - 'docker.io/karmada/karmada-agent                                                                             '
-                - 'docker.io/karmada/karmada-aggregated-apiserver                                                              '
             max-parallel: 100
 name: sync-0
 'on':

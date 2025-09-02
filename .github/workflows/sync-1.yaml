@@ -15,6 +15,9 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - 'docker.io/joxit/docker-registry-ui                                                                          '
+                - 'docker.io/karmada/karmada-agent                                                                             '
+                - 'docker.io/karmada/karmada-aggregated-apiserver                                                              '
                 - 'docker.io/karmada/karmada-controller-manager                                                                '
                 - 'docker.io/karmada/karmada-descheduler                                                                       '
                 - 'docker.io/karmada/karmada-interpreter-webhook-example                                                       '
@@ -102,8 +105,6 @@ jobs:
                 - gcr.io/knative-releases/knative.dev/serving/cmd/default-domain                                              knative-serving-default-domain
                 - gcr.io/knative-releases/knative.dev/serving/cmd/queue                                                       knative-serving-queue
                 - gcr.io/knative-releases/knative.dev/serving/cmd/webhook                                                     knative-serving-webhook
-                - 'gcr.io/kubebuilder/kube-rbac-proxy                                                                          '
-                - gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver
             max-parallel: 100
 name: sync-1
 'on':
