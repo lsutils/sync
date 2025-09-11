@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - 'docker.io/joxit/docker-registry-ui                                                                          '
                 - 'docker.io/karmada/karmada-agent                                                                             '
                 - 'docker.io/karmada/karmada-aggregated-apiserver                                                              '
                 - 'docker.io/karmada/karmada-controller-manager                                                                '
@@ -39,6 +38,7 @@ jobs:
                 - docker.io/labring/calico                                                                                    labring_calico
                 - docker.io/labring/flannel                                                                                   labring_flannel
                 - docker.io/labring/helm                                                                                      labring_helm
+                - docker.io/labring/kubernetes                                                                                labring_kubernetes
                 - 'docker.io/library/alpine                                                                                    '
                 - 'docker.io/library/buildpack-deps                                                                            '
                 - 'docker.io/library/busybox                                                                                   '

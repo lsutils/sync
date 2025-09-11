@@ -113,6 +113,7 @@
     "docker.io/labring/calico                                                                                    labring_calico",
     "docker.io/labring/flannel                                                                                   labring_flannel",
     "docker.io/labring/helm                                                                                      labring_helm",
+    "docker.io/labring/kubernetes                                                                                labring_kubernetes",
     "docker.io/library/alpine                                                                                    ",
     "docker.io/library/buildpack-deps                                                                            ",
     "docker.io/library/busybox                                                                                   ",
