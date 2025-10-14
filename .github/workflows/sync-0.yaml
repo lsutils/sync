@@ -39,7 +39,6 @@ jobs:
                 - 'docker.io/cilium/certgen                                                                                    '
                 - 'docker.io/cilium/cilium                                                                                     '
                 - 'docker.io/cilium/cilium-ci                                                                                  '
-                - 'docker.io/cilium/cilium-envoy                                                                               '
                 - 'docker.io/cilium/hubble-export-stdout                                                                       '
                 - 'docker.io/cilium/hubble-relay                                                                               '
                 - 'docker.io/cilium/hubble-ui                                                                                  '
@@ -106,6 +105,7 @@ jobs:
                 - 'docker.io/istio/ztunnel                                                                                     '
                 - 'docker.io/jaegertracing/all-in-one                                                                          '
                 - 'docker.io/joxit/docker-registry-ui                                                                          '
+                - 'docker.io/karmada/karmada-agent                                                                             '
             max-parallel: 100
 name: sync-0
 'on':
