@@ -10,7 +10,11 @@ base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
 
 def trans_image_name():
-    sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'tasks.json')
+    try:
+        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))),'tasks.json')
+    except OSError:
+        sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'tasks.json')
+
     syncs = json.load(open(sync_path, 'r', encoding='utf8'))
 
     trans_images = {}
@@ -34,7 +38,6 @@ def trans_image_name():
 
 
 if __name__ == '__main__':
-    sys.argv = ['/Users/acejilam/script/trans_image_name.py', 'dir', '/tmp/kube-prometheus/manifests']
     ts = trans_image_name()
     new_ts = {}
     for k, v in ts.items():
