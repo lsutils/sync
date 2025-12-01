@@ -4,8 +4,6 @@ import os.path
 import sys
 from collections import defaultdict
 
-import yaml
-
 base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
 
 
@@ -43,8 +41,10 @@ if __name__ == '__main__':
     for k, v in ts.items():
         if k.startswith('docker.io/'):
             new_ts[k[10:]] = v
-    if sys.argv[1] == "dir":
-        for _cd, dirs, files in os.walk(sys.argv[2]):
+    target = sys.argv[1]
+
+    if os.path.isdir(target):
+        for _cd, dirs, files in os.walk(target):
             for file in files:
                 if file.endswith('.yaml') or file.endswith('.yml'):
                     file_path = os.path.join(_cd, file)
@@ -57,17 +57,15 @@ if __name__ == '__main__':
                         print(f"Handing {file_path}")
                     with open(file_path, 'w', encoding='utf8') as f:
                         f.write(text)
-    elif sys.argv[1] == "file":
-        with open(sys.argv[1], 'r', encoding='utf8') as f:
+    elif os.path.isfile(target):
+        with open(target, 'r', encoding='utf8') as f:
             text = f.read()
             for k, v in ts.items():
                 text = text.replace(k, v)
-
             for k, v in new_ts.items():
                 text = text.replace(k, v)
-
             print(text)
-        with open(sys.argv[2], 'w', encoding='utf8') as f:
+        with open(target, 'w', encoding='utf8') as f:
             f.write(text)
     else:
         text = input()
