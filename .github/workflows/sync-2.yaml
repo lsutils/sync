@@ -15,6 +15,7 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver
                 - 'ghcr.io/apache/skywalking-cli/skywalking-cli                                                                '
                 - 'ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    '
                 - 'ghcr.io/apache/skywalking-rover/skywalking-rover                                                            '
