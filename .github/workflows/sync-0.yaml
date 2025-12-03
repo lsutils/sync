@@ -16,6 +16,7 @@ jobs:
             matrix:
                 syncs:
                 - cgr.dev/chainguard/bash                                                                                     chainguard_bash
+                - 'cr.kgateway.dev/kgateway-dev/kgateway                                                                       '
                 - 'docker.elastic.co/elasticsearch/elasticsearch                                                               '
                 - 'docker.io/80imike/find-container-process                                                                    '
                 - 'docker.io/antrea/antrea-ubuntu                                                                              '
