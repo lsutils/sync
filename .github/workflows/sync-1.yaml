@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - 'docker.io/karmada/karmada-agent                                                                             '
                 - 'docker.io/karmada/karmada-aggregated-apiserver                                                              '
                 - 'docker.io/karmada/karmada-controller-manager                                                                '
                 - 'docker.io/karmada/karmada-descheduler                                                                       '
@@ -26,6 +25,8 @@ jobs:
                 - 'docker.io/karmada/karmada-scheduler-estimator                                                               '
                 - 'docker.io/karmada/karmada-search                                                                            '
                 - 'docker.io/karmada/karmada-webhook                                                                           '
+                - 'docker.io/kindest/kindnetd                                                                                  '
+                - 'docker.io/kindest/local-path-provisioner                                                                    '
                 - 'docker.io/kindest/node                                                                                      '
                 - 'docker.io/kiwigrid/k8s-sidecar                                                                              '
                 - 'docker.io/kubeshark/front                                                                                   '
@@ -95,6 +96,9 @@ jobs:
                 - gcr.io/google-samples/microservices-demo/recommendationservice                                              gcr_microservices-demo-recommendationservice
                 - gcr.io/google-samples/microservices-demo/shippingservice                                                    gcr_microservices-demo-shippingservice
                 - 'gcr.io/heptio-images/ks-guestbook-demo                                                                      '
+                - 'gcr.io/istio-testing/app                                                                                    '
+                - 'gcr.io/istio-testing/ext-authz                                                                              '
+                - 'gcr.io/istio-testing/jwt-server                                                                             '
                 - gcr.io/knative-releases/knative.dev/net-istio/cmd/controller                                                net-istio-controller
                 - gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook                                                   net-istio-webhook
                 - gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier                                                 net-kourier-kourier
@@ -106,6 +110,7 @@ jobs:
                 - gcr.io/knative-releases/knative.dev/serving/cmd/queue                                                       knative-serving-queue
                 - gcr.io/knative-releases/knative.dev/serving/cmd/webhook                                                     knative-serving-webhook
                 - 'gcr.io/kubebuilder/kube-rbac-proxy                                                                          '
+                - gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver
             max-parallel: 100
 name: sync-1
 'on':

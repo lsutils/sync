@@ -23,7 +23,9 @@ jobs:
                 - 'docker.io/apache/apisix                                                                                     '
                 - 'docker.io/apache/rocketmq                                                                                   '
                 - 'docker.io/apache/rocketmq-exporter                                                                          '
+                - 'docker.io/apache/skywalking-oap-server                                                                      '
                 - 'docker.io/apache/skywalking-swck                                                                            '
+                - 'docker.io/apache/skywalking-ui                                                                              '
                 - 'docker.io/apachepulsar/pulsar-all                                                                           '
                 - 'docker.io/aweimeow/sctp-server                                                                              '
                 - 'docker.io/bitnami/jmx-exporter                                                                              '
@@ -87,6 +89,7 @@ jobs:
                 - 'docker.io/gpustack/gpustack                                                                                 '
                 - 'docker.io/grafana/grafana                                                                                   '
                 - 'docker.io/grafana/loki                                                                                      '
+                - 'docker.io/hiroakis/tornado-websocket-example                                                                '
                 - 'docker.io/istio/examples-bookinfo-details-v1                                                                '
                 - 'docker.io/istio/examples-bookinfo-details-v2                                                                '
                 - 'docker.io/istio/examples-bookinfo-mongodb                                                                   '
@@ -107,6 +110,7 @@ jobs:
                 - 'docker.io/istio/ztunnel                                                                                     '
                 - 'docker.io/jaegertracing/all-in-one                                                                          '
                 - 'docker.io/joxit/docker-registry-ui                                                                          '
+                - 'docker.io/karmada/karmada-agent                                                                             '
             max-parallel: 100
 name: sync-0
 'on':

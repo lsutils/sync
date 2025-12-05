@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - gcr.io/kubernetes-e2e-test-images/echoserver                                                                gcr_echoserver
                 - 'ghcr.io/apache/skywalking-cli/skywalking-cli                                                                '
                 - 'ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter                    '
                 - 'ghcr.io/apache/skywalking-rover/skywalking-rover                                                            '
@@ -44,6 +43,10 @@ jobs:
                 - 'ghcr.io/siemens/ghostwire                                                                                   '
                 - 'ghcr.io/siemens/packetflix                                                                                  '
                 - 'ghcr.io/skyapm/r3                                                                                           '
+                - 'ghcr.io/spiffe/spiffe-csi-driver                                                                            '
+                - 'ghcr.io/spiffe/spire-agent                                                                                  '
+                - 'ghcr.io/spiffe/spire-controller-manager                                                                     '
+                - 'ghcr.io/spiffe/spire-server                                                                                 '
                 - 'ghcr.io/squat/generic-device-plugin                                                                         '
                 - 'ghcr.io/stefanprodan/podinfo                                                                                '
                 - 'k8s.gcr.io/sig-storage/csi-attacher                                                                         '
@@ -64,6 +67,7 @@ jobs:
                 - 'quay.io/jetstack/cert-manager-csi-driver                                                                    '
                 - 'quay.io/jetstack/cert-manager-ctl                                                                           '
                 - 'quay.io/jetstack/cert-manager-webhook                                                                       '
+                - 'quay.io/kiali/kiali                                                                                         '
                 - quay.io/kuberay/operator                                                                                    kuberay_operator
                 - quay.io/metallb/controller                                                                                  metallb_controller
                 - quay.io/metallb/frr-k8s                                                                                     metallb_frr-k8s
