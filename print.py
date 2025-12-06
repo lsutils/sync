@@ -3,7 +3,7 @@ import os
 import re
 import subprocess
 
-with open('tasks.json', 'r', encoding='utf8') as f:
+with open('random-tasks.json', 'r', encoding='utf8') as f:
     raw = json.loads(f.read())
 
 try:

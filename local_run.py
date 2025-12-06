@@ -2,7 +2,7 @@ import json
 import random
 import os
 
-with open('tasks.json', 'r', encoding='utf8') as f:
+with open('random-tasks.json', 'r', encoding='utf8') as f:
     data= json.loads(f.read())
     random.shuffle(data)
     for item in data:

@@ -2,7 +2,7 @@ import json
 
 import yaml
 
-from trans_image_name import trans_image_name
+from trans_image_name import __inner_trans_image
 
 
 def split_list(lst, n):
@@ -17,7 +17,7 @@ def split_list(lst, n):
     return result
 
 
-with open("tasks.json", "r") as f:
+with open("fixed-tasks.json", "r") as f:
     raw = json.loads(f.read())
 
 for i, _ in enumerate(raw):
@@ -32,15 +32,15 @@ for item in raw:
     syncs.add("%s%s%s" % (raw_name, ' ' * (max_len - len(raw_name)), new_name))
 
 template = yaml.safe_load(open('sync-template.yaml', 'r', encoding='utf8'))
-trans_image_name()
+__inner_trans_image()
 
 syncs = list(syncs)
 syncs.sort()
-with open("tasks.json", "w", encoding='utf8') as f:
+with open("fixed-tasks.json", "w", encoding='utf8') as f:
     f.write(json.dumps(syncs, indent=4, ensure_ascii=False))
 
 for i, part in enumerate(split_list(syncs, 3)):
-    template['name'] = f"sync-{i}"
+    template['name'] = f"fixed-sync-{i}"
     template['jobs']['build']['strategy']['matrix']['syncs'] = part
-    with open(f'.github/workflows/sync-{i}.yaml', 'w', encoding='utf8') as f:
+    with open(f'.github/workflows/fixed-sync-{i}.yaml', 'w', encoding='utf8') as f:
         f.write(yaml.dump(template, allow_unicode=False, default_flow_style=False, indent=4, width=10 ** 10))

@@ -7,7 +7,7 @@ import sys
 
 import redis
 
-from trans_image_name import trans_image_name
+from trans_image_name import trans_random_image_name
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -75,7 +75,7 @@ def get_tags(rep):
     return x
 
 
-image_map = trans_image_name()
+image_map = trans_random_image_name()
 
 data = list(get_tags(source_image))
 

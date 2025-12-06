@@ -19,11 +19,11 @@ inner_repo = [
 ]
 
 
-def trans_image_name():
+def __trans_random_image_name():
     try:
-        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'tasks.json')
+        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'random-tasks.json')
     except OSError:
-        sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tasks.json')
+        sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'random-tasks.json')
 
     syncs = json.load(open(sync_path, 'r', encoding='utf8'))
 
@@ -65,61 +65,123 @@ def trans_image_name():
     return trans_images
 
 
-def replace_image_name(_file_path, _repo_map, _new_ts):
+def __trans_fixed_image_name():
+    try:
+        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'fixed-tasks.json')
+    except OSError:
+        sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fixed-tasks.json')
+
+    syncs = json.load(open(sync_path, 'r', encoding='utf8'))
+
+    trans_images = {}
+    raws = defaultdict(list)
+
+    for item in syncs:
+        ss = item.strip('\" ').split(' ')
+        if len(ss) == 1:
+            base_name = ss[0].split('/')[-1]
+            trans_images[ss[0]] = '%s/%s' % (base, base_name)
+            raws[trans_images[ss[0]]].append(ss[0])
+
+        else:
+            trans_images[ss[0]] = '%s/%s' % (base, ss[-1])
+            raws[trans_images[ss[0]]].append(ss[0])
+
+    for k, vs in raws.items():
+        if len(vs) > 1:
+            print(vs, '======>', k)
+    return trans_images
+
+
+def __inner_trans_image():
+    _a = __trans_random_image_name()
+    _b = __trans_fixed_image_name()
+    for _k, _v in _b.items():
+        _a[_k] = _v
+    return _a
+
+
+def __handle_image(_line):
+    if _line.strip().startswith('image: '):
+        return _line.index('image: ')
+    elif _line.strip().startswith('- image: '):
+        return _line.index('- image: ')
+    else:
+        return -1
+
+
+def trans_image(x):
+    return __input_replace(x)
+
+
+def __file_replace_image_name(_lines, _repo_map, _new_ts):
     new_text = ''
     # 'quay.io/submariner/lighthouse-agent:' -> 'registry.cn-hangzhou.aliyuncs.com/acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-'
     # 'quay.io/submariner/lighthouse-agent' -> 'registry.cn-hangzhou.aliyuncs.com/acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-latest'
+    for _line in _lines:
+        image_index = __handle_image(_line)
+        if image_index > 0:
+            new_line = _line.strip().split('#')[0].strip()
+            raw_new_line = new_line.strip()
+            for _k, _v in _repo_map.items():
+                new_line = new_line.replace(_k + ':', _v)
+                new_line = new_line.replace(_k + '', _v + 'latest')
+            for _k, _v in _new_ts.items():
+                new_line = new_line.replace(_k + ':', _v)
+                new_line = new_line.replace(_k + '', _v + 'latest')
 
-    with open(_file_path, 'r', encoding='utf8') as f:
-        for line in f.readlines():
-            if line.strip().startswith('image: '):
-                image_index = line.index('image: ')
-                new_line = line.strip().split('#')[0].strip()
-                raw_new_line = new_line.strip()
-                for _k, _v in repo_map.items():
-                    new_line = new_line.replace(_k + ':', _v)
-                    new_line = new_line.replace(_k + '', _v + 'latest')
-                for _k, _v in new_ts.items():
-                    new_line = new_line.replace(_k + ':', _v)
-                    new_line = new_line.replace(_k + '', _v + 'latest')
-
-                if raw_new_line != new_line:
-                    new_text += line[:image_index] + new_line + '\n'
-                    new_text += line[:image_index] + f'# {raw_new_line}\n'
-                else:
-                    new_text += line
+            if raw_new_line != new_line:
+                new_text += _line[:image_index] + new_line + '\n'
+                new_text += _line[:image_index] + f'# {raw_new_line}\n'
             else:
-                new_text += line
+                new_text += _line
+        else:
+            new_text += _line
     return new_text
 
 
+def __input_replace(_text):
+    _a = __trans_random_image_name()
+    _b = __trans_fixed_image_name()
+    ss = _text.split(":")
+    if ss[0] in _b:
+        if len(ss) == 1:
+            return _b[ss[0]]
+        else:
+            return _b[ss[0]] + ':' + ss[-1]
+    pre = ' image: '
+    _text = __file_replace_image_name([pre + _text.strip()], repo_map, new_ts)
+    return _text[len(pre):].split('\n')[0].strip()
+
+
 if __name__ == '__main__':
-    repo_map = trans_image_name()
+    repo_map = __inner_trans_image()
     new_ts = {}
     for k, v in repo_map.items():
         if k.startswith('docker.io/'):
             new_ts[k[10:]] = v
 
     target = sys.argv[1]
-
     if os.path.isdir(target):
         for _cd, dirs, files in os.walk(target):
             for file in files:
                 if file.endswith('.yaml') or file.endswith('.yml'):
                     file_path = os.path.join(_cd, file)
-
-                    text = replace_image_name(file_path, repo_map, new_ts)
+                    lines = []
+                    with open(file_path, 'r', encoding='utf8') as f:
+                        for line in f.readlines():
+                            lines.append(line)
+                    text = __file_replace_image_name(lines, repo_map, new_ts)
                     print(f"Handing {file_path}")
                     with open(file_path, 'w', encoding='utf8') as f:
                         f.write(text)
     elif os.path.isfile(target):
+        lines = []
         with open(target, 'r', encoding='utf8') as f:
-            text = f.read()
-            text = replace_image_name(text, repo_map, new_ts)
-            print(text)
+            for line in f.readlines():
+                lines.append(line)
+        text = __file_replace_image_name(lines, repo_map, new_ts)
         with open(target, 'w', encoding='utf8') as f:
             f.write(text)
     else:
-        text = target
-        text = replace_image_name(text, repo_map, new_ts)
-        print(text)
+        print(__input_replace(target.strip()))

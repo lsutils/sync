@@ -1,0 +1,5 @@
+[
+  "docker.io/istio/pilot                                                                                       ",
+  "docker.io/istio/proxyv2                                                                                     ",
+  "docker.io/kindest/node                                                                                      "
+]
