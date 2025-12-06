@@ -146,12 +146,18 @@ def __input_replace(_repo):
     ss = _repo.split(":")
     if ss[0] in _b:
         if len(ss) == 1:
-            return _b[ss[0]]+':latest'
+            return _b[ss[0]] + ':latest'
         else:
             return _b[ss[0]] + ':' + ss[-1]
 
     _a = __trans_random_image_name()
-    return _a[_repo]
+    ss = _repo.split(":")
+    if ss[0] in _a:
+        if len(ss) == 1:
+            return _a[ss[0]] + 'latest'
+        else:
+            return _a[ss[0]] + ss[-1]
+    return _repo
 
 
 if __name__ == '__main__':
