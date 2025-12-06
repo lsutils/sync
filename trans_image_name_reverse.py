@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import copy
 import hashlib
 import sys
 
@@ -14,13 +14,15 @@ else:
     # 从stdin获取数据
     lines = sys.stdin.read().split('\n')
 
+lines_bak = copy.deepcopy(lines)
+
 res = ''
 for line in lines:
     if line.strip() == '':
         continue
     line = line.strip()
     if 'acejilam/ib-' not in line:
-        res += line + '\n'
+        res += line.strip() + '\n'
         continue
 
     mda = line.split(':')[-1].split('-')[0]
@@ -28,7 +30,9 @@ for line in lines:
     for old_image in _a:
         image_repo_md5 = hashlib.md5(old_image.encode('utf-8')).hexdigest()
         if image_repo_md5 == mda:
-            res += old_image + ':' + '-'.join(line.split(':')[-1].split('-')[1:]) + '\n '
+            new_line = old_image + ':' + '-'.join(line.split(':')[-1].split('-')[1:])
+            new_line = new_line.strip()
+            res += new_line + '\n'
 print(res)
-# ╰─ trans_image_name.py docker.io/library/buildpack-deps:24.04                                             192.168.1.12   M3 ─╯
-# registry.cn-hangzhou.aliyuncs.com/acejilam/ib-miszxulobc:c2607219cd5d6f2c4570f4e3986db743-24.04
+
+

@@ -83,7 +83,7 @@ print(data)
 
 i = 0
 for tag in data:
-    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{trans_image(source_image)}:{tag}'
+    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{trans_image(source_image)}{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     print(text, flush=True)

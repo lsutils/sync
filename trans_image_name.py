@@ -90,6 +90,7 @@ def __trans_fixed_image_name():
     for k, vs in raws.items():
         if len(vs) > 1:
             print(vs, '======>', k)
+            sys.exit(1)
     return trans_images
 
 
@@ -140,18 +141,17 @@ def __file_replace_image_name(_lines, _repo_map, _new_ts):
     return new_text
 
 
-def __input_replace(_text):
-    _a = __trans_random_image_name()
+def __input_replace(_repo):
     _b = __trans_fixed_image_name()
-    ss = _text.split(":")
+    ss = _repo.split(":")
     if ss[0] in _b:
         if len(ss) == 1:
-            return _b[ss[0]]
+            return _b[ss[0]]+':latest'
         else:
             return _b[ss[0]] + ':' + ss[-1]
-    pre = ' image: '
-    _text = __file_replace_image_name([pre + _text.strip()], repo_map, new_ts)
-    return _text[len(pre):].split('\n')[0].strip()
+
+    _a = __trans_random_image_name()
+    return _a[_repo]
 
 
 if __name__ == '__main__':
