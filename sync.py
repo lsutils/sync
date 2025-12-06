@@ -7,7 +7,7 @@ import sys
 
 import redis
 
-from trans_image_name import trans_random_image_name
+from trans_image_name import trans_image
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -75,7 +75,7 @@ def get_tags(rep):
     return x
 
 
-image_map = trans_random_image_name()
+image_map = trans_image()
 
 data = list(get_tags(source_image))
 
@@ -85,7 +85,7 @@ print(data)
 
 i = 0
 for tag in data:
-    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{image_map[source_image]}:{tag}'
+    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{image_map(source_image)}:{tag}'
     print(i, "/", len(data), cmd, flush=True)
     (code, text) = subprocess.getstatusoutput(cmd)
     print(text, flush=True)
