@@ -39,7 +39,7 @@ syncs.sort()
 with open("fixed-tasks.json", "w", encoding='utf8') as f:
     f.write(json.dumps(syncs, indent=4, ensure_ascii=False))
 
-for i, part in enumerate(split_list(syncs, 3)):
+for i, part in enumerate(split_list(syncs, 1)):
     template['name'] = f"fixed-sync-{i}"
     template['jobs']['build']['strategy']['matrix']['syncs'] = part
     with open(f'.github/workflows/fixed-sync-{i}.yaml', 'w', encoding='utf8') as f:

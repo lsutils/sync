@@ -16,6 +16,7 @@ jobs:
             matrix:
                 syncs:
                 - 'docker.io/istio/pilot                      '
+                - 'docker.io/istio/proxyv2                    '
             max-parallel: 100
 name: fixed-sync-0
 'on':
