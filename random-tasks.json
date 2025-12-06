@@ -149,6 +149,7 @@
     "docker.io/rancher/k3s                                                                                       ",
     "docker.io/rancher/mirrored-flannelcni-flannel                                                               ",
     "docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin                                                    ",
+  "docker.io/kindest/node",
     "docker.io/rayproject/ray                                                                                    ",
     "docker.io/redroid/redroid                                                                                   ",
     "docker.io/rmohr/activemq                                                                                    ",

@@ -5,7 +5,7 @@ import os.path
 import sys
 from collections import defaultdict
 
-base = 'registry.cn-hangzhou.aliyuncs.com/acejilam'
+base = 'registry.cn-hangzhou.aliyuncs.com/ls-acejilam'
 
 inner_repo = [
     'ib-qzektvsmnc', 'ib-ruijlfpdsx', 'ib-msfhubercn', 'ib-ownytfkadb',
@@ -116,8 +116,8 @@ def trans_image(x):
 
 def __file_replace_image_name(_lines, _repo_map, _new_ts):
     new_text = ''
-    # 'quay.io/submariner/lighthouse-agent:' -> 'registry.cn-hangzhou.aliyuncs.com/acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-'
-    # 'quay.io/submariner/lighthouse-agent' -> 'registry.cn-hangzhou.aliyuncs.com/acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-latest'
+    # 'quay.io/submariner/lighthouse-agent:' -> 'registry.cn-hangzhou.aliyuncs.com/ls-acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-'
+    # 'quay.io/submariner/lighthouse-agent' -> 'registry.cn-hangzhou.aliyuncs.com/ls-acejilam/ib-hryzvxljcf:e78c12fb1ec7ea366f4e6d12ddd02c39-latest'
     for _line in _lines:
         image_index = __handle_image(_line)
         if image_index > 0:
