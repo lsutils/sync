@@ -3,11 +3,8 @@ import os
 import re
 import subprocess
 
-import yaml
-
-res = yaml.safe_load(open('.github/workflows/sync.yaml', 'r', encoding='utf8'))
-
-raw = res['jobs']['build']['strategy']['matrix']['syncs']
+with open('random-tasks.json', 'r', encoding='utf8') as f:
+    raw = json.loads(f.read())
 
 try:
     os.mkdir('txts')
