@@ -20,6 +20,7 @@ jobs:
                 - docker.io/bitnamisecure/git
                 - docker.io/kindest/node
                 - docker.io/library/nats
+                - docker.io/natsio/nats-box
             max-parallel: 10
 name: random-sync-0
 'on':
