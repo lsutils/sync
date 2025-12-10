@@ -323,5 +323,8 @@
     "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend": [],
     "registry.k8s.io/kwok/kwok": [
         "v0.7.0"
+    ],
+    "nginx": [
+        "latest"
     ]
 }
