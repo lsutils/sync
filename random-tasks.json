@@ -326,5 +326,8 @@
     ],
     "nginx": [
         "latest"
+    ],
+    "kindest/node": [
+        "v1.33.4"
     ]
 }
