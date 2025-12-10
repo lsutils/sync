@@ -116,7 +116,10 @@
     "docker.io/karmada/karmada-webhook": [],
     "docker.io/kindest/kindnetd": [],
     "docker.io/kindest/local-path-provisioner": [],
-    "docker.io/kindest/node": [],
+    "docker.io/kindest/node": [
+        "v1.33.4",
+        "v1.34.0"
+    ],
     "docker.io/kiwigrid/k8s-sidecar": [],
     "docker.io/kubeshark/front": [],
     "docker.io/kubeshark/hub": [],
