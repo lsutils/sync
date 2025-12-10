@@ -21,6 +21,7 @@ jobs:
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
                 - quay.io/centos/centos
+                - registry.k8s.io/kwok/kwok
             max-parallel: 10
 name: random-sync-1
 'on':

@@ -148,7 +148,9 @@
     "docker.io/library/postgres": [],
     "docker.io/library/python": [],
     "docker.io/library/redis": [],
-    "docker.io/library/registry": [],
+    "docker.io/library/registry": [
+        "2"
+    ],
     "docker.io/library/ubuntu": [],
     "docker.io/loftsh/vcluster": [],
     "docker.io/mccutchen/go-httpbin": [],
@@ -318,5 +320,8 @@
     "us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice": [],
     "us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice": [],
     "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend": [],
-    "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend": []
+    "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend": [],
+    "registry.k8s.io/kwok/kwok": [
+        "v0.7.0"
+    ]
 }
