@@ -16,6 +16,7 @@ jobs:
             matrix:
                 syncs:
                 - cgr.dev/chainguard/bash
+                - cr.kgateway.dev/kgateway-dev/kgateway
                 - docker.io/alpine/k8s
                 - docker.io/bitnamilegacy/etcd
                 - docker.io/bitnamisecure/git
@@ -23,7 +24,6 @@ jobs:
                 - docker.io/library/mysql
                 - docker.io/library/nats
                 - docker.io/library/registry
-                - docker.io/natsio/nats-box
             max-parallel: 10
 name: random-sync-0
 'on':

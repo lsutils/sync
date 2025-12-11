@@ -2,7 +2,9 @@
     "cgr.dev/chainguard/bash": [
         "latest"
     ],
-    "cr.kgateway.dev/kgateway-dev/kgateway": [],
+    "cr.kgateway.dev/kgateway-dev/kgateway": [
+        "v2.0.3"
+    ],
     "docker.elastic.co/elasticsearch/elasticsearch": [],
     "docker.io/80imike/find-container-process": [],
     "docker.io/alpine/k8s": [
