@@ -46,6 +46,7 @@ if __name__ == '__main__':
 source ~/script/.customer_script.sh
 skopeo_copy {s_img} {trans_image(s_img)}
 cd ~/k8s/sync
+eval "$(print_proxy.py)"
 git add .
 git commit -m "{s_img}"
 git push 
