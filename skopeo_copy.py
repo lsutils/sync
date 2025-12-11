@@ -44,9 +44,9 @@ if __name__ == '__main__':
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
 source ~/script/.customer_script.sh
+eval "$(print_proxy.py)"
 skopeo_copy {s_img} {trans_image(s_img)}
 cd ~/k8s/sync
-eval "$(print_proxy.py)"
 git add .
 git commit -m "{s_img}"
 git push 
