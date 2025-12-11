@@ -1,5 +1,7 @@
 {
-    "cgr.dev/chainguard/bash": [],
+    "cgr.dev/chainguard/bash": [
+        "latest"
+    ],
     "cr.kgateway.dev/kgateway-dev/kgateway": [],
     "docker.elastic.co/elasticsearch/elasticsearch": [],
     "docker.io/80imike/find-container-process": [],
