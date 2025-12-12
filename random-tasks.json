@@ -338,5 +338,8 @@
     ],
     "ghcr.io/nvidia/kai-scheduler/operator": [
         "v0.10.3"
+    ],
+    "docker.io/soyking/e3w": [
+        "latest"
     ]
 }

@@ -25,6 +25,7 @@ jobs:
                 - docker.io/library/nats
                 - docker.io/library/registry
                 - docker.io/natsio/nats-box
+                - docker.io/natsio/nats-server-config-reloader
             max-parallel: 10
 name: random-sync-0
 'on':
