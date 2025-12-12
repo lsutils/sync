@@ -23,6 +23,8 @@ with open(sync_path, 'r', encoding='utf8') as f:
 
 if __name__ == '__main__':
     repo_tag = sys.argv[1].strip()
+    if len(repo_tag.split('/'))<2:
+        raise Exception('must have group/user/repo')
     repo, tag = '', ''
     if len(repo_tag.split(':')) == 2:
         repo, tag = repo_tag.split(':')

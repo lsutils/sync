@@ -147,7 +147,6 @@
     "docker.io/library/nats": [
         "2.10.21-alpine"
     ],
-    "docker.io/library/nginx": [],
     "docker.io/library/node": [],
     "docker.io/library/postgres": [],
     "docker.io/library/python": [],
@@ -330,11 +329,8 @@
     "registry.k8s.io/kwok/kwok": [
         "v0.7.0"
     ],
-    "nginx": [
+    "docker.io/library/nginx": [
         "latest"
-    ],
-    "kindest/node": [
-        "v1.33.4"
     ],
     "ghcr.io/nvidia/kai-scheduler/operator": [
         "v0.10.3"

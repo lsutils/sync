@@ -15,14 +15,14 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - docker.io/natsio/nats-server-config-reloader
                 - gcr.io/kubebuilder/kube-rbac-proxy
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
                 - quay.io/centos/centos
                 - registry.k8s.io/lws/lws
                 - registry.k8s.io/kwok/kwok
-                - nginx
-                - kindest/node
+                - docker.io/library/nginx
                 - ghcr.io/nvidia/kai-scheduler/operator
                 - docker.io/soyking/e3w
             max-parallel: 10

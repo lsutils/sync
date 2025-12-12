@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import json
+import os
 import sys
-import os 
 from collections import defaultdict
-
 
 skopeo_bin = 'skopeo'
 tags = []
@@ -17,7 +16,7 @@ except OSError:
 
 with open(fix_sync_path, 'r', encoding='utf8') as f:
     data = json.load(f)
-    for k,v in data.items():
+    for k, v in data.items():
         res[k].extend(v)
 
 try:
@@ -27,14 +26,15 @@ except OSError:
 
 with open(sync_path, 'r', encoding='utf8') as f:
     data = json.load(f)
-    for k,v in data.items():
+    for k, v in data.items():
         res[k].extend(v)
-     
+
 if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
 
-
-for k,tags in res.items():
+for k, tags in res.items():
+    print(k)
+    continue
     if len(tags) == 0:
         continue
     for tag in tags:
@@ -46,7 +46,3 @@ for k,tags in res.items():
     trans-image-to-ls-harbor.py --arch all --source {source_image}
     ''')
         os.system('zsh /tmp/sl.sh')
-    
-
-
- 
