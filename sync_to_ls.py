@@ -33,8 +33,6 @@ if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
 
 for k, tags in res.items():
-    print(k)
-    continue
     if len(tags) == 0:
         continue
     for tag in tags:
