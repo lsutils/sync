@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
                 - quay.io/centos/centos
                 - registry.k8s.io/lws/lws
@@ -28,6 +27,7 @@ jobs:
                 - ghcr.io/nvidia/kai-scheduler/binder
                 - ghcr.io/nvidia/kai-scheduler/crd-upgrader
                 - ghcr.io/nvidia/kai-scheduler/podgroupcontroller
+                - ghcr.io/nvidia/kai-scheduler/podgrouper
             max-parallel: 10
 name: random-sync-1
 'on':

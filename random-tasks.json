@@ -354,5 +354,8 @@
     ],
     "ghcr.io/nvidia/kai-scheduler/podgroupcontroller": [
         "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/podgrouper": [
+        "v0.10.3"
     ]
 }

@@ -28,6 +28,7 @@ jobs:
                 - docker.io/natsio/nats-box
                 - docker.io/natsio/nats-server-config-reloader
                 - gcr.io/kubebuilder/kube-rbac-proxy
+                - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
             max-parallel: 10
 name: random-sync-0
 'on':
