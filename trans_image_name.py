@@ -144,6 +144,11 @@ def trans_image(x):
         fc = __input_replace(_x)
         if fc != _x:
             return fc
+    if len(x.split('/')) == 2:
+        _x = 'docker.io/' + x
+        fc = __input_replace(_x)
+        if fc != _x:
+            return fc
     return x
 
 
