@@ -351,5 +351,8 @@
     ],
     "ghcr.io/nvidia/kai-scheduler/crd-upgrader": [
         "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/podgroupcontroller": [
+        "v0.10.3"
     ]
 }

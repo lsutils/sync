@@ -27,6 +27,7 @@ jobs:
                 - ghcr.io/nvidia/kai-scheduler/admission
                 - ghcr.io/nvidia/kai-scheduler/binder
                 - ghcr.io/nvidia/kai-scheduler/crd-upgrader
+                - ghcr.io/nvidia/kai-scheduler/podgroupcontroller
             max-parallel: 10
 name: random-sync-1
 'on':
