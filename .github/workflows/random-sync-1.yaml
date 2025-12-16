@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - gcr.io/kubebuilder/kube-rbac-proxy
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
                 - quay.io/centos/centos
@@ -27,6 +26,7 @@ jobs:
                 - ghcr.io/ai-dynamo/grove/grove-operator
                 - ghcr.io/nvidia/kai-scheduler/admission
                 - ghcr.io/nvidia/kai-scheduler/binder
+                - ghcr.io/nvidia/kai-scheduler/crd-upgrader
             max-parallel: 10
 name: random-sync-1
 'on':

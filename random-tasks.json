@@ -348,5 +348,8 @@
     ],
     "ghcr.io/nvidia/kai-scheduler/binder": [
         "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/crd-upgrader": [
+        "v0.10.3"
     ]
 }
