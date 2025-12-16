@@ -345,5 +345,8 @@
     ],
     "ghcr.io/nvidia/kai-scheduler/admission": [
         "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/binder": [
+        "v0.10.3"
     ]
 }

@@ -26,6 +26,7 @@ jobs:
                 - docker.io/soyking/e3w
                 - ghcr.io/ai-dynamo/grove/grove-operator
                 - ghcr.io/nvidia/kai-scheduler/admission
+                - ghcr.io/nvidia/kai-scheduler/binder
             max-parallel: 10
 name: random-sync-1
 'on':
