@@ -337,5 +337,8 @@
     ],
     "docker.io/soyking/e3w": [
         "latest"
+    ],
+    "ghcr.io/ai-dynamo/grove/grove-operator": [
+        "v0.0.0-g0f07586"
     ]
 }
