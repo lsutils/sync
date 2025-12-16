@@ -149,7 +149,9 @@
     ],
     "docker.io/library/node": [],
     "docker.io/library/postgres": [],
-    "docker.io/library/python": [],
+    "docker.io/library/python": [
+        "3.12-slim"
+    ],
     "docker.io/library/redis": [],
     "docker.io/library/registry": [
         "2"

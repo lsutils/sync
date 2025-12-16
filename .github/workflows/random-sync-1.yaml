@@ -15,6 +15,7 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - docker.io/natsio/nats-server-config-reloader
                 - gcr.io/kubebuilder/kube-rbac-proxy
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
