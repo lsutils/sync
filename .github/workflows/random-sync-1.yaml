@@ -15,6 +15,7 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - nvcr.io/nvidia/ai-dynamo/vllm-runtime
                 - quay.io/centos/centos
                 - registry.k8s.io/lws/lws
                 - registry.k8s.io/kwok/kwok
