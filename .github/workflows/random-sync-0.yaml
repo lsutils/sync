@@ -20,6 +20,7 @@ jobs:
                 - docker.io/alpine/k8s
                 - docker.io/bitnamilegacy/etcd
                 - docker.io/bitnamisecure/git
+                - docker.io/jaegertracing/all-in-one
                 - docker.io/kindest/node
                 - docker.io/library/mysql
                 - docker.io/library/nats

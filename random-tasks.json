@@ -105,7 +105,9 @@
     "docker.io/istio/install-cni": [],
     "docker.io/istio/tcp-echo-server": [],
     "docker.io/istio/ztunnel": [],
-    "docker.io/jaegertracing/all-in-one": [],
+    "docker.io/jaegertracing/all-in-one": [
+        "latest"
+    ],
     "docker.io/joxit/docker-registry-ui": [],
     "docker.io/karmada/karmada-agent": [],
     "docker.io/karmada/karmada-aggregated-apiserver": [],
