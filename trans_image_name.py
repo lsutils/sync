@@ -32,12 +32,15 @@ __random_image = {}
 __fixed_image = {}
 
 
-def __trans_random_image_name():
+def __trans_random_image_name(path=None):
     global __random_image
     if len(__random_image) != 0:
         return __random_image
     try:
-        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'random-tasks.json')
+        if path is None:
+            sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'random-tasks.json')
+        else:
+            sync_path = path
     except OSError:
         sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'random-tasks.json')
 
@@ -81,12 +84,15 @@ def __trans_random_image_name():
     return trans_images
 
 
-def __trans_fixed_image_name():
+def __trans_fixed_image_name(path=None):
     global __fixed_image
     if len(__fixed_image) != 0:
         return __fixed_image
     try:
-        sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'fixed-tasks.json')
+        if path is None:
+            sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'fixed-tasks.json')
+        else:
+            sync_path = path
     except OSError:
         sync_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fixed-tasks.json')
 
@@ -114,10 +120,6 @@ def __trans_fixed_image_name():
     return trans_images
 
 
-__trans_fixed_image_name()
-__trans_random_image_name()
-
-
 def __inner_trans_image():
     _a = __trans_random_image_name()
     _b = __trans_fixed_image_name()
@@ -135,7 +137,15 @@ def __handle_image(_line):
         return -1
 
 
-def trans_image(x):
+read = False
+
+
+def trans_image(x, random_path=None, fixed_path=None):
+    global read
+    if not read:
+        __trans_fixed_image_name(fixed_path)
+        __trans_random_image_name(random_path)
+
     fc = __input_replace(x)
     if fc != x:
         return fc
