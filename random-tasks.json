@@ -368,9 +368,6 @@
     "ghcr.io/nvidia/kai-scheduler/scheduler": [
         "v0.10.3"
     ],
-    "nvidia/cuda": [
-        "12.9.1-runtime-ubuntu24.04"
-    ],
     "docker.io/nvidia/cuda": [
         "12.9.1-runtime-ubuntu24.04"
     ]

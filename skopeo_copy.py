@@ -40,8 +40,7 @@ if __name__ == '__main__':
         random_data[repo] = list(ds)
     else:
         random_data[repo] = [tag]
-    with (open(sync_path, 'w', encoding='utf8')) as f:
-        f.write(json.dumps(random_data, indent=4, ensure_ascii=False))
+
     from trans_image_name import trans_image
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
@@ -51,6 +50,9 @@ skopeo_copy {s_img} {trans_image(s_img)}
 cd ~/k8s/sync
 git add .
 git commit -m "{s_img}"
-git push 
+git push
 ''')
     os.system('zsh /tmp/sc.sh')
+    if os.path.exists('/tmp/skopeo_copy_success'):
+        with (open(sync_path, 'w', encoding='utf8')) as f:
+            f.write(json.dumps(random_data, indent=4, ensure_ascii=False))
