@@ -3,8 +3,6 @@ import json
 import os.path
 import sys
 
-
-
 try:
     fix_sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'fixed-tasks.json')
 except OSError:
@@ -23,7 +21,7 @@ with open(sync_path, 'r', encoding='utf8') as f:
 
 if __name__ == '__main__':
     repo_tag = sys.argv[1].strip()
-    if len(repo_tag.split('/'))<2:
+    if len(repo_tag.split('/')) < 2:
         raise Exception('must have group/user/repo')
     repo, tag = '', ''
     if len(repo_tag.split(':')) == 2:
@@ -42,11 +40,13 @@ if __name__ == '__main__':
         random_data[repo] = [tag]
 
     from trans_image_name import trans_image
+
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
 source ~/script/.customer_script.sh
 eval "$(print_proxy.py)"
-skopeo_copy {s_img} {trans_image(s_img)}
+set -ex
+skopeo_copy {s_img} {trans_image(s_img, random_data)}
 cd ~/k8s/sync
 git add .
 git commit -m "{s_img}"

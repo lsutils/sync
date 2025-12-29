@@ -25,7 +25,7 @@ inner_repo = [
     'ag4sl3r8ot', 'qylw5i4623'
 ]
 
-for i,item in enumerate(inner_repo):
+for i, item in enumerate(inner_repo):
     inner_repo[i] = 'ib-' + item
 
 __random_image = {}
@@ -135,20 +135,28 @@ def __handle_image(_line):
         return -1
 
 
-def trans_image(x):
+def trans_image(x, random_images={}):
+    global __random_image
+    raw__random_image = __random_image
+    if len(random_images)!=0:
+        __random_image = random_images
     fc = __input_replace(x)
     if fc != x:
+        __random_image = raw__random_image
         return fc
     if len(x.split('/')) == 1:
         _x = 'docker.io/library/' + x
         fc = __input_replace(_x)
         if fc != _x:
+            __random_image = raw__random_image
             return fc
     if len(x.split('/')) == 2:
         _x = 'docker.io/' + x
         fc = __input_replace(_x)
         if fc != _x:
+            __random_image = raw__random_image
             return fc
+    __random_image = raw__random_image
     return x
 
 
