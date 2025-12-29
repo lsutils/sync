@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import json
 import os.path
+import shutil
 import sys
+import tempfile
 
 try:
     fix_sync_path = os.path.join(os.path.dirname(os.readlink(os.path.abspath(__file__))), 'fixed-tasks.json')
@@ -39,20 +41,23 @@ if __name__ == '__main__':
     else:
         random_data[repo] = [tag]
 
+    with (open(sync_path, 'w', encoding='utf8')) as f:
+        f.write(json.dumps(random_data, indent=4, ensure_ascii=False))
+
     from trans_image_name import trans_image
 
+    shutil.copy2(sync_path, sync_path + '.bak')
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
 source ~/script/.customer_script.sh
 eval "$(print_proxy.py)"
 set -ex
-skopeo_copy {s_img} {trans_image(s_img, random_data)}
+skopeo_copy {s_img} {trans_image(s_img)}
 cd ~/k8s/sync
 git add .
 git commit -m "{s_img}"
 git push
 ''')
     os.system('zsh /tmp/sc.sh')
-    if os.path.exists('/tmp/skopeo_copy_success'):
-        with (open(sync_path, 'w', encoding='utf8')) as f:
-            f.write(json.dumps(random_data, indent=4, ensure_ascii=False))
+    if not os.path.exists('/tmp/skopeo_copy_success'):
+        shutil.copy2(sync_path + '.bak', sync_path)
