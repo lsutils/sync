@@ -12,4 +12,4 @@ random_data['docker.io/alpine/k8s'] = ['1.34.1']
 
 from trans_image_name import trans_image
 
-print(trans_image('docker.io/alpine/k8s:1.34.1', random_images=random_data))
+print(trans_image('docker.io/alpine/k8s:1.34.1'))
