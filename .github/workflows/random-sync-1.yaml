@@ -15,7 +15,6 @@ jobs:
         strategy:
             matrix:
                 syncs:
-                - quay.io/centos/centos
                 - registry.k8s.io/lws/lws
                 - registry.k8s.io/kwok/kwok
                 - docker.io/library/nginx
@@ -32,6 +31,7 @@ jobs:
                 - xhofe/alist
                 - docker.io/xhofe/alist
                 - registry.cn-shanghai.aliyuncs.com/labring/kubernetes-docker
+                - registry.cn-shanghai.aliyuncs.com/labring/helm
             max-parallel: 10
 name: random-sync-1
 'on':
