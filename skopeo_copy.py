@@ -49,6 +49,7 @@ if __name__ == '__main__':
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
 source ~/script/.customer_script.sh
+set -x
 eval "$(print_proxy.py)"
 set -ex
 skopeo_copy {s_img} {trans_image(s_img, random_path=sync_path + '.bak')}

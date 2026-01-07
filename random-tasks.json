@@ -277,8 +277,9 @@
     "quay.io/argoproj/argocd": [],
     "quay.io/brancz/kube-rbac-proxy": [],
     "quay.io/centos/centos": [
-        "7",
-        "stream8"
+        "stream8",
+        "stream9",
+        "7"
     ],
     "quay.io/cephcsi/cephcsi": [],
     "quay.io/cilium/cilium-envoy": [],
