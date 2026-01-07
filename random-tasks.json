@@ -123,9 +123,9 @@
     "docker.io/kindest/kindnetd": [],
     "docker.io/kindest/local-path-provisioner": [],
     "docker.io/kindest/node": [
+        "v1.33.4",
         "v1.34.0",
-        "v1.34.2",
-        "v1.33.4"
+        "v1.34.2"
     ],
     "docker.io/kiwigrid/k8s-sidecar": [],
     "docker.io/kubeshark/front": [],
