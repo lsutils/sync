@@ -15,6 +15,7 @@ jobs:
         strategy:
             matrix:
                 syncs:
+                - quay.io/centos/centos
                 - registry.k8s.io/lws/lws
                 - registry.k8s.io/kwok/kwok
                 - docker.io/library/nginx
@@ -28,10 +29,8 @@ jobs:
                 - ghcr.io/nvidia/kai-scheduler/podgrouper
                 - ghcr.io/nvidia/kai-scheduler/queuecontroller
                 - ghcr.io/nvidia/kai-scheduler/scheduler
-                - xhofe/alist
+                - docker.io/nvidia/cuda
                 - docker.io/xhofe/alist
-                - registry.cn-shanghai.aliyuncs.com/labring/kubernetes-docker
-                - registry.cn-shanghai.aliyuncs.com/labring/helm
             max-parallel: 10
 name: random-sync-1
 'on':

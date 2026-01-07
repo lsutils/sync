@@ -124,8 +124,7 @@
     "docker.io/kindest/local-path-provisioner": [],
     "docker.io/kindest/node": [
         "v1.33.4",
-        "v1.34.0",
-        "v1.34.2"
+        "v1.34.0"
     ],
     "docker.io/kiwigrid/k8s-sidecar": [],
     "docker.io/kubeshark/front": [],
@@ -277,8 +276,6 @@
     "quay.io/argoproj/argocd": [],
     "quay.io/brancz/kube-rbac-proxy": [],
     "quay.io/centos/centos": [
-        "stream8",
-        "stream9",
         "7"
     ],
     "quay.io/cephcsi/cephcsi": [],
@@ -373,5 +370,8 @@
     ],
     "docker.io/nvidia/cuda": [
         "12.9.1-runtime-ubuntu24.04"
+    ],
+    "docker.io/xhofe/alist": [
+        "latest"
     ]
 }

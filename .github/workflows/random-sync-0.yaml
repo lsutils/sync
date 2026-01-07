@@ -32,7 +32,6 @@ jobs:
                 - gcr.io/kubebuilder/kube-rbac-proxy
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime
-                - quay.io/centos/centos
             max-parallel: 10
 name: random-sync-0
 'on':
