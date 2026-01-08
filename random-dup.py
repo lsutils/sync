@@ -33,5 +33,5 @@ with open("random-tasks.json", "w", encoding='utf8') as f:
 for i, part in enumerate(split_list(syncs, len(syncs) // 256 + 1)):
     template['name'] = f"random-sync-{i}"
     template['jobs']['build']['strategy']['matrix']['syncs'] = part
-    with open(f'.github/workflows/random-sync-{i}.yaml', 'w', encoding='utf8') as f:
-        f.write(yaml.dump(template, allow_unicode=False, default_flow_style=False, indent=4, width=10 ** 10))
+    # with open(f'.github/workflows/random-sync-{i}.yaml', 'w', encoding='utf8') as f:
+    #     f.write(yaml.dump(template, allow_unicode=False, default_flow_style=False, indent=4, width=10 ** 10))
