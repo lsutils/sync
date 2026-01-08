@@ -215,7 +215,9 @@
     "gcr.io/istio-testing/jwt-server": [],
     "gcr.io/knative-releases/knative.dev/net-istio/cmd/controller": [],
     "gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook": [],
-    "gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier": [],
+    "gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier": [
+        "v1.17.0"
+    ],
     "gcr.io/knative-releases/knative.dev/serving/cmd/activator": [],
     "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler": [],
     "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa": [],
@@ -373,5 +375,8 @@
     ],
     "docker.io/xhofe/alist": [
         "latest"
+    ],
+    "envoyproxy/envoy": [
+        "v1.31-latest"
     ]
 }

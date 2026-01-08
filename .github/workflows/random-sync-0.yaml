@@ -29,6 +29,7 @@ jobs:
                 - docker.io/library/ubuntu
                 - docker.io/natsio/nats-box
                 - docker.io/natsio/nats-server-config-reloader
+                - gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier
                 - gcr.io/kubebuilder/kube-rbac-proxy
                 - nvcr.io/nvidia/ai-dynamo/kubernetes-operator
                 - nvcr.io/nvidia/ai-dynamo/vllm-runtime

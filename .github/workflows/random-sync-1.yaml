@@ -31,6 +31,7 @@ jobs:
                 - ghcr.io/nvidia/kai-scheduler/scheduler
                 - docker.io/nvidia/cuda
                 - docker.io/xhofe/alist
+                - envoyproxy/envoy
             max-parallel: 10
 name: random-sync-1
 'on':
