@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"reflect"
 )
 
@@ -15,7 +16,9 @@ func NeedUpgrade() bool {
 	currentFix := map[string][]string{}
 	remoteRandom := map[string][]string{}
 	remoteFix := map[string][]string{}
-
+	if os.Getenv("SkipUpgradeCheck") == "true" {
+		return false
+	}
 	json.Unmarshal(RandomData, &currentRandom)
 	json.Unmarshal(FixData, &currentFix)
 	json.Unmarshal(Remote(random), &remoteRandom)

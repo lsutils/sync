@@ -221,7 +221,6 @@ func replaceImages(fileData string, filepath string) {
 		}
 	} else {
 		if len(res) > 0 {
-			fmt.Println(strings.Join(res, "\n---\n"))
 			ioutil.WriteFile(filepath, []byte(strings.Join(res, "\n---\n")), 0644)
 		} else {
 			ioutil.WriteFile(filepath, []byte(res[0]), 0644)

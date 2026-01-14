@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    image-replace: |-
+      {
+        "ccr.ccs.tencentyun.com/acejilam/ib-0y1tg9wj7e:dba37485fee3d4d76d5d82609cc9bccb-latest": "nginx"
+      }
+  labels:
+    role: title
+  name: title
+spec:
+  containers:
+  - image: ccr.ccs.tencentyun.com/acejilam/ib-0y1tg9wj7e:dba37485fee3d4d76d5d82609cc9bccb-latest
+    imagePullPolicy: IfNotPresent
+    name: title
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  restartPolicy: Always

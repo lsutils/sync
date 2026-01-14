@@ -44,7 +44,7 @@ if __name__ == '__main__':
     with (open(sync_path + '.bak', 'w', encoding='utf8')) as f:
         f.write(json.dumps(random_data, indent=4, ensure_ascii=False))
 
-    from trans_image_name import trans_image
+    from trans_image import trans_image
 
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         f.write(f'''
