@@ -203,7 +203,7 @@ func replaceImage(data string) (string, map[string]string) {
 
 func replaceImages(fileData string, filepath string) {
 	var res []string
-	reverseList := []string{}
+	var reverseList []string
 	for _, item := range strings.Split(fileData, "\n---\n") {
 		_t, rm := replaceImage(item)
 		for _, v := range rm {
@@ -231,15 +231,28 @@ func replaceImages(fileData string, filepath string) {
 
 func main() {
 	if NeedUpgrade() {
-		cmd := exec.Command("go", "install -v github.com/lsutils/sync/cmd/...@latest")
-		fmt.Println(cmd.Output())
+		cmd := exec.Command("bash", "-c", "go install -v gitee.com/ls-2018/sync/cmd/...@latest")
+		cmd.Env = append(os.Environ(),
+			"GOPRIVATE=gitee.com",
+			"GONOSUMDB=gitee.com",
+			"GONOPROXY=gitee.com",
+		)
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+
+		if err := cmd.Run(); err != nil {
+			fmt.Println("err:", err)
+		}
+
 		cmd = exec.Command("trans-image-name", os.Args[1])
 		out, err := cmd.Output()
 		if err != nil {
 			panic(err)
 		}
 		fmt.Println(string(out))
+		os.Exit(0)
 	}
+
 	repoMap = transImageName()
 	target := os.Args[1]
 	if isDir(target) {

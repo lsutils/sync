@@ -1,4 +1,4 @@
 {
-    "docker.io/istio/pilot": [],
+    "docker.io/istio/pilot": ["a"],
     "docker.io/istio/proxyv2": []
 }
