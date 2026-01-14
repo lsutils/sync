@@ -1,385 +1,385 @@
 {
-  "cgr.dev/chainguard/bash": [
-    "latest"
-  ],
-  "cr.kgateway.dev/kgateway-dev/kgateway": [
-    "v2.0.3"
-  ],
-  "docker.elastic.co/elasticsearch/elasticsearch": [],
-  "docker.io/80imike/find-container-process": [],
-  "docker.io/alpine/k8s": [
-    "1.34.1"
-  ],
-  "docker.io/antrea/antrea-ubuntu": [],
-  "docker.io/apache/apisix": [],
-  "docker.io/apache/rocketmq": [],
-  "docker.io/apache/rocketmq-exporter": [],
-  "docker.io/apache/skywalking-oap-server": [],
-  "docker.io/apache/skywalking-swck": [],
-  "docker.io/apache/skywalking-ui": [],
-  "docker.io/apachepulsar/pulsar-all": [],
-  "docker.io/aweimeow/sctp-server": [],
-  "docker.io/bitnami/etcd": [],
-  "docker.io/bitnami/jmx-exporter": [],
-  "docker.io/bitnami/kubectl": [],
-  "docker.io/bitnami/mongodb": [],
-  "docker.io/bitnami/mongodb-exporter": [],
-  "docker.io/bitnami/rabbitmq": [],
-  "docker.io/bitnamilegacy/etcd": [
-    "3.5.18-debian-12-r5"
-  ],
-  "docker.io/bitnamisecure/git": [
-    "latest"
-  ],
-  "docker.io/burlyluo/kindest": [],
-  "docker.io/burlyluo/nettool": [],
-  "docker.io/burlyluo/vyos": [],
-  "docker.io/calico/cni": [],
-  "docker.io/calico/kube-controllers": [],
-  "docker.io/calico/node": [],
-  "docker.io/cilium/certgen": [],
-  "docker.io/cilium/cilium": [],
-  "docker.io/cilium/cilium-ci": [],
-  "docker.io/cilium/clustermesh-apiserver": [],
-  "docker.io/cilium/hubble-export-stdout": [],
-  "docker.io/cilium/hubble-relay": [],
-  "docker.io/cilium/hubble-ui": [],
-  "docker.io/cilium/hubble-ui-backend": [],
-  "docker.io/cilium/json-mock": [],
-  "docker.io/cilium/netperf": [],
-  "docker.io/cilium/operator": [],
-  "docker.io/cilium/operator-generic": [],
-  "docker.io/cilium/startup-script": [],
-  "docker.io/cilium/tetragon": [],
-  "docker.io/cilium/tetragon-operator": [],
-  "docker.io/clickhouse/clickhouse-server": [],
-  "docker.io/cloudnativelabs/kube-router": [],
-  "docker.io/curlimages/curl": [],
-  "docker.io/docker/dockerfile": [],
-  "docker.io/dragonflyoss/client": [],
-  "docker.io/dragonflyoss/dfinit": [],
-  "docker.io/dragonflyoss/manager": [],
-  "docker.io/dragonflyoss/scheduler": [],
-  "docker.io/flannel/flannel": [],
-  "docker.io/flannel/flannel-cni-plugin": [],
-  "docker.io/flannelcni/flannel": [],
-  "docker.io/flomesh/fsm-bootstrap": [],
-  "docker.io/flomesh/fsm-controller": [],
-  "docker.io/flomesh/fsm-curl": [],
-  "docker.io/flomesh/fsm-ingress": [],
-  "docker.io/flomesh/fsm-injector": [],
-  "docker.io/flomesh/fsm-preinstall": [],
-  "docker.io/flomesh/fsm-sidecar-init": [],
-  "docker.io/flomesh/pipy": [],
-  "docker.io/flomesh/pipy-repo": [],
-  "docker.io/fluent/fluent-bit": [],
-  "docker.io/frooodle/s-pdf": [],
-  "docker.io/goharbor/harbor-core": [],
-  "docker.io/goharbor/harbor-db": [],
-  "docker.io/goharbor/harbor-jobservice": [],
-  "docker.io/goharbor/harbor-log": [],
-  "docker.io/goharbor/harbor-portal": [],
-  "docker.io/goharbor/harbor-registryctl": [],
-  "docker.io/goharbor/nginx-photon": [],
-  "docker.io/goharbor/prepare": [],
-  "docker.io/goharbor/redis-photon": [],
-  "docker.io/goharbor/registry-photon": [],
-  "docker.io/gpustack/gpustack": [],
-  "docker.io/grafana/grafana": [],
-  "docker.io/grafana/loki": [],
-  "docker.io/hiroakis/tornado-websocket-example": [],
-  "docker.io/istio/examples-bookinfo-details-v1": [],
-  "docker.io/istio/examples-bookinfo-details-v2": [],
-  "docker.io/istio/examples-bookinfo-mongodb": [],
-  "docker.io/istio/examples-bookinfo-mysqldb": [],
-  "docker.io/istio/examples-bookinfo-productpage-v1": [],
-  "docker.io/istio/examples-bookinfo-ratings-v1": [],
-  "docker.io/istio/examples-bookinfo-ratings-v2": [],
-  "docker.io/istio/examples-bookinfo-reviews-v1": [],
-  "docker.io/istio/examples-bookinfo-reviews-v2": [],
-  "docker.io/istio/examples-bookinfo-reviews-v3": [],
-  "docker.io/istio/examples-helloworld-v1": [],
-  "docker.io/istio/examples-helloworld-v2": [],
-  "docker.io/istio/health": [],
-  "docker.io/istio/install-cni": [],
-  "docker.io/istio/tcp-echo-server": [],
-  "docker.io/istio/ztunnel": [],
-  "docker.io/jaegertracing/all-in-one": [
-    "latest"
-  ],
-  "docker.io/joxit/docker-registry-ui": [],
-  "docker.io/karmada/karmada-agent": [],
-  "docker.io/karmada/karmada-aggregated-apiserver": [],
-  "docker.io/karmada/karmada-controller-manager": [],
-  "docker.io/karmada/karmada-descheduler": [],
-  "docker.io/karmada/karmada-interpreter-webhook-example": [],
-  "docker.io/karmada/karmada-metrics-adapter": [],
-  "docker.io/karmada/karmada-operator": [],
-  "docker.io/karmada/karmada-scheduler": [],
-  "docker.io/karmada/karmada-scheduler-estimator": [],
-  "docker.io/karmada/karmada-search": [],
-  "docker.io/karmada/karmada-webhook": [],
-  "docker.io/kindest/kindnetd": [],
-  "docker.io/kindest/local-path-provisioner": [],
-  "docker.io/kindest/node": [
-    "v1.33.4",
-    "v1.34.0"
-  ],
-  "docker.io/kiwigrid/k8s-sidecar": [],
-  "docker.io/kubeshark/front": [],
-  "docker.io/kubeshark/hub": [],
-  "docker.io/kubeshark/worker": [],
-  "docker.io/kubeskoop/agent": [],
-  "docker.io/kubeskoop/controller": [],
-  "docker.io/kubezoo/clusterresourcequota": [],
-  "docker.io/kubezoo/kubezoo": [],
-  "docker.io/labring/calico": [],
-  "docker.io/labring/flannel": [],
-  "docker.io/labring/helm": [],
-  "docker.io/labring/kubernetes": [],
-  "docker.io/library/alpine": [],
-  "docker.io/library/buildpack-deps": [],
-  "docker.io/library/busybox": [],
-  "docker.io/library/debian": [],
-  "docker.io/library/golang": [],
-  "docker.io/library/mysql": [
-    "8"
-  ],
-  "docker.io/library/nats": [
-    "2.10.21-alpine"
-  ],
-  "docker.io/library/node": [],
-  "docker.io/library/postgres": [],
-  "docker.io/library/python": [
-    "3.12-slim"
-  ],
-  "docker.io/library/redis": [],
-  "docker.io/library/registry": [
-    "2"
-  ],
-  "docker.io/library/ubuntu": [
-    "24.04"
-  ],
-  "docker.io/loftsh/vcluster": [],
-  "docker.io/mccutchen/go-httpbin": [],
-  "docker.io/meltwater/latency-test": [],
-  "docker.io/mingrammer/flog": [],
-  "docker.io/moby/buildkit": [],
-  "docker.io/mydlqclub/dnsutils": [],
-  "docker.io/natsio/nats-box": [
-    "0.14.5"
-  ],
-  "docker.io/natsio/nats-server-config-reloader": [
-    "0.16.0"
-  ],
-  "docker.io/opensearchproject/opensearch": [],
-  "docker.io/opensearchproject/opensearch-dashboards": [],
-  "docker.io/otel/opentelemetry-collector": [],
-  "docker.io/pivotalrabbitmq/perf-test": [],
-  "docker.io/projecthami/hami": [],
-  "docker.io/prom/mysqld-exporter": [],
-  "docker.io/prometheuscommunity/postgres-exporter": [],
-  "docker.io/rancher/k3s": [],
-  "docker.io/rancher/mirrored-flannelcni-flannel": [],
-  "docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin": [],
-  "docker.io/rayproject/ray": [],
-  "docker.io/redroid/redroid": [],
-  "docker.io/rmohr/activemq": [],
-  "docker.io/soelvkaer/vppcontainer": [],
-  "docker.io/tinygo/tinygo": [],
-  "docker.io/traefik/whoami": [],
-  "docker.io/vllm/vllm-openai": [],
-  "docker.io/volcanosh/dist-mnist-tf-example": [],
-  "docker.io/volcanosh/vc-controller-manager": [],
-  "docker.io/volcanosh/vc-scheduler": [],
-  "docker.io/volcanosh/vc-webhook-manager": [
-    "latest"
-  ],
-  "docker.io/wagoodman/dive": [],
-  "docker.io/yanbaru/vyos-1.4": [],
-  "docker.io/yunwei37/ebpm": [],
-  "gcr.io/google-samples/microservices-demo/adservice": [],
-  "gcr.io/google-samples/microservices-demo/cartservice": [],
-  "gcr.io/google-samples/microservices-demo/checkoutservice": [],
-  "gcr.io/google-samples/microservices-demo/currencyservice": [],
-  "gcr.io/google-samples/microservices-demo/emailservice": [],
-  "gcr.io/google-samples/microservices-demo/frontend": [],
-  "gcr.io/google-samples/microservices-demo/loadgenerator": [],
-  "gcr.io/google-samples/microservices-demo/paymentservice": [],
-  "gcr.io/google-samples/microservices-demo/productcatalogservice": [],
-  "gcr.io/google-samples/microservices-demo/recommendationservice": [],
-  "gcr.io/google-samples/microservices-demo/shippingservice": [],
-  "gcr.io/heptio-images/ks-guestbook-demo": [],
-  "gcr.io/istio-testing/app": [],
-  "gcr.io/istio-testing/ext-authz": [],
-  "gcr.io/istio-testing/jwt-server": [],
-  "gcr.io/knative-releases/knative.dev/net-istio/cmd/controller": [],
-  "gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook": [],
-  "gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier": [
-    "v1.17.0"
-  ],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/activator": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/controller": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/default-domain": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/queue": [],
-  "gcr.io/knative-releases/knative.dev/serving/cmd/webhook": [],
-  "gcr.io/kubebuilder/kube-rbac-proxy": [
-    "v0.15.0"
-  ],
-  "gcr.io/kubernetes-e2e-test-images/echoserver": [],
-  "ghcr.io/apache/skywalking-cli/skywalking-cli": [],
-  "ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter": [],
-  "ghcr.io/apache/skywalking-rover/skywalking-rover": [],
-  "ghcr.io/apache/skywalking-satellite/skywalking-satellite": [],
-  "ghcr.io/apache/skywalking-showcase/app": [],
-  "ghcr.io/apache/skywalking-showcase/frontend": [],
-  "ghcr.io/apache/skywalking-showcase/gateway-service": [],
-  "ghcr.io/apache/skywalking-showcase/load-gen": [],
-  "ghcr.io/apache/skywalking-showcase/rating-service": [],
-  "ghcr.io/apache/skywalking-showcase/recommendation-service": [],
-  "ghcr.io/apache/skywalking-showcase/songs-service": [],
-  "ghcr.io/apache/skywalking/oap": [],
-  "ghcr.io/apache/skywalking/ui": [],
-  "ghcr.io/berriai/litellm": [],
-  "ghcr.io/dexidp/dex": [],
-  "ghcr.io/eunomia-bpf/ecc-x86_64": [],
-  "ghcr.io/fluxcd/flagger": [],
-  "ghcr.io/fluxcd/flagger-loadtester": [],
-  "ghcr.io/jimmidyson/configmap-reload": [],
-  "ghcr.io/k-cloud-labs/kinitiras-webhook": [],
-  "ghcr.io/k8snetworkplumbingwg/multi-networkpolicy-iptables": [],
-  "ghcr.io/k8snetworkplumbingwg/multus-cni": [],
-  "ghcr.io/k8snetworkplumbingwg/whereabouts": [],
-  "ghcr.io/mellanox/k8s-rdma-shared-dev-plugin": [],
-  "ghcr.io/prometheus-operator/prometheus-config-reloader": [],
-  "ghcr.io/siemens/ghostwire": [],
-  "ghcr.io/siemens/packetflix": [],
-  "ghcr.io/skyapm/r3": [],
-  "ghcr.io/spiffe/spiffe-csi-driver": [],
-  "ghcr.io/spiffe/spire-agent": [],
-  "ghcr.io/spiffe/spire-controller-manager": [],
-  "ghcr.io/spiffe/spire-server": [],
-  "ghcr.io/squat/generic-device-plugin": [],
-  "ghcr.io/stefanprodan/podinfo": [],
-  "k8s.gcr.io/sig-storage/csi-attacher": [],
-  "k8s.gcr.io/sig-storage/csi-node-driver-registrar": [],
-  "k8s.gcr.io/sig-storage/csi-provisioner": [],
-  "k8s.gcr.io/sig-storage/csi-resizer": [],
-  "k8s.gcr.io/sig-storage/csi-snapshotter": [],
-  "nvcr.io/nvidia/ai-dynamo/kubernetes-operator": [
-    "0.7.0"
-  ],
-  "nvcr.io/nvidia/ai-dynamo/vllm-runtime": [
-    "0.7.0"
-  ],
-  "public.ecr.aws/zinclabs/openobserve": [],
-  "quay.io/argoproj/argocd": [],
-  "quay.io/brancz/kube-rbac-proxy": [],
-  "quay.io/centos/centos": [
-    "7"
-  ],
-  "quay.io/cephcsi/cephcsi": [],
-  "quay.io/cilium/cilium-envoy": [],
-  "quay.io/coreos/etcd": [],
-  "quay.io/frrouting/frr": [],
-  "quay.io/jetstack/cert-manager-cainjector": [],
-  "quay.io/jetstack/cert-manager-controller": [],
-  "quay.io/jetstack/cert-manager-csi-driver": [],
-  "quay.io/jetstack/cert-manager-ctl": [],
-  "quay.io/jetstack/cert-manager-webhook": [],
-  "quay.io/kiali/kiali": [],
-  "quay.io/kuberay/operator": [],
-  "quay.io/metallb/controller": [],
-  "quay.io/metallb/frr-k8s": [],
-  "quay.io/metallb/speaker": [],
-  "quay.io/prometheus-operator/prometheus-config-reloader": [],
-  "quay.io/prometheus-operator/prometheus-operator": [],
-  "quay.io/prometheus/alertmanager": [],
-  "quay.io/prometheus/blackbox-exporter": [],
-  "quay.io/prometheus/node-exporter": [],
-  "quay.io/prometheus/prometheus": [],
-  "quay.io/prometheuscommunity/elasticsearch-exporter": [],
-  "quay.io/submariner/lighthouse-agent": [],
-  "quay.io/submariner/lighthouse-coredns": [],
-  "quay.io/submariner/nettest": [],
-  "quay.io/submariner/submariner-gateway": [],
-  "quay.io/submariner/submariner-operator": [],
-  "quay.io/submariner/submariner-route-agent": [],
-  "registry.k8s.io/dns/k8s-dns-node-cache": [],
-  "registry.k8s.io/e2e-test-images/agnhost": [],
-  "registry.k8s.io/etcd": [],
-  "registry.k8s.io/kube-apiserver": [],
-  "registry.k8s.io/kube-controller-manager": [],
-  "registry.k8s.io/kube-state-metrics/kube-state-metrics": [],
-  "registry.k8s.io/lws/lws": [
-    "0.7.0"
-  ],
-  "registry.k8s.io/metrics-server/metrics-server": [],
-  "registry.k8s.io/prometheus-adapter/prometheus-adapter": [],
-  "registry.k8s.io/sig-storage/csi-node-driver-registrar": [],
-  "skywalking.docker.scarf.sh/apache/skywalking-oap-server": [],
-  "skywalking.docker.scarf.sh/apache/skywalking-ui": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice": [],
-  "us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice": [],
-  "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend": [],
-  "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend": [],
-  "registry.k8s.io/kwok/kwok": [
-    "v0.7.0"
-  ],
-  "docker.io/library/nginx": [
-    "latest"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/operator": [
-    "v0.10.3"
-  ],
-  "docker.io/soyking/e3w": [
-    "latest"
-  ],
-  "ghcr.io/ai-dynamo/grove/grove-operator": [
-    "v0.0.0-g0f07586"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/admission": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/binder": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/crd-upgrader": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/podgroupcontroller": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/podgrouper": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/queuecontroller": [
-    "v0.10.3"
-  ],
-  "ghcr.io/nvidia/kai-scheduler/scheduler": [
-    "v0.10.3"
-  ],
-  "docker.io/nvidia/cuda": [
-    "12.9.1-runtime-ubuntu24.04"
-  ],
-  "docker.io/xhofe/alist": [
-    "latest"
-  ],
-  "docker.io/envoyproxy/envoy": [
-    "v1.31-latest"
-  ],
-  "docker.io/prom/prometheus": [
-    "latest"
-  ]
+    "cgr.dev/chainguard/bash": [
+        "latest"
+    ],
+    "cr.kgateway.dev/kgateway-dev/kgateway": [
+        "v2.0.3"
+    ],
+    "docker.elastic.co/elasticsearch/elasticsearch": [],
+    "docker.io/80imike/find-container-process": [],
+    "docker.io/alpine/k8s": [
+        "1.34.1"
+    ],
+    "docker.io/antrea/antrea-ubuntu": [],
+    "docker.io/apache/apisix": [],
+    "docker.io/apache/rocketmq": [],
+    "docker.io/apache/rocketmq-exporter": [],
+    "docker.io/apache/skywalking-oap-server": [],
+    "docker.io/apache/skywalking-swck": [],
+    "docker.io/apache/skywalking-ui": [],
+    "docker.io/apachepulsar/pulsar-all": [],
+    "docker.io/aweimeow/sctp-server": [],
+    "docker.io/bitnami/etcd": [],
+    "docker.io/bitnami/jmx-exporter": [],
+    "docker.io/bitnami/kubectl": [],
+    "docker.io/bitnami/mongodb": [],
+    "docker.io/bitnami/mongodb-exporter": [],
+    "docker.io/bitnami/rabbitmq": [],
+    "docker.io/bitnamilegacy/etcd": [
+        "3.5.18-debian-12-r5"
+    ],
+    "docker.io/bitnamisecure/git": [
+        "latest"
+    ],
+    "docker.io/burlyluo/kindest": [],
+    "docker.io/burlyluo/nettool": [],
+    "docker.io/burlyluo/vyos": [],
+    "docker.io/calico/cni": [],
+    "docker.io/calico/kube-controllers": [],
+    "docker.io/calico/node": [],
+    "docker.io/cilium/certgen": [],
+    "docker.io/cilium/cilium": [],
+    "docker.io/cilium/cilium-ci": [],
+    "docker.io/cilium/clustermesh-apiserver": [],
+    "docker.io/cilium/hubble-export-stdout": [],
+    "docker.io/cilium/hubble-relay": [],
+    "docker.io/cilium/hubble-ui": [],
+    "docker.io/cilium/hubble-ui-backend": [],
+    "docker.io/cilium/json-mock": [],
+    "docker.io/cilium/netperf": [],
+    "docker.io/cilium/operator": [],
+    "docker.io/cilium/operator-generic": [],
+    "docker.io/cilium/startup-script": [],
+    "docker.io/cilium/tetragon": [],
+    "docker.io/cilium/tetragon-operator": [],
+    "docker.io/clickhouse/clickhouse-server": [],
+    "docker.io/cloudnativelabs/kube-router": [],
+    "docker.io/curlimages/curl": [],
+    "docker.io/docker/dockerfile": [],
+    "docker.io/dragonflyoss/client": [],
+    "docker.io/dragonflyoss/dfinit": [],
+    "docker.io/dragonflyoss/manager": [],
+    "docker.io/dragonflyoss/scheduler": [],
+    "docker.io/flannel/flannel": [],
+    "docker.io/flannel/flannel-cni-plugin": [],
+    "docker.io/flannelcni/flannel": [],
+    "docker.io/flomesh/fsm-bootstrap": [],
+    "docker.io/flomesh/fsm-controller": [],
+    "docker.io/flomesh/fsm-curl": [],
+    "docker.io/flomesh/fsm-ingress": [],
+    "docker.io/flomesh/fsm-injector": [],
+    "docker.io/flomesh/fsm-preinstall": [],
+    "docker.io/flomesh/fsm-sidecar-init": [],
+    "docker.io/flomesh/pipy": [],
+    "docker.io/flomesh/pipy-repo": [],
+    "docker.io/fluent/fluent-bit": [],
+    "docker.io/frooodle/s-pdf": [],
+    "docker.io/goharbor/harbor-core": [],
+    "docker.io/goharbor/harbor-db": [],
+    "docker.io/goharbor/harbor-jobservice": [],
+    "docker.io/goharbor/harbor-log": [],
+    "docker.io/goharbor/harbor-portal": [],
+    "docker.io/goharbor/harbor-registryctl": [],
+    "docker.io/goharbor/nginx-photon": [],
+    "docker.io/goharbor/prepare": [],
+    "docker.io/goharbor/redis-photon": [],
+    "docker.io/goharbor/registry-photon": [],
+    "docker.io/gpustack/gpustack": [],
+    "docker.io/grafana/grafana": [],
+    "docker.io/grafana/loki": [],
+    "docker.io/hiroakis/tornado-websocket-example": [],
+    "docker.io/istio/examples-bookinfo-details-v1": [],
+    "docker.io/istio/examples-bookinfo-details-v2": [],
+    "docker.io/istio/examples-bookinfo-mongodb": [],
+    "docker.io/istio/examples-bookinfo-mysqldb": [],
+    "docker.io/istio/examples-bookinfo-productpage-v1": [],
+    "docker.io/istio/examples-bookinfo-ratings-v1": [],
+    "docker.io/istio/examples-bookinfo-ratings-v2": [],
+    "docker.io/istio/examples-bookinfo-reviews-v1": [],
+    "docker.io/istio/examples-bookinfo-reviews-v2": [],
+    "docker.io/istio/examples-bookinfo-reviews-v3": [],
+    "docker.io/istio/examples-helloworld-v1": [],
+    "docker.io/istio/examples-helloworld-v2": [],
+    "docker.io/istio/health": [],
+    "docker.io/istio/install-cni": [],
+    "docker.io/istio/tcp-echo-server": [],
+    "docker.io/istio/ztunnel": [],
+    "docker.io/jaegertracing/all-in-one": [
+        "latest"
+    ],
+    "docker.io/joxit/docker-registry-ui": [],
+    "docker.io/karmada/karmada-agent": [],
+    "docker.io/karmada/karmada-aggregated-apiserver": [],
+    "docker.io/karmada/karmada-controller-manager": [],
+    "docker.io/karmada/karmada-descheduler": [],
+    "docker.io/karmada/karmada-interpreter-webhook-example": [],
+    "docker.io/karmada/karmada-metrics-adapter": [],
+    "docker.io/karmada/karmada-operator": [],
+    "docker.io/karmada/karmada-scheduler": [],
+    "docker.io/karmada/karmada-scheduler-estimator": [],
+    "docker.io/karmada/karmada-search": [],
+    "docker.io/karmada/karmada-webhook": [],
+    "docker.io/kindest/kindnetd": [],
+    "docker.io/kindest/local-path-provisioner": [],
+    "docker.io/kindest/node": [
+        "v1.33.4",
+        "v1.34.0"
+    ],
+    "docker.io/kiwigrid/k8s-sidecar": [],
+    "docker.io/kubeshark/front": [],
+    "docker.io/kubeshark/hub": [],
+    "docker.io/kubeshark/worker": [],
+    "docker.io/kubeskoop/agent": [],
+    "docker.io/kubeskoop/controller": [],
+    "docker.io/kubezoo/clusterresourcequota": [],
+    "docker.io/kubezoo/kubezoo": [],
+    "docker.io/labring/calico": [],
+    "docker.io/labring/flannel": [],
+    "docker.io/labring/helm": [],
+    "docker.io/labring/kubernetes": [],
+    "docker.io/library/alpine": [],
+    "docker.io/library/buildpack-deps": [],
+    "docker.io/library/busybox": [],
+    "docker.io/library/debian": [],
+    "docker.io/library/golang": [],
+    "docker.io/library/mysql": [
+        "8"
+    ],
+    "docker.io/library/nats": [
+        "2.10.21-alpine"
+    ],
+    "docker.io/library/node": [],
+    "docker.io/library/postgres": [],
+    "docker.io/library/python": [
+        "3.12-slim"
+    ],
+    "docker.io/library/redis": [],
+    "docker.io/library/registry": [
+        "2"
+    ],
+    "docker.io/library/ubuntu": [
+        "24.04"
+    ],
+    "docker.io/loftsh/vcluster": [],
+    "docker.io/mccutchen/go-httpbin": [],
+    "docker.io/meltwater/latency-test": [],
+    "docker.io/mingrammer/flog": [],
+    "docker.io/moby/buildkit": [],
+    "docker.io/mydlqclub/dnsutils": [],
+    "docker.io/natsio/nats-box": [
+        "0.14.5"
+    ],
+    "docker.io/natsio/nats-server-config-reloader": [
+        "0.16.0"
+    ],
+    "docker.io/opensearchproject/opensearch": [],
+    "docker.io/opensearchproject/opensearch-dashboards": [],
+    "docker.io/otel/opentelemetry-collector": [],
+    "docker.io/pivotalrabbitmq/perf-test": [],
+    "docker.io/projecthami/hami": [],
+    "docker.io/prom/mysqld-exporter": [],
+    "docker.io/prometheuscommunity/postgres-exporter": [],
+    "docker.io/rancher/k3s": [],
+    "docker.io/rancher/mirrored-flannelcni-flannel": [],
+    "docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin": [],
+    "docker.io/rayproject/ray": [],
+    "docker.io/redroid/redroid": [],
+    "docker.io/rmohr/activemq": [],
+    "docker.io/soelvkaer/vppcontainer": [],
+    "docker.io/tinygo/tinygo": [],
+    "docker.io/traefik/whoami": [],
+    "docker.io/vllm/vllm-openai": [],
+    "docker.io/volcanosh/dist-mnist-tf-example": [],
+    "docker.io/volcanosh/vc-controller-manager": [],
+    "docker.io/volcanosh/vc-scheduler": [],
+    "docker.io/volcanosh/vc-webhook-manager": [
+        "latest"
+    ],
+    "docker.io/wagoodman/dive": [],
+    "docker.io/yanbaru/vyos-1.4": [],
+    "docker.io/yunwei37/ebpm": [],
+    "gcr.io/google-samples/microservices-demo/adservice": [],
+    "gcr.io/google-samples/microservices-demo/cartservice": [],
+    "gcr.io/google-samples/microservices-demo/checkoutservice": [],
+    "gcr.io/google-samples/microservices-demo/currencyservice": [],
+    "gcr.io/google-samples/microservices-demo/emailservice": [],
+    "gcr.io/google-samples/microservices-demo/frontend": [],
+    "gcr.io/google-samples/microservices-demo/loadgenerator": [],
+    "gcr.io/google-samples/microservices-demo/paymentservice": [],
+    "gcr.io/google-samples/microservices-demo/productcatalogservice": [],
+    "gcr.io/google-samples/microservices-demo/recommendationservice": [],
+    "gcr.io/google-samples/microservices-demo/shippingservice": [],
+    "gcr.io/heptio-images/ks-guestbook-demo": [],
+    "gcr.io/istio-testing/app": [],
+    "gcr.io/istio-testing/ext-authz": [],
+    "gcr.io/istio-testing/jwt-server": [],
+    "gcr.io/knative-releases/knative.dev/net-istio/cmd/controller": [],
+    "gcr.io/knative-releases/knative.dev/net-istio/cmd/webhook": [],
+    "gcr.io/knative-releases/knative.dev/net-kourier/cmd/kourier": [
+        "v1.17.0"
+    ],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/activator": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/controller": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/default-domain": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/queue": [],
+    "gcr.io/knative-releases/knative.dev/serving/cmd/webhook": [],
+    "gcr.io/kubebuilder/kube-rbac-proxy": [
+        "v0.15.0"
+    ],
+    "gcr.io/kubernetes-e2e-test-images/echoserver": [],
+    "ghcr.io/apache/skywalking-cli/skywalking-cli": [],
+    "ghcr.io/apache/skywalking-kubernetes-event-exporter/skywalking-kubernetes-event-exporter": [],
+    "ghcr.io/apache/skywalking-rover/skywalking-rover": [],
+    "ghcr.io/apache/skywalking-satellite/skywalking-satellite": [],
+    "ghcr.io/apache/skywalking-showcase/app": [],
+    "ghcr.io/apache/skywalking-showcase/frontend": [],
+    "ghcr.io/apache/skywalking-showcase/gateway-service": [],
+    "ghcr.io/apache/skywalking-showcase/load-gen": [],
+    "ghcr.io/apache/skywalking-showcase/rating-service": [],
+    "ghcr.io/apache/skywalking-showcase/recommendation-service": [],
+    "ghcr.io/apache/skywalking-showcase/songs-service": [],
+    "ghcr.io/apache/skywalking/oap": [],
+    "ghcr.io/apache/skywalking/ui": [],
+    "ghcr.io/berriai/litellm": [],
+    "ghcr.io/dexidp/dex": [],
+    "ghcr.io/eunomia-bpf/ecc-x86_64": [],
+    "ghcr.io/fluxcd/flagger": [],
+    "ghcr.io/fluxcd/flagger-loadtester": [],
+    "ghcr.io/jimmidyson/configmap-reload": [],
+    "ghcr.io/k-cloud-labs/kinitiras-webhook": [],
+    "ghcr.io/k8snetworkplumbingwg/multi-networkpolicy-iptables": [],
+    "ghcr.io/k8snetworkplumbingwg/multus-cni": [],
+    "ghcr.io/k8snetworkplumbingwg/whereabouts": [],
+    "ghcr.io/mellanox/k8s-rdma-shared-dev-plugin": [],
+    "ghcr.io/prometheus-operator/prometheus-config-reloader": [],
+    "ghcr.io/siemens/ghostwire": [],
+    "ghcr.io/siemens/packetflix": [],
+    "ghcr.io/skyapm/r3": [],
+    "ghcr.io/spiffe/spiffe-csi-driver": [],
+    "ghcr.io/spiffe/spire-agent": [],
+    "ghcr.io/spiffe/spire-controller-manager": [],
+    "ghcr.io/spiffe/spire-server": [],
+    "ghcr.io/squat/generic-device-plugin": [],
+    "ghcr.io/stefanprodan/podinfo": [],
+    "k8s.gcr.io/sig-storage/csi-attacher": [],
+    "k8s.gcr.io/sig-storage/csi-node-driver-registrar": [],
+    "k8s.gcr.io/sig-storage/csi-provisioner": [],
+    "k8s.gcr.io/sig-storage/csi-resizer": [],
+    "k8s.gcr.io/sig-storage/csi-snapshotter": [],
+    "nvcr.io/nvidia/ai-dynamo/kubernetes-operator": [
+        "0.7.0"
+    ],
+    "nvcr.io/nvidia/ai-dynamo/vllm-runtime": [
+        "0.7.0"
+    ],
+    "public.ecr.aws/zinclabs/openobserve": [],
+    "quay.io/argoproj/argocd": [],
+    "quay.io/brancz/kube-rbac-proxy": [],
+    "quay.io/centos/centos": [
+        "7"
+    ],
+    "quay.io/cephcsi/cephcsi": [],
+    "quay.io/cilium/cilium-envoy": [],
+    "quay.io/coreos/etcd": [],
+    "quay.io/frrouting/frr": [],
+    "quay.io/jetstack/cert-manager-cainjector": [],
+    "quay.io/jetstack/cert-manager-controller": [],
+    "quay.io/jetstack/cert-manager-csi-driver": [],
+    "quay.io/jetstack/cert-manager-ctl": [],
+    "quay.io/jetstack/cert-manager-webhook": [],
+    "quay.io/kiali/kiali": [],
+    "quay.io/kuberay/operator": [],
+    "quay.io/metallb/controller": [],
+    "quay.io/metallb/frr-k8s": [],
+    "quay.io/metallb/speaker": [],
+    "quay.io/prometheus-operator/prometheus-config-reloader": [],
+    "quay.io/prometheus-operator/prometheus-operator": [],
+    "quay.io/prometheus/alertmanager": [],
+    "quay.io/prometheus/blackbox-exporter": [],
+    "quay.io/prometheus/node-exporter": [],
+    "quay.io/prometheus/prometheus": [],
+    "quay.io/prometheuscommunity/elasticsearch-exporter": [],
+    "quay.io/submariner/lighthouse-agent": [],
+    "quay.io/submariner/lighthouse-coredns": [],
+    "quay.io/submariner/nettest": [],
+    "quay.io/submariner/submariner-gateway": [],
+    "quay.io/submariner/submariner-operator": [],
+    "quay.io/submariner/submariner-route-agent": [],
+    "registry.k8s.io/dns/k8s-dns-node-cache": [],
+    "registry.k8s.io/e2e-test-images/agnhost": [],
+    "registry.k8s.io/etcd": [],
+    "registry.k8s.io/kube-apiserver": [],
+    "registry.k8s.io/kube-controller-manager": [],
+    "registry.k8s.io/kube-state-metrics/kube-state-metrics": [],
+    "registry.k8s.io/lws/lws": [
+        "0.7.0"
+    ],
+    "registry.k8s.io/metrics-server/metrics-server": [],
+    "registry.k8s.io/prometheus-adapter/prometheus-adapter": [],
+    "registry.k8s.io/sig-storage/csi-node-driver-registrar": [],
+    "skywalking.docker.scarf.sh/apache/skywalking-oap-server": [],
+    "skywalking.docker.scarf.sh/apache/skywalking-ui": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice": [],
+    "us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice": [],
+    "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-backend": [],
+    "us-central1-docker.pkg.dev/k8s-staging-images/kueue/kueueviz-frontend": [],
+    "registry.k8s.io/kwok/kwok": [
+        "v0.7.0"
+    ],
+    "docker.io/library/nginx": [
+        "latest"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/operator": [
+        "v0.10.3"
+    ],
+    "docker.io/soyking/e3w": [
+        "latest"
+    ],
+    "ghcr.io/ai-dynamo/grove/grove-operator": [
+        "v0.0.0-g0f07586"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/admission": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/binder": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/crd-upgrader": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/podgroupcontroller": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/podgrouper": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/queuecontroller": [
+        "v0.10.3"
+    ],
+    "ghcr.io/nvidia/kai-scheduler/scheduler": [
+        "v0.10.3"
+    ],
+    "docker.io/nvidia/cuda": [
+        "12.9.1-runtime-ubuntu24.04"
+    ],
+    "docker.io/xhofe/alist": [
+        "latest"
+    ],
+    "docker.io/envoyproxy/envoy": [
+        "v1.31-latest"
+    ],
+    "docker.io/prom/prometheus": [
+        "latest"
+    ]
 }

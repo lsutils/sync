@@ -22,7 +22,8 @@ with open(sync_path, 'r', encoding='utf8') as f:
     random_data = json.loads(f.read())
 
 if __name__ == '__main__':
-    repo_tag = sys.argv[1].strip()
+    # repo_tag = sys.argv[1].strip()
+    repo_tag = 'docker.io/prom/prometheus'
     if len(repo_tag.split('/')) < 3:
         raise Exception('must have group/user/repo')
     repo, tag = '', ''
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     from trans_image import trans_image
 
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
-        f.write(f'''
+        cmd = f'''
 source ~/script/.customer_script.sh
 set -x
 eval "$(print_proxy.py)"
@@ -57,7 +58,9 @@ cd ~/k8s/sync
 git add .
 git commit -m "{s_img}"
 git push
-''')
+'''
+        f.write(cmd)
+        print(cmd)
     os.system('zsh /tmp/sc.sh')
     if not os.path.exists('/tmp/skopeo_copy_success'):
         shutil.copy2(sync_path + '.bak', sync_path)
