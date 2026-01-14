@@ -194,7 +194,9 @@
     "docker.io/volcanosh/dist-mnist-tf-example": [],
     "docker.io/volcanosh/vc-controller-manager": [],
     "docker.io/volcanosh/vc-scheduler": [],
-    "docker.io/volcanosh/vc-webhook-manager": [],
+    "docker.io/volcanosh/vc-webhook-manager": [
+        "latest"
+    ],
     "docker.io/wagoodman/dive": [],
     "docker.io/yanbaru/vyos-1.4": [],
     "docker.io/yunwei37/ebpm": [],
