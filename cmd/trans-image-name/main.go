@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	. "github.com/lsutils/sync"
+	. "gitee.com/ls-2018/sync"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"sigs.k8s.io/yaml"
 )
