@@ -2,7 +2,7 @@ import json
 import subprocess
 import sys
 
-from trans_image_name import trans_image
+from trans_image import trans_image
 
 _input = sys.argv[1]
 print(sys.argv)
@@ -23,7 +23,6 @@ with open('fixed-tasks.json', 'r', encoding='utf8') as f:
 
 if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
-
 
 print(tags)
 
