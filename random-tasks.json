@@ -28,9 +28,6 @@
     "docker.io/bitnamilegacy/etcd": [
         "3.5.18-debian-12-r5"
     ],
-    "docker.io/bitnamisecure/git": [
-        "latest"
-    ],
     "docker.io/burlyluo/kindest": [],
     "docker.io/burlyluo/nettool": [],
     "docker.io/burlyluo/vyos": [],
@@ -380,6 +377,9 @@
         "v1.31-latest"
     ],
     "docker.io/prom/prometheus": [
+        "latest"
+    ],
+    "docker.io/bitnami/git": [
         "latest"
     ]
 }
