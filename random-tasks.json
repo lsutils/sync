@@ -380,5 +380,8 @@
     ],
     "envoyproxy/envoy": [
         "v1.31-latest"
+    ],
+    "prom/prometheus": [
+        "latest"
     ]
 }
