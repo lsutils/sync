@@ -13,7 +13,7 @@ jobs:
       - name: Push to Gitee
         run: |
           set -xv
-          remote_repo="https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/ls-2018/script.git"
+          remote_repo="https://${GITEE_USERNAME}:${GITEE_PASSWORD}@gitee.com/ls-2018/sync.git"
           ls 
           pwd
           git fetch --unshallow origin
