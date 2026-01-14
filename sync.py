@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import sys
 
@@ -28,13 +29,13 @@ print(tags)
 
 i = 0
 for tag in tags:
-    cmd = f'{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{trans_image(source_image + ":" + tag)}'
-    print(i, "/", len(tags), cmd, flush=True)
-    (code, text) = subprocess.getstatusoutput(cmd)
-    print(text, flush=True)
-    if code == 0:
-        i += 1
-    elif 'unsupported' in text or 'unknown' in text:
-        i += 1
-    elif 'toomanyrequests' in text:
-        sys.exit(1)
+    with open('/tmp/sync.sh', 'w', encoding='utf8') as f:
+        f.write(f'''
+set -x 
+#rm -rf /tmp/sync.txt
+{skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{trans_image(source_image + ":" + tag)}
+#echo $?> /tmp/sync.txt
+''')
+
+    print(i, "/", len(tags), flush=True)
+    os.system(f'bash /tmp/sync.sh')
