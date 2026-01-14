@@ -179,7 +179,9 @@
     "docker.io/pivotalrabbitmq/perf-test": [],
     "docker.io/projecthami/hami": [],
     "docker.io/prom/mysqld-exporter": [],
-    "docker.io/prom/prometheus": [],
+    "docker.io/prom/prometheus": [
+        "latest"
+    ],
     "docker.io/prometheuscommunity/postgres-exporter": [],
     "docker.io/rancher/k3s": [],
     "docker.io/rancher/mirrored-flannelcni-flannel": [],
