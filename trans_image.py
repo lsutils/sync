@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-import hashlib
-import json
-import os.path
-import sys
-from collections import defaultdict
 import subprocess
 
 
