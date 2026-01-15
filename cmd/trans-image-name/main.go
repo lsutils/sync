@@ -238,7 +238,7 @@ func replaceImages(fileData string, filepath string) {
 }
 
 func main() {
-	GetImage()
+	UpdateImageData()
 	repoMap = transImageName()
 	target := os.Args[1]
 	if isDir(target) {

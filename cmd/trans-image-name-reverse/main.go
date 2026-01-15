@@ -41,6 +41,10 @@ func init() {
 
 var randomImageMap = make(map[string]string)
 
+func init() {
+	UpdateImageData()
+}
+
 func transRandomImageName() map[string]string { // old repo name -> new repo name
 	if len(randomImageMap) != 0 {
 		return randomImageMap
@@ -76,18 +80,8 @@ func transRandomImageName() map[string]string { // old repo name -> new repo nam
 	return transImages
 }
 
-func main() {
-	transRandomImageName()
-
-	var lines []string
+func ReverseImage(lines []string) string {
 	var linesBak []string
-
-	if len(os.Args) > 1 {
-		lines = os.Args[1:]
-	} else {
-		data, _ := io.ReadAll(os.Stdin)
-		lines = strings.Split(string(data), "\n")
-	}
 
 	for _, line := range lines {
 		linesBak = append(linesBak, line)
@@ -124,6 +118,19 @@ func main() {
 		}
 
 	}
-	fmt.Println(res)
+	return res
+}
 
+func main() {
+	transRandomImageName()
+
+	var lines []string
+
+	if len(os.Args) > 1 {
+		lines = os.Args[1:]
+	} else {
+		data, _ := io.ReadAll(os.Stdin)
+		lines = strings.Split(string(data), "\n")
+	}
+	fmt.Println(ReverseImage(lines))
 }

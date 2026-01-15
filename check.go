@@ -8,7 +8,7 @@ import (
 	"k8s.io/kube-openapi/pkg/util/sets"
 )
 
-func GetImage() {
+func UpdateImageData() {
 	random := "https://gitee.com/ls-2018/sync/raw/main/random-tasks.json"
 	fix := "https://gitee.com/ls-2018/sync/raw/main/fixed-tasks.json"
 
