@@ -12,6 +12,9 @@ func NeedUpgrade() bool {
 	random := "https://gitee.com/ls-2018/sync/raw/main/random-tasks.json"
 	fix := "https://gitee.com/ls-2018/sync/raw/main/fixed-tasks.json"
 
+	p1 := "https://gitee.com/ls-2018/sync/raw/main/cmd/trans-image-name/main.go"
+	p2 := "https://gitee.com/ls-2018/sync/raw/main/cmd/trans-image-name-reverse/main.go"
+
 	currentRandom := map[string][]string{}
 	currentFix := map[string][]string{}
 	remoteRandom := map[string][]string{}
@@ -23,7 +26,10 @@ func NeedUpgrade() bool {
 	json.Unmarshal(FixData, &currentFix)
 	json.Unmarshal(Remote(random), &remoteRandom)
 	json.Unmarshal(Remote(fix), &remoteFix)
-	if reflect.DeepEqual(currentRandom, remoteRandom) && reflect.DeepEqual(currentFix, remoteFix) {
+	if reflect.DeepEqual(currentRandom, remoteRandom) &&
+		reflect.DeepEqual(currentFix, remoteFix) &&
+		reflect.DeepEqual(Remote(p1), Process1) &&
+		reflect.DeepEqual(Remote(p2), Process1) {
 		return false
 	}
 	return true
