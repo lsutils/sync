@@ -926,5 +926,8 @@
     ],
     "docker.io/volcanosh/vc-agent": [
         "latest"
+    ],
+    "docker.io/volcanosh/vc-descheduler": [
+        "latest"
     ]
 }
