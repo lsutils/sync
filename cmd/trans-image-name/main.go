@@ -152,6 +152,9 @@ func replaceImage(data string) (string, map[string]string) {
 	var finTexts []string
 
 	for _, line := range strings.Split(data, "\n") {
+		if strings.Contains(line, "image: ") {
+			fmt.Println(1)
+		}
 		index, indexLength, handle := handleImage(line)
 		if !handle || index < 0 {
 			finTexts = append(finTexts, line)
@@ -166,6 +169,11 @@ func replaceImage(data string) (string, map[string]string) {
 			newLine = strings.ReplaceAll(newLine, last, "docker.io/library/"+last)
 		}
 
+		if len(strings.Split(line[index:], "/")) == 2 {
+			length := len(strings.Split(newLine, " "))
+			last := strings.Split(newLine, " ")[length-1]
+			newLine = strings.ReplaceAll(newLine, last, "docker.io/"+last)
+		}
 		for k, v := range repoMap {
 			if strings.Contains(newLine, k+":") {
 				newLine = strings.ReplaceAll(newLine, k+":", v)
@@ -233,6 +241,7 @@ func replaceImages(fileData string, filepath string) {
 }
 
 func main() {
+	os.Setenv("SkipUpgradeCheck", "true")
 	if NeedUpgrade() {
 		cmd := exec.Command("bash", "-c", "go install -v gitee.com/ls-2018/sync/cmd/...@latest")
 		cmd.Env = append(os.Environ(),
@@ -257,13 +266,14 @@ func main() {
 	}
 
 	repoMap = transImageName()
-	target := os.Args[1]
+	//target := os.Args[1]
+	target := "/tmp/volcano"
 	if isDir(target) {
 		filepath.WalkDir(target, func(path string, d fs.DirEntry, err error) error {
-			if !strings.HasSuffix(target, ".yaml") || !strings.HasSuffix(target, ".yml") {
+			if !(strings.HasSuffix(path, ".yaml") || strings.HasSuffix(path, ".yml")) {
 				return nil
 			}
-			if isFile(path) {
+			if !isFile(path) {
 				return nil
 			}
 
