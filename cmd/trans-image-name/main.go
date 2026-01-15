@@ -172,7 +172,6 @@ func replaceImage(data string) (string, map[string]string) {
 			newLine = strings.ReplaceAll(newLine, last, "docker.io/"+last)
 		}
 		for k, v := range repoMap {
-			fmt.Println(newLine, k, strings.Contains(newLine, k))
 			if strings.Contains(newLine, k+":") {
 				newLine = strings.ReplaceAll(newLine, k+":", v)
 				imageMap[newLine[indexLength:]] = rawNewLine[indexLength:]
