@@ -29,7 +29,7 @@ func NeedUpgrade() bool {
 	if reflect.DeepEqual(currentRandom, remoteRandom) &&
 		reflect.DeepEqual(currentFix, remoteFix) &&
 		reflect.DeepEqual(Remote(p1), Process1) &&
-		reflect.DeepEqual(Remote(p2), Process1) {
+		reflect.DeepEqual(Remote(p2), Process2) {
 		return false
 	}
 	return true
