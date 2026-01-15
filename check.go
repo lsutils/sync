@@ -1,7 +1,6 @@
 package sync
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -15,20 +14,14 @@ func NeedUpgrade() bool {
 	p1 := "https://gitee.com/ls-2018/sync/raw/main/cmd/trans-image-name/main.go"
 	p2 := "https://gitee.com/ls-2018/sync/raw/main/cmd/trans-image-name-reverse/main.go"
 
-	currentRandom := map[string][]string{}
-	currentFix := map[string][]string{}
-	remoteRandom := map[string][]string{}
-	remoteFix := map[string][]string{}
+	RandomData = Remote(random)
+	FixData = Remote(fix)
+
 	if os.Getenv("SkipUpgradeCheck") == "true" {
 		return false
 	}
-	json.Unmarshal(RandomData, &currentRandom)
-	json.Unmarshal(FixData, &currentFix)
-	json.Unmarshal(Remote(random), &remoteRandom)
-	json.Unmarshal(Remote(fix), &remoteFix)
-	if reflect.DeepEqual(currentRandom, remoteRandom) &&
-		reflect.DeepEqual(currentFix, remoteFix) &&
-		reflect.DeepEqual(Remote(p1), Process1) &&
+
+	if reflect.DeepEqual(Remote(p1), Process1) &&
 		reflect.DeepEqual(Remote(p2), Process2) {
 		return false
 	}
