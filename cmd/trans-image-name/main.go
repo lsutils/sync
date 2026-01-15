@@ -144,7 +144,7 @@ func handleImage(_line string) (int, int, bool) {
 	return -1, 0, false
 }
 
-func replaceImage(data string) (string, map[string]string) {
+func ReplaceImage(data string) (string, map[string]string) {
 	imageMap := make(map[string]string)
 	imageReverseMap := make(map[string]string)
 
@@ -210,7 +210,7 @@ func replaceImages(fileData string, filepath string) {
 	var res []string
 	var reverseList []string
 	for _, item := range strings.Split(fileData, "\n---\n") {
-		_t, rm := replaceImage(item)
+		_t, rm := ReplaceImage(item)
 		for _, v := range rm {
 			reverseList = append(reverseList, v)
 		}
