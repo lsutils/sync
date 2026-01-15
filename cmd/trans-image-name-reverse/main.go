@@ -97,10 +97,10 @@ func main() {
 
 	for _, line := range lines {
 
-		if strings.Trim(line, " \n") == "" {
+		if strings.Trim(line, TrimChars) == "" {
 			continue
 		}
-		line = strings.Trim(line, " \n")
+		line = strings.Trim(line, TrimChars)
 
 		if !strings.Contains(line, "acejilam/ib-") {
 			res += line + "\n"
@@ -117,7 +117,7 @@ func main() {
 			if imageRepoMd5 == mda {
 
 				newLine := oldImage + ":" + strings.Join(strings.Split(ss[len(ss)-1], "-")[1:], "-")
-				newLine = strings.Trim(newLine, " \n")
+				newLine = strings.Trim(newLine, TrimChars)
 				res += newLine + "\n"
 			}
 

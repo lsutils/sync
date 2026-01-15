@@ -13,3 +13,5 @@ var Process1 []byte
 
 //go:embed cmd/trans-image-name-reverse/main.go
 var Process2 []byte
+
+var TrimChars = " \n\r\t"

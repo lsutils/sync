@@ -132,7 +132,7 @@ func isFile(path string) bool {
 }
 
 func handleImage(_line string) (int, int, bool) {
-	line := strings.Trim(_line, " \n")
+	line := strings.Trim(_line, TrimChars)
 
 	if strings.HasPrefix(line, "image: ") {
 		return strings.Index(_line, "image: "), len("image: "), true
@@ -157,7 +157,7 @@ func replaceImage(data string) (string, map[string]string) {
 			continue
 		}
 
-		newLine := strings.Trim(strings.Split(strings.Trim(line, " \n"), "#")[0], " \n")
+		newLine := strings.Trim(strings.Split(strings.Trim(line, TrimChars), "#")[0], TrimChars)
 		rawNewLine := newLine
 
 		if len(strings.Split(line[index:], "/")) == 1 {
