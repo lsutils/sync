@@ -62,5 +62,5 @@ git push
         f.write(cmd)
         print(f"""skopeo_copy {s_img} {trans_image(s_img, random_path=sync_path + '.bak')}""")
     os.system('zsh /tmp/sc.sh')
-    if not os.path.exists('/tmp/skopeo_copy_success'):
+    if os.path.exists('/tmp/skopeo_copy_success'):
         shutil.copy2(sync_path + '.bak', sync_path)

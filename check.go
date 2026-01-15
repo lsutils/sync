@@ -21,8 +21,7 @@ func NeedUpgrade() bool {
 		return false
 	}
 
-	if reflect.DeepEqual(Remote(p1), Process1) &&
-		reflect.DeepEqual(Remote(p2), Process2) {
+	if reflect.DeepEqual(Remote(p1), Process1) && reflect.DeepEqual(Remote(p2), Process2) {
 		return false
 	}
 	return true
