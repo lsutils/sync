@@ -1,10 +1,11 @@
-package sync
+package utils
 
 import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
 
+	. "gitee.com/ls-2018/sync"
 	"k8s.io/kube-openapi/pkg/util/sets"
 )
 
