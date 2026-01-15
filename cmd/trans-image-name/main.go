@@ -239,8 +239,8 @@ func replaceImages(fileData string, filepath string) {
 
 func main() {
 	repoMap = transImageName()
-	//target := os.Args[1]
-	target := "/tmp/volcano"
+	target := os.Args[1]
+	//target := "/tmp/volcano"
 	if isDir(target) {
 		filepath.WalkDir(target, func(path string, d fs.DirEntry, err error) error {
 			if !(strings.HasSuffix(path, ".yaml") || strings.HasSuffix(path, ".yml")) {
