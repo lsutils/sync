@@ -22,7 +22,8 @@ with open(sync_path, 'r', encoding='utf8') as f:
     random_data = json.loads(f.read())
 
 if __name__ == '__main__':
-    repo_tag = sys.argv[1].strip()
+    # repo_tag = sys.argv[1].strip()
+    repo_tag = 'docker.io/volcanosh/vc-scheduler'
     if len(repo_tag.split('/')) < 3:
         raise Exception('must have group/user/repo')
     repo, tag = '', ''
@@ -49,6 +50,7 @@ if __name__ == '__main__':
     with open('/tmp/sc.sh', 'w', encoding='utf8') as f:
         cmd = f'''
 source ~/script/.customer_script.sh
+rm -rf /tmp/skopeo_copy_success
 set -x
 eval "$(print_proxy.py)"
 set -ex

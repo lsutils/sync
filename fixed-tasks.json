@@ -1,6 +1,8 @@
 {
     "docker.io/istio/pilot": [
-        "a"
+        "latest"
     ],
-    "docker.io/istio/proxyv2": []
+    "docker.io/istio/proxyv2": [
+        "latest"
+    ]
 }

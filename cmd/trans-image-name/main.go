@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"math/big"
 	"os"
-	"os/exec"
 	"path/filepath"
 	"strings"
 
@@ -152,9 +151,6 @@ func replaceImage(data string) (string, map[string]string) {
 	var finTexts []string
 
 	for _, line := range strings.Split(data, "\n") {
-		if strings.Contains(line, "image: ") {
-			fmt.Println(1)
-		}
 		index, indexLength, handle := handleImage(line)
 		if !handle || index < 0 {
 			finTexts = append(finTexts, line)
@@ -241,33 +237,32 @@ func replaceImages(fileData string, filepath string) {
 }
 
 func main() {
-	os.Setenv("SkipUpgradeCheck", "true")
-	if NeedUpgrade() {
-		cmd := exec.Command("bash", "-c", "go install -v gitee.com/ls-2018/sync/cmd/...@latest")
-		cmd.Env = append(os.Environ(),
-			"GOPRIVATE=gitee.com",
-			"GONOSUMDB=gitee.com",
-			"GONOPROXY=gitee.com",
-		)
-		cmd.Stdout = os.Stdout
-		cmd.Stderr = os.Stderr
-
-		if err := cmd.Run(); err != nil {
-			fmt.Println("err:", err)
-		}
-
-		cmd = exec.Command("trans-image-name", os.Args[1])
-		out, err := cmd.Output()
-		if err != nil {
-			panic(err)
-		}
-		fmt.Println(string(out))
-		os.Exit(0)
-	}
+	//os.Setenv("SkipUpgradeCheck", "true")
+	//if NeedUpgrade() {
+	//	cmd := exec.Command("bash", "-c", "go install -v gitee.com/ls-2018/sync/cmd/...@latest")
+	//	cmd.Env = append(os.Environ(),
+	//		"GOPRIVATE=gitee.com",
+	//		"GONOSUMDB=gitee.com",
+	//		"GONOPROXY=gitee.com",
+	//	)
+	//	cmd.Stdout = os.Stdout
+	//	cmd.Stderr = os.Stderr
+	//
+	//	if err := cmd.Run(); err != nil {
+	//		fmt.Println("err:", err)
+	//	}
+	//
+	//	cmd = exec.Command("trans-image-name", os.Args[1])
+	//	out, err := cmd.Output()
+	//	if err != nil {
+	//		panic(err)
+	//	}
+	//	fmt.Println(string(out))
+	//	os.Exit(0)
+	//}
 
 	repoMap = transImageName()
-	//target := os.Args[1]
-	target := "/tmp/volcano"
+	target := os.Args[1]
 	if isDir(target) {
 		filepath.WalkDir(target, func(path string, d fs.DirEntry, err error) error {
 			if !(strings.HasSuffix(path, ".yaml") || strings.HasSuffix(path, ".yml")) {
