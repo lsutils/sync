@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"math/big"
 	"os"
-	"os/exec"
 	"path/filepath"
 	"strings"
 
@@ -157,6 +156,7 @@ func replaceImage(data string) (string, map[string]string) {
 			finTexts = append(finTexts, line)
 			continue
 		}
+
 		newLine := strings.Trim(strings.Split(strings.Trim(line, " \n"), "#")[0], " \n")
 		rawNewLine := newLine
 
@@ -172,6 +172,7 @@ func replaceImage(data string) (string, map[string]string) {
 			newLine = strings.ReplaceAll(newLine, last, "docker.io/"+last)
 		}
 		for k, v := range repoMap {
+			fmt.Println(newLine, k, strings.Contains(newLine, k))
 			if strings.Contains(newLine, k+":") {
 				newLine = strings.ReplaceAll(newLine, k+":", v)
 				imageMap[newLine[indexLength:]] = rawNewLine[indexLength:]
@@ -238,32 +239,9 @@ func replaceImages(fileData string, filepath string) {
 }
 
 func main() {
-	os.Setenv("SkipUpgradeCheck", "true")
-	if NeedUpgrade() {
-		cmd := exec.Command("bash", "-c", "go install -v gitee.com/ls-2018/sync/cmd/...@latest")
-		cmd.Env = append(os.Environ(),
-			"GOPRIVATE=gitee.com",
-			"GONOSUMDB=gitee.com",
-			"GONOPROXY=gitee.com",
-		)
-		cmd.Stdout = os.Stdout
-		cmd.Stderr = os.Stderr
-
-		if err := cmd.Run(); err != nil {
-			fmt.Println("err:", err)
-		}
-
-		cmd = exec.Command("trans-image-name", os.Args[1])
-		out, err := cmd.Output()
-		if err != nil {
-			panic(err)
-		}
-		fmt.Println(string(out))
-		os.Exit(0)
-	}
-
 	repoMap = transImageName()
-	target := os.Args[1]
+	//target := os.Args[1]
+	target := "/tmp/volcano"
 	if isDir(target) {
 		filepath.WalkDir(target, func(path string, d fs.DirEntry, err error) error {
 			if !(strings.HasSuffix(path, ".yaml") || strings.HasSuffix(path, ".yml")) {

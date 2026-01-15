@@ -923,5 +923,8 @@
     ],
     "docker.io/bitnami/git": [
         "latest"
+    ],
+    "docker.io/volcanosh/vc-agent": [
+        "latest"
     ]
 }
