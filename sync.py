@@ -31,11 +31,15 @@ i = 0
 for tag in tags:
     with open('/tmp/sync.sh', 'w', encoding='utf8') as f:
         f.write(f'''
+source ~/script/.customer_script.sh
+eval "$(print_proxy.py)"
+rm -rf /tmp/sync.txt
 set -x 
-#rm -rf /tmp/sync.txt
 {skopeo_bin} copy --all --insecure-policy docker://{source_image}:{tag} docker://{trans_image(source_image + ":" + tag)}
-#echo $?> /tmp/sync.txt
+echo $?> /tmp/sync.txt
 ''')
 
     print(i, "/", len(tags), flush=True)
     os.system(f'bash /tmp/sync.sh')
+    with open('/tmp/sync.txt', 'r', encoding='utf8') as f:
+        sys.exit(int(f.read()))

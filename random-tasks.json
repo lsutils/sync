@@ -5,7 +5,7 @@
     "cr.kgateway.dev/kgateway-dev/kgateway": [
         "v2.0.3"
     ],
-    "docker.elastic.co/elasticsearch/elasticsearch": [
+    "docker.io/library/elasticsearch": [
         "latest"
     ],
     "docker.io/80imike/find-container-process": [
