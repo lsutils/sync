@@ -16,10 +16,6 @@ with open('random-tasks.json', 'r', encoding='utf8') as f:
     data = json.load(f)
     if _input in data:
         tags = data[_input]
-with open('fixed-tasks.json', 'r', encoding='utf8') as f:
-    data = json.load(f)
-    if _input in data:
-        tags = data[_input]
 
 if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
