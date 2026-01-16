@@ -42,7 +42,7 @@ func replaceImages(fileData string, filepath string) {
 			if len(reverseList) > 0 {
 				fmt.Println(reverseList[0])
 			} else {
-				fmt.Println("unknow map info")
+				fmt.Println(fileData[7:])
 			}
 		} else if len(res) > 0 {
 			fmt.Println(strings.Join(res, "\n---\n"))
