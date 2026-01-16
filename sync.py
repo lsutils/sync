@@ -1,6 +1,5 @@
 import json
 import os
-import subprocess
 import sys
 
 from trans_image import trans_image
@@ -25,7 +24,12 @@ with open('fixed-tasks.json', 'r', encoding='utf8') as f:
 if 'darwin' in sys.platform.lower():
     skopeo_bin = '/opt/homebrew/bin/skopeo'
 
-print(tags)
+new_tags = []
+for tag in tags:
+    if tag == "latest":
+        continue
+    new_tags.append(tag)
+tags = new_tags
 
 i = 0
 for tag in tags:
@@ -39,7 +43,6 @@ set -x
 echo $?> /tmp/sync.txt
 ''')
 
-    print(i, "/", len(tags), flush=True)
     os.system(f'bash /tmp/sync.sh')
     with open('/tmp/sync.txt', 'r', encoding='utf8') as f:
         sys.exit(int(f.read()))
