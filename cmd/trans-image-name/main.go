@@ -60,7 +60,8 @@ func replaceImages(fileData string, filepath string) {
 
 func main() {
 	utils.PrepareTransImageName()
-	target := os.Args[1]
+	//target := os.Args[1]
+	target := "docker.io/volcanosh/vc-agent-scheduler:latest"
 	if isDir(target) {
 		filepath.WalkDir(target, func(path string, d fs.DirEntry, err error) error {
 			if !(strings.HasSuffix(path, ".yaml") || strings.HasSuffix(path, ".yml")) {
